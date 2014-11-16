@@ -40,15 +40,29 @@
 			<header class="clearfix">
 				<span>E-Government</span>
 				<h1>Your Profile</h1>
+
 				<nav>
                     <div class="dropdown">
 					
 					<button class="noborder" id="showLeftPush" class="icon-drop" data-info="Menu"><span class="glyphicon glyphicon-align-justify bigfont" aria-hidden="true"></span></button>
-					<button class="noborder" id="showLeftPush" data-info="Login" data-toggle="dropdown"><span class="glyphicon glyphicon-user bigfont" aria-hidden="true"></span>Hello, User</button>
-                    <button type="button" class="btn btn-danger noborder signout-btn">Sign out</button>
+					<button class="noborder" data-info="Login" data-toggle="dropdown"><span class="glyphicon glyphicon-user bigfont" aria-hidden="true"></span>Hello, User</button>
+					<ul  class="dropdown-menu" style="padding: 10px; background: #ddd; width: 200px;">
+                       
+                       
+                        <button type="button" class="btn btn-primary maxwidth">View Profile</button>
+                       
+                        <button type="button" class="btn btn-danger noborder maxwidth">Sign out</button>
+
+                      
+                        </ul>
+                    
                     </div>
 				</nav>
+
+
+
 			</header>
+			
 		</div>
 
 

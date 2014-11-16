@@ -45,7 +45,7 @@
 					
 					<button class="noborder" id="showLeftPush" class="icon-drop" data-info="Menu"><span class="glyphicon glyphicon-align-justify bigfont" aria-hidden="true"></span></button>
 					<button class="noborder" id="showLeftPush" data-info="Login" data-toggle="dropdown"><span class="glyphicon glyphicon-user bigfont" aria-hidden="true"></span></button>
-                        <ul  class="dropdown-menu" style="padding: 10px; background: #ddd">
+                        <ul  class="dropdown-menu" style="padding: 10px; background: #ddd; width: 200px;">
                         <form action="" role="form">
                         <div class="form-group">
                         <label for="user">User</label>
