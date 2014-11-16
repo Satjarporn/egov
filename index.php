@@ -52,8 +52,14 @@
                         <input type="text" class="form-control" id="user" placeholder="User" />
                         <label for="password">Password</label>
                         <input type="password" class="form-control" id="password" placeholder="Password" />
+                        <div class="checkbox">
+  						  <label> <input type="checkbox"> Remember me</label>
+  						</div>
                         </div>
-                        <button type="submit" class="btn btn-default">Sign in</button>
+                        <button type="button" class="btn btn-primary maxwidth">Sign in</button>
+                        <button type="button" class="btn btn-warning maxwidth">Forgot Password ?</button>
+                        <button type="button" class="btn btn-success maxwidth">New Account</button>
+
                         </form>
                         </ul>
                    
