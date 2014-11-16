@@ -1,0 +1,20 @@
+.bigheader{
+	height: 20px;
+	background: #0080FF;	
+}
+
+.bigbutton{
+	height: 20px;
+	background: #0080FF;
+	padding: 10%;
+	text-align: center;
+}
+.minibox{
+	height: 10px;
+	text-align: center;
+	background: transparent;
+
+}
+.transparent{
+	background: transparent;
+}
