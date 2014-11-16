@@ -12,17 +12,17 @@
 
 
 		<!-- frontpage css -->
-		<link href="css/frontpage.css" rel="stylesheet">
+		<link href="assets/css/frontpage.css" rel="stylesheet">
 
 		<!-- Bootstrap -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/css/bootstrap-theme.min.css" rel="stylesheet">
 
 
 		<!-- Push & slide css -->
-		<link rel="stylesheet" type="text/css" href="css/default.css" />
-		<link rel="stylesheet" type="text/css" href="css/component.css" />
-		<script src="js/modernizr.custom.js"></script>
+		<link rel="stylesheet" type="text/css" href="assets/css/default.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/component.css" />
+		<script src="assets/js/modernizr.custom.js"></script>
 	</head>
 
 	<body class="cbp-spmenu-push">
@@ -102,7 +102,7 @@
 		
 
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
-		<script src="js/classie.js"></script>
+		<script src="assets/js/classie.js"></script>
 		<script>
 			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
 				showLeftPush = document.getElementById( 'showLeftPush' ),
@@ -130,17 +130,17 @@
 
 		<!-- Bootstrap -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
 
         
 
 		<!-- jquery.easing by http://gsgd.co.uk/ : http://gsgd.co.uk/sandbox/jquery/easing/ -->
-		<script src="js/jquery.easing.min.js"></script>
+		<script src="assets/js/jquery.easing.min.js"></script>
 		<!-- waypoints jQuery plugin by http://imakewebthings.com/ : http://imakewebthings.com/jquery-waypoints/ -->
-		<script src="js/waypoints.min.js"></script>
+		<script src="assets/js/waypoints.min.js"></script>
 		<!-- jquery-smartresize by @louis_remi : https://github.com/louisremi/jquery-smartresize -->
-		<script src="js/jquery.debouncedresize.js"></script>
-		<script src="js/cbpFixedScrollLayout.js"></script>
+		<script src="assets/js/jquery.debouncedresize.js"></script>
+		<script src="assets/js/cbpFixedScrollLayout.js"></script>
 		<script>
 			$(function() {
 				cbpFixedScrollLayout.init();
