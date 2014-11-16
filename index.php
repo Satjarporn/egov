@@ -42,9 +42,9 @@
 				<h1>Working Area</h1>
 				<nav>
                     <div class="dropdown">
-					<a href="#" id="showLeftPush" class="icon-drop" data-info="Menu">Menu</a>
 					
-                    <a href="#" class="icon-drop" data-info="Login" data-toggle="dropdown">Login</a>
+					<button class="noborder" id="showLeftPush" class="icon-drop" data-info="Menu"><span class="glyphicon glyphicon-align-justify bigfont" aria-hidden="true"></span></button>
+					<button class="noborder" id="showLeftPush" data-info="Login" data-toggle="dropdown"><span class="glyphicon glyphicon-user bigfont" aria-hidden="true"></span></button>
                         <ul  class="dropdown-menu" style="padding: 10px; background: #ddd">
                         <form action="" role="form">
                         <div class="form-group">
@@ -56,7 +56,7 @@
                         <button type="submit" class="btn btn-default">Sign in</button>
                         </form>
                         </ul>
-					<a href="#" class="icon-drop" data-info="Register">Register</a>
+                   
                     </div>
 				</nav>
 			</header>
@@ -137,7 +137,7 @@
 		<script src="js/waypoints.min.js"></script>
 		<!-- jquery-smartresize by @louis_remi : https://github.com/louisremi/jquery-smartresize -->
 		<script src="js/jquery.debouncedresize.js"></script>
-		<script src="js/cbpFixedScrollLayout.min.js"></script>
+		<script src="js/cbpFixedScrollLayout.js"></script>
 		<script>
 			$(function() {
 				cbpFixedScrollLayout.init();
