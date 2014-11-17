@@ -51,7 +51,7 @@
 
         
 
-<section class="swag text-center">
+        <section class="swag text-center">
           <div class="container">
             <div class="row">
 
@@ -85,26 +85,11 @@
 
           <!-- task menu -->
           <div class="taskmenu">
-           
-             <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-default active">
-              <input type="checkbox" autocomplete="off" checked> ALL TASK
-            </label>
-            <label class="btn btn-primary">
-              <input type="checkbox" autocomplete="off"> New & Updated task
-            </label>
-            <label class="btn btn-success">
-              <input type="checkbox" autocomplete="off"> Completed task
-            </label>
-            <label class="btn btn-warning">
-              <input type="checkbox" autocomplete="off"> Unreleased task
-            </label>
-          </div>
 
 
 
           <!-- create task-->
-          <button class="btn btn-primary taskmenu-createtask" data-toggle="modal" data-target="#createNewTask"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create Task</button>
+          <button class="btn btn-primary" data-toggle="modal" data-target="#createNewTask"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create Task</button>
           <div id="createNewTask" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
            <div class="modal-dialog modal-lg">
            <div class="modal-content">
@@ -137,57 +122,129 @@
            </div>
           </div> <!-- create task-->
 
+          <!--filter-->
+           <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-default active">
+              <input type="checkbox" autocomplete="off" checked> ALL TASK
+            </label>
+            <label class="btn btn-primary">
+              <input type="checkbox" autocomplete="off"> New & Updated task
+            </label>
+            <label class="btn btn-success">
+              <input type="checkbox" autocomplete="off"> Completed task
+            </label>
+            <label class="btn btn-warning">
+              <input type="checkbox" autocomplete="off"> Unreleased task
+            </label>
+          </div><!--filter-->
+
 
           </div> <!-- task menu -->
            
            <!-- task list -->
 
            <div class="panel-group" id="alltask">
+
+
+
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
                   <a data-toggle="collapse" data-target="#task1" data-parent="#alltask">task1</a>
+                  <a class="toRight">On Progress</a>
                 </h4>
               </div>
               <div id="task1" class="panel-collapse collapse">
                 <div class="panel-body">
-                test
+                  <button id="taskFile" type="button" class="btn btn-info">Download File</button>
+                   <br>
+                   <p class="taskContent">task content</p>
+                   <hr>
+                    <p class="taskUpdateInfo">
+                   Release Date: dd/mm/yy time
+                    <br>Last Update: dd/mm/yy time
+                    </p>
+                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updateTask">Update Task</button>
+                   <button type="button" class="btn btn-success">Complete Task</button>
+                   <button type="button" class="btn btn-danger">Stop Releasing Task</button>
+                  
               </div>
               </div>
             </div> <!-- task1 -->
+
+
+
           <div class="panel panel-success">
               <div class="panel-heading">
                 <h4 class="panel-title">
                   <a data-toggle="collapse" data-target="#task2" data-parent="#alltask">task2</a>
+                  <a class="toRight">Completed</a>
                 </h4>
               </div>
               <div id="task2" class="panel-collapse collapse">
                 <div class="panel-body">
-                test
+                  <button id="taskFile" type="button" class="btn btn-info">Download File</button>
+                   <br>
+                   <p class="taskContent">task content</p>
+                   <hr>
+                    <p class="taskUpdateInfo">
+                    Release Date: dd/mm/yy time
+                    <br>Last Update: dd/mm/yy time
+                    </p>
+                <button type="button" class="btn btn-default">See Detail</button>
               </div>
               </div>
             </div> <!-- task 2 -->
+
+
             <div class="panel panel-info">
               <div class="panel-heading">
                 <h4 class="panel-title">
                   <a data-toggle="collapse" data-target="#task3" data-parent="#alltask">task3</a>
+                  <a class="toRight">New</a>
                 </h4>
               </div>
               <div id="task3" class="panel-collapse collapse">
                 <div class="panel-body">
-                test
+                 <button id="taskFile" type="button" class="btn btn-info">Download File</button>
+                   <br>
+                   <p class="taskContent">task content</p>
+                   <hr>
+                   <p class="taskUpdateInfo">
+                   Release Date: dd/mm/yy time
+                    <br>Last Update: dd/mm/yy time
+                    </p>
+                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updateTask">Update Task</button>
+                   <button type="button" class="btn btn-success">Complete Task</button>
+                   <button type="button" class="btn btn-danger">Stop Releasing Task</button>
+                 
               </div>
               </div>
             </div> <!-- task 3 -->
-            <div class="panel panel-warning">
+
+
+
+            <div class="panel panel-danger">
               <div class="panel-heading">
                 <h4 class="panel-title">
                   <a data-toggle="collapse" data-target="#task4" data-parent="#alltask">task4</a>
+                  <a class="toRight">Stop Releasing</a>
                 </h4>
               </div>
               <div id="task4" class="panel-collapse collapse">
                 <div class="panel-body">
-                test
+                 <button id="taskFile" type="button" class="btn btn-info">Download File</button>
+                   <br>
+                   <p class="taskContent">task content</p>
+                   <hr>
+                    <p class="taskUpdateInfo">
+                    Release Date: dd/mm/yy time
+                    <br>Last Update: dd/mm/yy time
+                    </p>
+                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updateTask">Update Task</button>
+                   <button type="button" class="btn btn-success">Complete Task</button>
+                   <button type="button" class="btn btn-warning">Re-release Task</button>
+                   <button type="button" class="btn btn-danger">Delete Task Permanently</button>
               </div>
               </div>
             </div> <!-- task 4 -->
@@ -195,6 +252,38 @@
 
 
            </div> <!-- all task -->
+
+            <div id="updateTask" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+           <div class="modal-dialog modal-lg">
+           <div class="modal-content">
+            <h1 class="headerNewTask">Update Task</h1>
+            <hr>
+
+            <form role="form" class="taskModal">
+              <div class="form-group">
+             
+              <input id="taskName" type="text" class="form-control" placeholder="Task name">
+                </div>
+              <div class="form-group">
+                  <button id="taskFile" type="button" class="btn btn-info">Download File</button> or <input type="file" style="display: inline-flex;" id="taskFile">
+                  <p class="help-block">upload your task description file.</p>
+              </div>
+            <div class="form-group">
+              <textarea class="form-control" rows="10" placeholder="Add task description" style="padding-bottom: 10px;"></textarea>
+            </div>
+           
+               <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#updateTask">Update & Release</button>
+               <button type="submit" class="btn btn-success">Update Only (not release)</button>
+               <button type="submit" class="btn btn-danger">Cancel</button>
+      
+              </form>
+
+
+           
+            
+           </div> <!-- modal content -->
+           </div>
+          </div> <!-- create task-->
 
 
 
