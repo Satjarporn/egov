@@ -110,7 +110,10 @@
             <label class="btn btn-primary">
               <input type="checkbox" autocomplete="off"> New & Updated task
             </label>
-            <label class="btn btn-warning">
+            <label class="btn btn-danger">
+              <input type="checkbox" autocomplete="off"> Urgent task
+            </label>
+            <label class="btn btn-success">
               <input type="checkbox" autocomplete="off"> Ended task
             </label>
           </div><!--filter-->
@@ -128,7 +131,7 @@
               <div class="panel-heading">
                 <h4 class="panel-title">
                   <a data-toggle="collapse" data-target="#task1" data-parent="#alltask">task1</a>
-                  <a class="toRight">On Progress</a>
+            
                 </h4>
               </div>
               <div id="task1" class="panel-collapse collapse">
