@@ -67,8 +67,8 @@
 
               
               <div class="col-md-8 col-md-offset-2">
-                <h1>Working is easy<span>Let's do it together</span></h1>
-                <a href="#features" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
+                <h1>Workspace<span>Your Working Area<br>add, edit, delete tasks here</span></h1>
+                <a href="#tarea" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
               </div>
             </div>
           </div>
@@ -79,30 +79,41 @@
 
         <!--task container-->
 
-        <div class="col-md-12 taskarea">
+        <div class="col-md-12 taskarea" id="tarea">
           <div class="row taskmenugroup">
            <a href="#"><div class="col-md-1 taskmenu"><span class="glyphicon glyphicon glyphicon-plus taskmenufont" aria-hidden="true"></span></div></a>
              </div>
+           
 
-             <div class="col-md-12 tasklist taskfont">
-              <div class="col-md-10">task name</div>
-              
-              <div class="col-md-2 taskdelete">delete task</div>
-             </div>
+           <div class="panel-group" id="alltask">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-target="#task1" data-parent="#alltask">task1</a>
+                </h4>
+              </div>
+              <div id="task1" class="panel-collapse collapse">
+                <div class="panel-body">
+                test
+              </div>
+              </div>
+            </div> <!-- task1 -->
+          <div class="panel panel-success">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-target="#task2" data-parent="#alltask">task2</a>
+                </h4>
+              </div>
+              <div id="task2" class="panel-collapse collapse">
+                <div class="panel-body">
+                test
+              </div>
+              </div>
+            </div>
 
 
-             <div class="col-md-12 tasklist taskfont">
-              <div class="col-md-10">task name</div>
-              
-              <div class="col-md-2 taskdelete">delete task</div>
-             </div>
 
-             
-             <div class="col-md-12 tasklist taskfont">
-              <div class="col-md-10">task name</div>
-              
-              <div class="col-md-2 taskdelete">delete task</div>
-             </div>
+           </div> <!-- all task -->
 
 
 
@@ -147,8 +158,10 @@
 		
 
 			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
         	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         	<!-- Include all compiled plugins (below), or include individual files as needed -->
+
         	<script src="<?php echo base_url(); ?>assets/js/waypoints.min.js"></script>
         	<script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
         	<script src="<?php echo base_url(); ?>assets/js/scripts.js"></script>
