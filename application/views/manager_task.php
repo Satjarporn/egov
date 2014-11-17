@@ -91,21 +91,24 @@
               <input type="checkbox" autocomplete="off" checked> ALL TASK
             </label>
             <label class="btn btn-primary">
-              <input type="checkbox" autocomplete="off"> New task
+              <input type="checkbox" autocomplete="off"> New & Updated task
             </label>
             <label class="btn btn-success">
-              <input type="checkbox" autocomplete="off"> Success task
+              <input type="checkbox" autocomplete="off"> Completed task
             </label>
             <label class="btn btn-warning">
-              <input type="checkbox" autocomplete="off"> Warning task
+              <input type="checkbox" autocomplete="off"> Unreleased task
             </label>
           </div>
+
+
+
           <!-- create task-->
           <button class="btn btn-primary taskmenu-createtask" data-toggle="modal" data-target="#createNewTask"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create Task</button>
           <div id="createNewTask" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
            <div class="modal-dialog modal-lg">
            <div class="modal-content">
-            <h4 class="headerNewTask">Create New Task</h4>
+            <h1 class="headerNewTask">Create New Task</h1>
             <hr>
 
             <form role="form" class="taskModal">
@@ -117,16 +120,19 @@
                   <input type="file" id="taskFile">
                   <p class="help-block">upload your task description file.</p>
               </div>
-
-              <textarea class="form-control" rows="10" placeholder="Task description"></textarea>
-              <div class="checkbox">
-                 <label>
-                      <input type="checkbox"> Check me out
-                  </label>
-                </div>
-              <button type="submit" class="btn btn-default">Submit</button>
+            <div class="form-group">
+              <textarea class="form-control" rows="10" placeholder="Add task description" style="padding-bottom: 10px;"></textarea>
+            </div>
+           
+               <button type="submit" class="btn btn-primary">Submit & Release</button>
+               <button type="submit" class="btn btn-success">Submit Only (not release)</button>
                <button type="submit" class="btn btn-danger">Cancel</button>
+      
               </form>
+
+
+           
+            
            </div> <!-- modal content -->
            </div>
           </div> <!-- create task-->
@@ -164,7 +170,7 @@
             <div class="panel panel-info">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a data-toggle="collapse" data-target="#task3" data-parent="#alltask">task2</a>
+                  <a data-toggle="collapse" data-target="#task3" data-parent="#alltask">task3</a>
                 </h4>
               </div>
               <div id="task3" class="panel-collapse collapse">
@@ -176,7 +182,7 @@
             <div class="panel panel-warning">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a data-toggle="collapse" data-target="#task4" data-parent="#alltask">task2</a>
+                  <a data-toggle="collapse" data-target="#task4" data-parent="#alltask">task4</a>
                 </h4>
               </div>
               <div id="task4" class="panel-collapse collapse">
