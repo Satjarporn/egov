@@ -97,6 +97,7 @@
             <hr>
 
             <form role="form" class="taskModal">
+              <div class="taskForm">
               <div class="form-group">
              
               <input id="taskName" type="text" class="form-control" placeholder="Task name">
@@ -108,11 +109,12 @@
             <div class="form-group">
               <textarea class="form-control" rows="10" placeholder="Add task description" style="padding-bottom: 10px;"></textarea>
             </div>
-           
+          </div>
+            <div class="modal-footer">
                <button type="submit" class="btn btn-primary">Submit & Release</button>
                <button type="submit" class="btn btn-success">Submit Only (not release)</button>
-               <button type="submit" class="btn btn-danger">Cancel</button>
-      
+               <button type="submit" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            </div>
               </form>
 
 
@@ -262,6 +264,7 @@
             <hr>
 
             <form role="form" class="taskModal">
+                   <div class="taskForm">
               <div class="form-group">
              
               <input id="taskName" type="text" class="form-control" placeholder="Task name">
@@ -273,11 +276,12 @@
             <div class="form-group">
               <textarea class="form-control" rows="10" placeholder="Add task description" style="padding-bottom: 10px;"></textarea>
             </div>
-           
+          </div>
+            <div class="modal-footer">
                <button type="submit" class="btn btn-primary">Update & Release</button>
                <button type="submit" class="btn btn-success">Update Only (not release)</button>
-               <button type="submit" class="btn btn-danger">Cancel</button>
-      
+               <button type="submit" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            </div>
               </form> 
 
 
@@ -298,15 +302,17 @@
             <hr>
 
             <form role="form" class="taskModal">
+              <div class="taskForm">
               <div class="form-group">
                   <button id="taskFile" type="button" class="btn btn-info">Download File</button>
               </div>
             <div class="form-group">
               <textarea readonly id ="completedTaskDetailTextArea" class="form-control" rows="10" placeholder="Add task description" style="padding-bottom: 10px;"></textarea>
             </div>
-           
-               <button type="submit" class="btn btn-primary">Back</button>
-               
+          </div>
+            <div class="modal-footer">
+               <button type="submit" class="btn btn-primary" data-dismiss="modal">Back</button>
+               </div>
       
               </form> 
 
