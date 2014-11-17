@@ -20,6 +20,7 @@
     	<!-- Push & slide css -->
     	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/default.css" />
     	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/component.css" />
+      <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/frontpage.css" />
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -46,19 +47,21 @@
             <?php echo form_open("auth/login");?>
             <div class="form-group">
             <a for="user">User</a>
-            <input type="text" name="identity" value="" id="identity">
+            <input class="login-margin" type="text" name="identity" value="" id="identity">
             <a for="password">Password</a>
-            <input type="password" name="password" value="" id="password">
+            <input class="login-margin" type="password" name="password" value="" id="password">
+            <div class="login-margin">
             <div class="checkbox">
-            <label> <input type="checkbox" name="remember" value="1" id="remember"> Remember me</label>
+            <label> <input type="checkbox" name="remember" value="1" id="remember"><font style="color: white;"> Remember me</font></label>
+            </div>
             </div>
             </div>
 
 			<!-- <button type="button" class="btn btn-primary maxwidth">Sign in</button> -->
-            <input type="submit" class="btn btn-primary maxwidth" name="submit" value="Login">
+            <input type="submit" class="btn btn-primary maxwidth login-margin" name="submit" value="Login">
             <?php echo form_close();?>
-            <button type="button" class="btn btn-warning maxwidth">Forgot Password ?</button>
-            <button type="button" class="btn btn-success maxwidth">New Account</button>
+            <button type="button" class="btn btn-warning maxwidth login-margin">Forgot Password ?</button>
+            <button type="button" class="btn btn-success maxwidth login-margin">New Account</button>
 
         </nav>
 
@@ -72,7 +75,7 @@
               <div class="row">
                 <div class="col-md-1 text-right navicon">
                   <a id="nav-toggle"  class="nav_slide_button" href="#"><span></span></a>
-                </div>
+                </div
               </div>
               <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center inner">

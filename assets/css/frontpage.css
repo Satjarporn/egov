@@ -27,9 +27,9 @@
 }
 
 .maxwidth{
-	width: 100%;
+	width: 80%;
 }
 
-.signout-btn{
-	margin-top: -20px;
+.login-margin{
+	margin: 5%;
 }
