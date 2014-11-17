@@ -1,150 +1,205 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<title>E-Goverment Working Area</title>
-		<meta name="description" content="Working Area" />
-		<meta name="keywords" content="sliding menu, pushing menu, navigation, responsive, menu, css, jquery" />
-		<meta name="author" content="Codrops" />
-		
+<?php
+
+/*
+ *---------------------------------------------------------------
+ * APPLICATION ENVIRONMENT
+ *---------------------------------------------------------------
+ *
+ * You can load different configurations depending on your
+ * current environment. Setting the environment also influences
+ * things like logging and error reporting.
+ *
+ * This can be set to anything, but default usage is:
+ *
+ *     development
+ *     testing
+ *     production
+ *
+ * NOTE: If you change these, also change the error_reporting() code below
+ *
+ */
+	define('ENVIRONMENT', 'development');
+/*
+ *---------------------------------------------------------------
+ * ERROR REPORTING
+ *---------------------------------------------------------------
+ *
+ * Different environments will require different levels of error reporting.
+ * By default development will show errors but testing and live will hide them.
+ */
+
+if (defined('ENVIRONMENT'))
+{
+	switch (ENVIRONMENT)
+	{
+		case 'development':
+			error_reporting(E_ALL);
+		break;
+	
+		case 'testing':
+		case 'production':
+			error_reporting(0);
+		break;
+
+		default:
+			exit('The application environment is not set correctly.');
+	}
+}
+
+/*
+ *---------------------------------------------------------------
+ * SYSTEM FOLDER NAME
+ *---------------------------------------------------------------
+ *
+ * This variable must contain the name of your "system" folder.
+ * Include the path if the folder is not in the same  directory
+ * as this file.
+ *
+ */
+	$system_path = 'system';
+
+/*
+ *---------------------------------------------------------------
+ * APPLICATION FOLDER NAME
+ *---------------------------------------------------------------
+ *
+ * If you want this front controller to use a different "application"
+ * folder then the default one you can set its name here. The folder
+ * can also be renamed or relocated anywhere on your server.  If
+ * you do, use a full server path. For more info please see the user guide:
+ * http://codeigniter.com/user_guide/general/managing_apps.html
+ *
+ * NO TRAILING SLASH!
+ *
+ */
+	$application_folder = 'application';
+
+/*
+ * --------------------------------------------------------------------
+ * DEFAULT CONTROLLER
+ * --------------------------------------------------------------------
+ *
+ * Normally you will set your default controller in the routes.php file.
+ * You can, however, force a custom routing by hard-coding a
+ * specific controller class/function here.  For most applications, you
+ * WILL NOT set your routing here, but it's an option for those
+ * special instances where you might want to override the standard
+ * routing in a specific front controller that shares a common CI installation.
+ *
+ * IMPORTANT:  If you set the routing here, NO OTHER controller will be
+ * callable. In essence, this preference limits your application to ONE
+ * specific controller.  Leave the function name blank if you need
+ * to call functions dynamically via the URI.
+ *
+ * Un-comment the $routing array below to use this feature
+ *
+ */
+	// The directory name, relative to the "controllers" folder.  Leave blank
+	// if your controller is not in a sub-folder within the "controllers" folder
+	// $routing['directory'] = '';
+
+	// The controller class file name.  Example:  Mycontroller
+	// $routing['controller'] = '';
+
+	// The controller function you wish to be called.
+	// $routing['function']	= '';
 
 
-		<!-- frontpage css -->
-		<link href="assets/css/frontpage.css" rel="stylesheet">
-
-		<!-- Bootstrap -->
-		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
-		<link href="assets/css/bootstrap-theme.min.css" rel="stylesheet">
-
-
-		<!-- Push & slide css -->
-		<link rel="stylesheet" type="text/css" href="assets/css/default.css" />
-		<link rel="stylesheet" type="text/css" href="assets/css/component.css" />
-		<script src="assets/js/modernizr.custom.js"></script>
-	</head>
-
-	<body class="cbp-spmenu-push">
-		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
-			<h3>Menu</h3>
-			<a href="#">Home</a>
-			<a href="#">Wiki</a>
-			<a href="#">Forum</a>
-			<a href="#">Links</a>
-			<a href="#">About</a>
-			<a href="#">FAQ</a>
-		</nav>
-
-		<div class="container">
-			<header class="clearfix">
-				<span>E-Government</span>
-				<h1>Working Area</h1>
-				<nav>
-                    <div class="dropdown">
-					
-					<button class="noborder" id="showLeftPush" class="icon-drop" data-info="Menu"><span class="glyphicon glyphicon-align-justify bigfont" aria-hidden="true"></span></button>
-					<button class="noborder" id="showLeftPush" data-info="Login" data-toggle="dropdown"><span class="glyphicon glyphicon-user bigfont" aria-hidden="true"></span></button>
-                        <ul  class="dropdown-menu" style="padding: 10px; background: #ddd; width: 200px;">
-                        <form action="" role="form">
-                        <div class="form-group">
-                        <label for="user">User</label>
-                        <input type="text" class="form-control" id="user" placeholder="User" />
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Password" />
-                        <div class="checkbox">
-  						  <label> <input type="checkbox"> Remember me</label>
-  						</div>
-                        </div>
-                        <button type="button" class="btn btn-primary maxwidth">Sign in</button>
-                        <button type="button" class="btn btn-warning maxwidth">Forgot Password ?</button>
-                        <button type="button" class="btn btn-success maxwidth">New Account</button>
-
-                        </form>
-                        </ul>
-                   
-                    </div>
-				</nav>
-			</header>
-		</div>
-
-
-                <div id="cbp-fbscroller" class="cbp-fbscroller">
-
-<!--    Pointer for describe current page 
-				<nav>
-					<a href="#fbsection1" class="cbp-fbcurrent">Section 1</a>
-					<a href="#fbsection2">Section 2</a>
-					<a href="#fbsection3">Section 3</a>
-					<a href="#fbsection4">Section 4</a>
-					<a href="#fbsection5">Section 5</a>
-				</nav>
--->
-
-				<section id="fbsection5">
-					
-					<div class="container text-center">E-Government
-
-					<div class="container minibox"></div>
-
-					<div class="row"> 
-					<div class="col-md-6 bigbutton text-center">WiKi</div>
-					<div class="col-md-6 bigbutton text-center">Web Forum</div>
-					</div>
-					
-
-				</div>
-				</section>
-
-			<section id="fbsection5"></section>
-			</div>
-
-		
-
-		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
-		<script src="assets/js/classie.js"></script>
-		<script>
-			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
-				showLeftPush = document.getElementById( 'showLeftPush' ),
-				body = document.body;
-			
-			showLeftPush.onclick = function() {
-				classie.toggle( this, 'active' );
-				classie.toggle( body, 'cbp-spmenu-push-toright' );
-				classie.toggle( menuLeft, 'cbp-spmenu-open' );
-				disableOther( 'showLeftPush' );
-			};
-			
-
-			function disableOther( button ) {
-				if( button !== 'showLeft' ) {
-					classie.toggle( showLeft, 'disabled' );
-				}
-				if( button !== 'showLeftPush' ) {
-					classie.toggle( showLeftPush, 'disabled' );
-				}
-			}
-		</script>
+/*
+ * -------------------------------------------------------------------
+ *  CUSTOM CONFIG VALUES
+ * -------------------------------------------------------------------
+ *
+ * The $assign_to_config array below will be passed dynamically to the
+ * config class when initialized. This allows you to set custom config
+ * items or override any default config values found in the config.php file.
+ * This can be handy as it permits you to share one application between
+ * multiple front controller files, with each file containing different
+ * config values.
+ *
+ * Un-comment the $assign_to_config array below to use this feature
+ *
+ */
+	// $assign_to_config['name_of_config_item'] = 'value of config item';
 
 
 
-		<!-- Bootstrap -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
+// --------------------------------------------------------------------
+// END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
+// --------------------------------------------------------------------
 
-        
+/*
+ * ---------------------------------------------------------------
+ *  Resolve the system path for increased reliability
+ * ---------------------------------------------------------------
+ */
 
-		<!-- jquery.easing by http://gsgd.co.uk/ : http://gsgd.co.uk/sandbox/jquery/easing/ -->
-		<script src="assets/js/jquery.easing.min.js"></script>
-		<!-- waypoints jQuery plugin by http://imakewebthings.com/ : http://imakewebthings.com/jquery-waypoints/ -->
-		<script src="assets/js/waypoints.min.js"></script>
-		<!-- jquery-smartresize by @louis_remi : https://github.com/louisremi/jquery-smartresize -->
-		<script src="assets/js/jquery.debouncedresize.js"></script>
-		<script src="assets/js/cbpFixedScrollLayout.js"></script>
-		<script>
-			$(function() {
-				cbpFixedScrollLayout.init();
-			});
-		</script>
-	</body>
-</html>
+	// Set the current directory correctly for CLI requests
+	if (defined('STDIN'))
+	{
+		chdir(dirname(__FILE__));
+	}
+
+	if (realpath($system_path) !== FALSE)
+	{
+		$system_path = realpath($system_path).'/';
+	}
+
+	// ensure there's a trailing slash
+	$system_path = rtrim($system_path, '/').'/';
+
+	// Is the system path correct?
+	if ( ! is_dir($system_path))
+	{
+		exit("Your system folder path does not appear to be set correctly. Please open the following file and correct this: ".pathinfo(__FILE__, PATHINFO_BASENAME));
+	}
+
+/*
+ * -------------------------------------------------------------------
+ *  Now that we know the path, set the main path constants
+ * -------------------------------------------------------------------
+ */
+	// The name of THIS file
+	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
+
+	// The PHP file extension
+	// this global constant is deprecated.
+	define('EXT', '.php');
+
+	// Path to the system folder
+	define('BASEPATH', str_replace("\\", "/", $system_path));
+
+	// Path to the front controller (this file)
+	define('FCPATH', str_replace(SELF, '', __FILE__));
+
+	// Name of the "system folder"
+	define('SYSDIR', trim(strrchr(trim(BASEPATH, '/'), '/'), '/'));
+
+
+	// The path to the "application" folder
+	if (is_dir($application_folder))
+	{
+		define('APPPATH', $application_folder.'/');
+	}
+	else
+	{
+		if ( ! is_dir(BASEPATH.$application_folder.'/'))
+		{
+			exit("Your application folder path does not appear to be set correctly. Please open the following file and correct this: ".SELF);
+		}
+
+		define('APPPATH', BASEPATH.$application_folder.'/');
+	}
+
+/*
+ * --------------------------------------------------------------------
+ * LOAD THE BOOTSTRAP FILE
+ * --------------------------------------------------------------------
+ *
+ * And away we go...
+ *
+ */
+require_once BASEPATH.'core/CodeIgniter.php';
+
+/* End of file index.php */
+/* Location: ./index.php */
