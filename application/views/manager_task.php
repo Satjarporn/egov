@@ -191,7 +191,7 @@
                     Release Date: dd/mm/yy time
                     <br>Last Update: dd/mm/yy time
                     </p>
-                <button type="button" class="btn btn-default">See Detail</button>
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#completedTaskDetail">See Detail</button>
               </div>
               </div>
             </div> <!-- task 2 -->
@@ -253,6 +253,8 @@
 
            </div> <!-- all task -->
 
+
+           <!-- update task -->
             <div id="updateTask" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
            <div class="modal-dialog modal-lg">
            <div class="modal-content">
@@ -272,19 +274,48 @@
               <textarea class="form-control" rows="10" placeholder="Add task description" style="padding-bottom: 10px;"></textarea>
             </div>
            
-               <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#updateTask">Update & Release</button>
+               <button type="submit" class="btn btn-primary">Update & Release</button>
                <button type="submit" class="btn btn-success">Update Only (not release)</button>
                <button type="submit" class="btn btn-danger">Cancel</button>
       
-              </form>
+              </form> 
 
 
            
             
            </div> <!-- modal content -->
            </div>
-          </div> <!-- create task-->
+          </div>  <!-- update task -->
 
+
+
+
+          <!-- see completed task detail -->
+            <div id="completedTaskDetail" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+           <div class="modal-dialog modal-lg">
+           <div class="modal-content">
+            <h1 class="headerNewTask">Task Name</h1>
+            <hr>
+
+            <form role="form" class="taskModal">
+              <div class="form-group">
+                  <button id="taskFile" type="button" class="btn btn-info">Download File</button>
+              </div>
+            <div class="form-group">
+              <textarea readonly id ="completedTaskDetailTextArea" class="form-control" rows="10" placeholder="Add task description" style="padding-bottom: 10px;"></textarea>
+            </div>
+           
+               <button type="submit" class="btn btn-primary">Back</button>
+               
+      
+              </form> 
+
+
+           
+            
+           </div> <!-- modal content -->
+           </div>
+          </div><!-- see completed task detail -->
 
 
 
