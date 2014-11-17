@@ -51,7 +51,7 @@
 
         
 
-         <section class="swag text-center">
+<section class="swag text-center">
           <div class="container">
             <div class="row">
 
@@ -65,9 +65,9 @@
                   </div>
                 </div>
 
-
+              
               <div class="col-md-8 col-md-offset-2">
-                <h1>Task List<span>Add, Edit, Update and Delete your task here</span></h1>
+                <h1>Working is easy<span>Let's do it together</span></h1>
                 <a href="#features" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
               </div>
             </div>
@@ -79,10 +79,45 @@
 
         <!--task container-->
 
-        <div class="taskarea">
+        <div class="col-md-12 taskarea">
+          <div class="row taskmenugroup">
+           <a href="#"><div class="col-md-1 taskmenu"><span class="glyphicon glyphicon glyphicon-plus taskmenufont" aria-hidden="true"></span></div></a>
+             </div>
+
+             <div class="col-md-12 tasklist taskfont">
+              <div class="col-md-10">task name</div>
+              
+              <div class="col-md-2 taskdelete">delete task</div>
+             </div>
+
+
+             <div class="col-md-12 tasklist taskfont">
+              <div class="col-md-10">task name</div>
+              
+              <div class="col-md-2 taskdelete">delete task</div>
+             </div>
+
+             
+             <div class="col-md-12 tasklist taskfont">
+              <div class="col-md-10">task name</div>
+              
+              <div class="col-md-2 taskdelete">delete task</div>
+             </div>
+
+
+
+
+              <!-- if no task show this
+
+           <div class="container">
 
          <font class="taskfont"><i>Oops! No Task
           <br>Add new task <a href="#">here</a></i></font>
+        </div> -->
+
+
+
+
 
       </div>
 

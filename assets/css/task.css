@@ -1,13 +1,48 @@
 .taskarea{
-	background: #A4A4A4;
+	background: #D8D8D8;
 	text-align: center;
 	padding-top: 40px;
 	padding-bottom: 40px;
+	padding-left: 10%;
+	padding-right: 10%;
 
 }
 
-.taskfont{
-	color: #424242;
-	font-size: 50px;
 
+.taskmenu{
+	float: right;
+}
+
+.taskmenufont{
+	font-size: 50px;
+	color: #424242;
+}
+
+.taskmenugroup{
+	padding-bottom: 25px;
+}
+
+.taskfont{
+	color:#424242;
+	font-size: 20px;
+}
+
+.taskdelete {
+    border-left: 2px dotted #A4A4A4;
+}
+
+div a .taskmenufont:hover{
+	color: white;
+}
+
+.tasklist{
+	margin-top: 5px;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #A4A4A4;
+    padding: 10px;
+}
+
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after{
+	background: white;
 }
