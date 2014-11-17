@@ -79,11 +79,62 @@
 
         <!--task container-->
 
-        <div class="col-md-12 taskarea" id="tarea">
-          <div class="row taskmenugroup">
-           <a href="#"><div class="col-md-1 taskmenu"><span class="glyphicon glyphicon glyphicon-plus taskmenufont" aria-hidden="true"></span></div></a>
-             </div>
+
+
+        <div class="col-md-12 taskarea" id="tarea"> 
+
+          <!-- task menu -->
+          <div class="taskmenu">
            
+             <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-default active">
+              <input type="checkbox" autocomplete="off" checked> ALL TASK
+            </label>
+            <label class="btn btn-primary">
+              <input type="checkbox" autocomplete="off"> New task
+            </label>
+            <label class="btn btn-success">
+              <input type="checkbox" autocomplete="off"> Success task
+            </label>
+            <label class="btn btn-warning">
+              <input type="checkbox" autocomplete="off"> Warning task
+            </label>
+          </div>
+          <!-- create task-->
+          <button class="btn btn-primary taskmenu-createtask" data-toggle="modal" data-target="#createNewTask"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create Task</button>
+          <div id="createNewTask" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+           <div class="modal-dialog modal-lg">
+           <div class="modal-content">
+            <h4 class="headerNewTask">Create New Task</h4>
+            <hr>
+
+            <form role="form" class="taskModal">
+              <div class="form-group">
+             
+              <input id="taskName" type="text" class="form-control" placeholder="Task name">
+                </div>
+              <div class="form-group">
+                  <input type="file" id="taskFile">
+                  <p class="help-block">upload your task description file.</p>
+              </div>
+
+              <textarea class="form-control" rows="10" placeholder="Task description"></textarea>
+              <div class="checkbox">
+                 <label>
+                      <input type="checkbox"> Check me out
+                  </label>
+                </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+               <button type="submit" class="btn btn-danger">Cancel</button>
+              </form>
+           </div> <!-- modal content -->
+           </div>
+          </div> <!-- create task-->
+
+
+          </div> <!-- task menu -->
+           
+           <!-- task list -->
 
            <div class="panel-group" id="alltask">
             <div class="panel panel-default">
@@ -109,7 +160,31 @@
                 test
               </div>
               </div>
-            </div>
+            </div> <!-- task 2 -->
+            <div class="panel panel-info">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-target="#task3" data-parent="#alltask">task2</a>
+                </h4>
+              </div>
+              <div id="task3" class="panel-collapse collapse">
+                <div class="panel-body">
+                test
+              </div>
+              </div>
+            </div> <!-- task 3 -->
+            <div class="panel panel-warning">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-target="#task4" data-parent="#alltask">task2</a>
+                </h4>
+              </div>
+              <div id="task4" class="panel-collapse collapse">
+                <div class="panel-body">
+                test
+              </div>
+              </div>
+            </div> <!-- task 4 -->
 
 
 

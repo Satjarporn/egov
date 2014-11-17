@@ -7,8 +7,24 @@
 
 }
 
+.headerNewTask{
+	color: black;
+	padding: 20px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.taskModal{
+	padding: 20px;
+	font-size: 20px;
+	color: #424242;
+}
 
 .taskmenu{
+	padding-bottom: 10px;
+}
+
+.taskmenu-createtask{
 	float: right;
 }
 
