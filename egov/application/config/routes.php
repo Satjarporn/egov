@@ -40,9 +40,11 @@
 
 $route['default_controller'] = "main";
 //$route['profile'] = "main/profile";
+$route['task'] = "main/task";
 $route['auth']="auth";
 $route['wel']="welcome";
 $route['404_override'] = '';
+
 
 
 /* End of file routes.php */

@@ -25,6 +25,10 @@ class Main extends CI_Controller {
 	{
 		$this->load->view('profile');
 	}
+	public function task()
+	{
+		$this->load->view('task');
+	}
 }
 
 /* End of file welcome.php */
