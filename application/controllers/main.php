@@ -29,6 +29,10 @@ class Main extends CI_Controller {
 	{
 		$this->load->view('manager_task');
 	}
+	public function devtask()
+	{
+		$this->load->view('developer_task');
+	}
 }
 
 /* End of file welcome.php */
