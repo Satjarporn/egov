@@ -110,7 +110,26 @@
               <textarea class="form-control" rows="10" placeholder="Add task description" style="padding-bottom: 10px;"></textarea>
 
             </div>
+
+
             <div class="form-group">
+
+<div class="dropdown col-md-4" style="padding-left: 0px;">
+  <button class="btn btn-default dropdown-toggle" type="button" id="taskType" data-toggle="dropdown" aria-expanded="true" >
+    [Important] Choose task type...
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Type1</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Type2</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Type3</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Type4</a></li>
+  </ul>
+</div>
+
+
+
+
               <div class="btn-group" data-toggle="buttons">
   <label class="btn btn-default active">
     <input type="radio" name="options" id="option1" autocomplete="off" checked> Normal task
@@ -123,6 +142,8 @@
 
 
           </div>
+
+
             <div class="modal-footer">
                <button type="submit" class="btn btn-primary">Submit & Release</button>
                <button type="submit" class="btn btn-success">Submit Only (not release)</button>
@@ -289,6 +310,41 @@
             <div class="form-group">
               <textarea class="form-control" rows="10" placeholder="Add task description" style="padding-bottom: 10px;"></textarea>
             </div>
+
+
+            <div class="form-group">
+
+<div class="dropdown col-md-4" style="padding-left: 0px;">
+  <button class="btn btn-default dropdown-toggle" type="button" id="taskType" data-toggle="dropdown" aria-expanded="true" >
+    [Important] Choose task type...
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Type1</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Type2</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Type3</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Type4</a></li>
+  </ul>
+</div>
+
+
+
+
+              <div class="btn-group" data-toggle="buttons">
+  <label class="btn btn-default active">
+    <input type="radio" name="options" id="option1" autocomplete="off" checked> Normal task
+  </label>
+  <label class="btn btn-danger">
+    <input type="radio" name="options" id="option2" autocomplete="off" checked> Urgent task
+  </label>
+                </div>
+              </div>
+
+
+
+
+
+
           </div>
             <div class="modal-footer">
                <button type="submit" class="btn btn-primary">Update & Release</button>
