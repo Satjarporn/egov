@@ -27,7 +27,7 @@ class Main extends CI_Controller {
 	}
 	public function task()
 	{
-		$this->load->view('task');
+		$this->load->view('manager_task');
 	}
 }
 
