@@ -108,7 +108,20 @@
               </div>
             <div class="form-group">
               <textarea class="form-control" rows="10" placeholder="Add task description" style="padding-bottom: 10px;"></textarea>
+
             </div>
+            <div class="form-group">
+              <div class="btn-group" data-toggle="buttons">
+  <label class="btn btn-default active">
+    <input type="radio" name="options" id="option1" autocomplete="off" checked> Normal task
+  </label>
+  <label class="btn btn-danger">
+    <input type="radio" name="options" id="option2" autocomplete="off" checked> Urgent task
+  </label>
+                </div>
+              </div>
+
+
           </div>
             <div class="modal-footer">
                <button type="submit" class="btn btn-primary">Submit & Release</button>
@@ -121,7 +134,7 @@
            
             
            </div> <!-- modal content -->
-           </div>
+           </div> <!-- modal-dialog modal-lg -->
           </div> <!-- create task-->
 
           <!--filter-->
