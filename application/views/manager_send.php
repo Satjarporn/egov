@@ -124,12 +124,17 @@
                    <br>
                    <p class="taskContent">task content</p>
                    <hr>
+                   <p class="taskContent">Mentor: </p>
+                    <textarea readonly id="comment" class="form-control" rows="5" placeholder="Mentor's Comment" style="padding-bottom: 10px;"></textarea>
+          
+                   <hr>
                     <p class="taskUpdateInfo">
                     Last Update dd/mm/yy time
                     </p>
-                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updateTask">Update Task</button>
-                   <!--button type="button" class="btn btn-success">Complete Task</button-->
-                   <!--button type="button" class="btn btn-danger">Stop Releasing Task</button-->
+                   
+                   <button type="button" class="btn btn-success">Complete</button>
+                  
+                   <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#rejectBox">Reject</button>
                   
               </div>
               </div>
@@ -151,12 +156,15 @@
                    <br>
                    <p class="taskContent">task content</p>
                    <hr>
+                   <p class="taskContent">Mentor: </p>
+                    <textarea readonly id="comment" class="form-control" rows="5" placeholder="Mentor's Comment" style="padding-bottom: 10px;"></textarea>
+                    <hr>
                    <p class="taskUpdateInfo">
                     Last Update dd/mm/yy time
                     </p>
-                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updateTask">Update Task</button>
-                   <!--button type="button" class="btn btn-success">Complete Task</button-->
-                   <!--button type="button" class="btn btn-danger">Stop Releasing Task</button-->
+                   <button type="button" class="btn btn-success">Complete</button>
+                  
+                   <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#rejectBox">Reject</button>
                  
               </div>
               </div>
@@ -168,65 +176,27 @@
            </div> <!-- all task -->
 
 
-           <!-- update task -->
-            <div id="updateTask" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+           <!-- Reason box -->
+            <div id="rejectBox" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
            <div class="modal-dialog modal-lg">
            <div class="modal-content">
-            <h1 class="headerNewTask">Update Task</h1>
+            <h1 class="headerNewTask">Reject Reason</h1>
             <hr>
 
             <form role="form" class="taskModal">
+
+              
                    <div class="taskForm">
-              <div class="form-group">
-             
-              <input id="taskName" type="text" class="form-control" placeholder="Task name">
-                </div>
-              <div class="form-group">
-                  <button id="taskFile" type="button" class="btn btn-info">Download File</button> or <input type="file" style="display: inline-flex;" id="taskFile">
-                  <p class="help-block">upload your task description file.</p>
-              </div>
+              
+             <p class="taskContent">Task Creator : 
+                 </p>
             <div class="form-group">
-              <textarea class="form-control" rows="10" placeholder="Add task description" style="padding-bottom: 10px;"></textarea>
+              <textarea id="rejectReason" class="form-control" rows="10" placeholder="Add task description" style="padding-bottom: 10px;"></textarea>
             </div>
-
-
-            <div class="form-group">
-
-<div class="dropdown col-md-4" style="padding-left: 0px;">
-  <button class="btn btn-default dropdown-toggle" type="button" id="taskType" data-toggle="dropdown" aria-expanded="true" >
-    [Important] Choose task type...
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Type1</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Type2</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Type3</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Type4</a></li>
-  </ul>
-</div>
-
-
-
-
-              <div class="btn-group" data-toggle="buttons">
-  <label class="btn btn-default active">
-    <input type="radio" name="options" id="option1" autocomplete="off" checked> Normal task
-  </label>
-  <label class="btn btn-danger">
-    <input type="radio" name="options" id="option2" autocomplete="off" checked> Urgent task
-  </label>
-                </div>
-              </div>
-
-
-
-
-
 
           </div>
             <div class="modal-footer">
-               <button type="submit" class="btn btn-primary">Update & Release</button>
-               <button type="submit" class="btn btn-success">Update Only (not release)</button>
+               <button type="submit" class="btn btn-primary">Send</button>
                <button type="submit" class="btn btn-danger" data-dismiss="modal">Cancel</button>
             </div>
               </form> 
@@ -240,35 +210,6 @@
 
 
 
-
-          <!-- see completed task detail -->
-            <div id="completedTaskDetail" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-           <div class="modal-dialog modal-lg">
-           <div class="modal-content">
-            <h1 class="headerNewTask">Task Name</h1>
-            <hr>
-
-            <form role="form" class="taskModal">
-              <div class="taskForm">
-              <div class="form-group">
-                  <button id="taskFile" type="button" class="btn btn-info">Download File</button>
-              </div>
-            <div class="form-group">
-              <textarea readonly id ="completedTaskDetailTextArea" class="form-control" rows="10" placeholder="Add task description" style="padding-bottom: 10px;"></textarea>
-            </div>
-          </div>
-            <div class="modal-footer">
-               <button type="submit" class="btn btn-primary" data-dismiss="modal">Back</button>
-               </div>
-      
-              </form> 
-
-
-           
-            
-           </div> <!-- modal content -->
-           </div>
-          </div><!-- see completed task detail -->
 
 
 
