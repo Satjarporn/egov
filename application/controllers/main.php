@@ -21,7 +21,7 @@ class Main extends CI_Controller {
 	{
 		$this->load->view('home');
 	}
-	public function profile()
+	public function homepage()
 	{
 		if ($this->ion_auth->logged_in())
 		{
@@ -29,7 +29,7 @@ class Main extends CI_Controller {
 			//save username to be data
 			$data['username'] = $user->username;
 			//open home page
-			$this->load->view('profile',$data);
+			$this->load->view('general_manager_hp',$data);
 		} else{
 		 	redirect('', 'refresh');
 		}
