@@ -78,7 +78,7 @@
                 </div
               </div>
               <div class="row">
-                <div class="col-md-8 col-md-offset-2 text-center inner">
+                <div class="col-md-8 col-md-offset-1 text-center inner">
                   <h1 class="animated fadeInDown">E-Government<span>Working Area</span></h1>
                   <p class="animated fadeInUp delay-05s">A community for <em>working</em> together</p>
                 </div>
@@ -86,6 +86,7 @@
               <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center">
                   <a href="#" id="showRightPush" class="learn-more-btn">Log in</a>
+                  <a href="#" id="register" class="learn-more-btn" style="background: #4cae4c; box-shadow: 0px 3px 0px 0px #367436;">New Account</a>
                 </div>
               </div>
             </div>
