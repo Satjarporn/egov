@@ -33,7 +33,7 @@
 	<body id="top" class="cbp-spmenu-push">
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
         <h3>Menu</h3>
-        <a href="#">Home</a>
+        <?php echo anchor('', 'Home') ?>
         <a href="#">Wiki</a>
         <a href="#">Forum</a>
         <a href="#">Links</a>
