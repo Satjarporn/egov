@@ -86,12 +86,19 @@
               <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center">
                   <a href="#" id="showRightPush" class="learn-more-btn">Log in</a>
-                  <a href="#" id="register" class="learn-more-btn" style="background: #4cae4c; box-shadow: 0px 3px 0px 0px #367436;">New Account</a>
+                  <br><br><?php echo anchor('register','New Account')?>
+                  
                 </div>
               </div>
             </div>
           </section>
+
+
+               
+
         </header>
+
+           
         
 
          <section class="swag text-center">
@@ -349,6 +356,7 @@
             </div>
           </div>
         </footer>
+
 
 		
 

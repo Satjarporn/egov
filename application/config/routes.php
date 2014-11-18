@@ -43,8 +43,10 @@ $route['task'] = "main/task";
 $route['devtask'] = "main/devtask";
 $route['send'] = "main/send";
 $route['progress'] = "main/progress";
+$route['register']="main/register";
 $route['auth']="auth";
 $route['wel']="welcome";
+
 $route['404_override'] = '';
 
 

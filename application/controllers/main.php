@@ -21,6 +21,10 @@ class Main extends CI_Controller {
 	{
 		$this->load->view('home');
 	}
+	public function register()
+	{
+		$this->load->view('register');
+	}
 	public function homepage()
 	{
 		if ($this->ion_auth->logged_in())

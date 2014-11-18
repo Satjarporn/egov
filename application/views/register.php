@@ -67,7 +67,7 @@
 
               
               <div class="col-md-8 col-md-offset-2">
-                <h1>Workspace<span>Your Working Area<br>add, edit, delete tasks here</span></h1>
+                <h1>New Account</h1>
                 <a href="#tarea" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
               </div>
             </div>
@@ -76,193 +76,73 @@
 
 
 
-
-        <!--task container-->
-
-
-
-        <div class="col-md-12 taskarea" id="tarea"> 
-
-          <!-- task menu -->
-          <div class="taskmenu">
-
-
-
-          <!--filter-->
-           <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-default active">
-              <input type="checkbox" autocomplete="off" checked> ALL TASK
-            </label>
-            <label class="btn btn-primary">
-              <input type="checkbox" autocomplete="off"> New & Updated task
-            </label>
-            <label class="btn btn-success">
-              <input type="checkbox" autocomplete="off"> Completed task
-            </label>
-            <label class="btn btn-danger">
-              <input type="checkbox" autocomplete="off"> Unreleased task
-            </label>
-
-          </div><!--filter-->
-
-
-          </div> <!-- task menu -->
            
            <!-- task list -->
 
-           <div class="panel-group" id="alltask">
+          
+            <div class="container">
 
+<div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+    <form role="form" style="text-align: center;">
+    <h1>Welcome, our new member!</h1>
+      <hr class="colorgraph">
 
+      <div class="row">
 
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="modal" data-target="#seeTask" data-parent="#alltask">task1</a>
-                  <a class="toRight">On Progress</a>
-                </h4>
-              </div>
-            </div> <!-- task1 -->
-
-
-
-          <div class="panel panel-success">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="modal" data-target="#seeTask" data-parent="#alltask">task2</a>
-                  <a class="toRight">Completed</a>
-                </h4>
-              </div>
-              
-            </div> <!-- task 2 -->
-
-
-            <div class="panel panel-info">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="modal" data-target="#seeTask" data-parent="#alltask">task3</a>
-                  <a class="toRight">New</a>
-                </h4>
-              </div>
-              
-            </div> <!-- task 3 -->
-
-
-
-            <div class="panel panel-danger">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="modal" data-target="#seeTask" data-parent="#alltask">task4</a>
-                  <a class="toRight">Stop Releasing</a>
-                </h4>
-              </div>
-              
-            </div> <!-- task 4 -->
-
-             <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="modal" data-target="#seeTask" data-parent="#alltask">task5</a>
-                  <a class="toRight">On Progress</a>
-                </h4>
-              </div>
-              
-            </div> <!-- task 5 -->
-
-
-
-           </div> <!-- all task -->
-
-
-           <!-- see task -->
-            <div id="seeTask" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-           <div class="modal-dialog modal-lg">
-           <div class="modal-content">
-            <h1 class="headerNewTask">Task Name</h1>
-            <hr>
-
-            <form role="form" class="taskModal">
-                   <div class="taskForm">
-              <div class="form-group">
-                  <p class="taskContent">Task Creator : 
-                    <br>Release Date : dd/mm/yy time</p>
-                  <button id="taskFile" type="button" class="btn btn-info">Download File</button>
-              
-              </div>
-            <div class="form-group">
-              <textarea readonly class="form-control" rows="10" placeholder="Add task description" style="padding-bottom: 10px;"></textarea>
-            </div>
-
-
-            <div class="form-group">
-
-
-
-
-
-
-                <button type="submit" class="btn btn-danger" data-dismiss="modal" disabled>Urgent Task</button>
-
-    
-
-              </div>
-              <hr>
-                   <p class="taskContent">Mentor : </p>
-                    <textarea readonly id="comment" class="form-control" rows="5" placeholder="Mentor's Comment" style="padding-bottom: 10px;"></textarea>  
-                   
-
-
-
-
-
-
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+                        <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" tabindex="1">
           </div>
-            <div class="modal-footer">
-             
-               <button type="submit" class="btn btn-danger" data-dismiss="modal">Close</button>
-            </div>
-              </form> 
-
-
-           
-            
-           </div> <!-- modal content -->
-           </div>
-          </div>  <!-- see task -->
-
-
-
-
-          <!-- see completed task detail -->
-            <div id="completedTaskDetail" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-           <div class="modal-dialog modal-lg">
-           <div class="modal-content">
-            <h1 class="headerNewTask">Task Name</h1>
-            <hr>
-
-            <form role="form" class="taskModal">
-              <p class="taskContent">Task Creator : 
-                    <br>Release Date : dd/mm/yy time</p>
-              <div class="taskForm">
-
-              <div class="form-group">
-                  <button id="taskFile" type="button" class="btn btn-info">Download File</button>
-              </div>
-            <div class="form-group">
-              <textarea readonly id ="completedTaskDetailTextArea" class="form-control" rows="10" placeholder="Add task description" style="padding-bottom: 10px;"></textarea>
-            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+            <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name" tabindex="2">
           </div>
-            <div class="modal-footer">
-               <button type="submit" class="btn btn-primary" data-dismiss="modal">Back</button>
-               </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="text" name="userName" id="userName" class="form-control input-lg" placeholder="Username" tabindex="3">
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+            <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+            <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="6">
+          </div>
+        </div>
+      </div>
       
-              </form> 
+      
+      <hr>
+      <div class="row" style="padding-bottom: 10px;">
+        <div class="col-xs-12 col-md-12"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+      
+      </div>
+      <div class="row" style="padding-bottom: 20px;">
+        <div class="col-xs-12 col-md-12"><?php echo anchor('', '<div class="btn btn-default btn-block btn-lg" tabindex="7">Home</div>') ?> </div>
+      
+      </div>
+    </form>
+  </div>
+</div>
+</div>
 
 
-           
-            
-           </div> <!-- modal content -->
-           </div>
-          </div><!-- see completed task detail -->
+
+
+
+         
+
+
+
 
 
 
@@ -311,6 +191,7 @@
         	<!-- Include all compiled plugins (below), or include individual files as needed -->
 
         	<script src="<?php echo base_url(); ?>assets/js/waypoints.min.js"></script>
+          <script src="<?php echo base_url(); ?>assets/js/register.js"></script>
         	<script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
         	<script src="<?php echo base_url(); ?>assets/js/scripts.js"></script>
         	<script src="<?php echo base_url(); ?>assets/js/jquery.flexslider.js"></script>
