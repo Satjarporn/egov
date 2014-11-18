@@ -65,6 +65,21 @@ class Main extends CI_Controller {
 		// $this->load->view('manager_task');
 	}
 
+	public function progress()
+	{
+		if ($this->ion_auth->logged_in())
+		{
+			$user = $this->ion_auth->user()->row();
+			//save username to be data
+			$data['username'] = $user->username;
+			//open home page
+			$this->load->view('manager_progress',$data);
+		} else{
+		 	redirect('', 'refresh');
+		}
+		// $this->load->view('manager_task');
+	}
+
 
 	public function devtask()
 	{
