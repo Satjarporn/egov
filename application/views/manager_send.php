@@ -124,7 +124,7 @@
                    <br>
                    <p class="taskContent">task content</p>
                    <hr>
-                   <p class="taskContent">Mentor: </p>
+                   <p class="taskContent">Mentor : </p>
                     <textarea readonly id="comment" class="form-control" rows="5" placeholder="Mentor's Comment" style="padding-bottom: 10px;"></textarea>
           
                    <hr>
@@ -156,7 +156,7 @@
                    <br>
                    <p class="taskContent">task content</p>
                    <hr>
-                   <p class="taskContent">Mentor: </p>
+                   <p class="taskContent">Mentor : </p>
                     <textarea readonly id="comment" class="form-control" rows="5" placeholder="Mentor's Comment" style="padding-bottom: 10px;"></textarea>
                     <hr>
                    <p class="taskUpdateInfo">
