@@ -107,7 +107,7 @@
                     <div class="icon">
                       <i class=" fa fa-cloud-upload shadow"></i>
                     </div>
-                    <h2><a href="#">Send</a></h2>
+                    <h2><?php echo anchor('send','new update task')?></h2>
                     <p>Uploading work to us just a click.</p>
                   </div>
                   <div class="col-md-4 wp2 delay-1s">

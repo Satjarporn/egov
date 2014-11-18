@@ -68,7 +68,7 @@
 
               
               <div class="col-md-8 col-md-offset-2">
-                <h1>Complete or Reject<span>Complete or Reject the tasks you created here<br></span></h1>
+                <h1>check out<br>new updated task<span>Complete or Reject the tasks you created here<br></span></h1>
                 <a href="#tarea" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
               </div>
             </div>
