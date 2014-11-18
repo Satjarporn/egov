@@ -225,6 +225,7 @@
             </div>
           </div>
             <div class="modal-footer">
+              <button type="submit" class="btn btn-success">Join task</button>
                <button type="submit" class="btn btn-primary">Send your work</button>
                <button type="submit" class="btn btn-danger" data-dismiss="modal">Cancel</button>
             </div>
