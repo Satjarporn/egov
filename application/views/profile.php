@@ -16,6 +16,7 @@
     <!-- Push & slide css -->
     <link rel="stylesheet" type="text/css" href="../assets/css/default.css" />
     <link rel="stylesheet" type="text/css" href="../assets/css/component.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/authorLogin.css" />
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -99,7 +100,7 @@
                     <div class="icon">
                       <i class="fa fa-th-list shadow"></i>
                     </div>
-                    <h2><a href="#">Task</a></h2>
+                    <h2><?php echo anchor('task','task')?></h2>
                     <p>List for doing work, you can find the proper work from here.</p>
                   </div>
                   <div class="col-md-4 wp2 delay-05s">

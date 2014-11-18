@@ -41,6 +41,7 @@
 $route['default_controller'] = "main";
 $route['task'] = "main/task";
 $route['devtask'] = "main/devtask";
+$route['send'] = "main/send";
 $route['auth']="auth";
 $route['wel']="welcome";
 $route['404_override'] = '';
