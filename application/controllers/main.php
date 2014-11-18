@@ -23,15 +23,45 @@ class Main extends CI_Controller {
 	}
 	public function profile()
 	{
-		$this->load->view('profile');
+		if ($this->ion_auth->logged_in())
+		{
+			$user = $this->ion_auth->user()->row();
+			//save username to be data
+			$data['username'] = $user->username;
+			//open home page
+			$this->load->view('profile',$data);
+		} else{
+		 	redirect('', 'refresh');
+		}
+		// $this->load->view('profile');
 	}
 	public function task()
 	{
-		$this->load->view('manager_task');
+		if ($this->ion_auth->logged_in())
+		{
+			$user = $this->ion_auth->user()->row();
+			//save username to be data
+			$data['username'] = $user->username;
+			//open home page
+			$this->load->view('manager_task',$data);
+		} else{
+		 	redirect('', 'refresh');
+		}
+		// $this->load->view('manager_task');
 	}
 	public function devtask()
 	{
-		$this->load->view('developer_task');
+		if ($this->ion_auth->logged_in())
+		{
+			$user = $this->ion_auth->user()->row();
+			//save username to be data
+			$data['username'] = $user->username;
+			//open home page
+			$this->load->view('developer_task',$data);
+		} else{
+		 	redirect('', 'refresh');
+		}
+		// $this->load->view('developer_task');
 	}
 }
 
