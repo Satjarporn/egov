@@ -309,6 +309,8 @@
               <input id="taskName" type="text" class="form-control" placeholder="Task name">
                 </div>
               <div class="form-group">
+                  <p class="taskContent">Task Creator : 
+                    <br>Release Date : dd/mm/yy time</p>
                   <button id="taskFile" type="button" class="btn btn-info">Download File</button> or <input type="file" style="display: inline-flex;" id="taskFile">
                   <p class="help-block">upload your task description file.</p>
               </div>
@@ -376,7 +378,10 @@
             <hr>
 
             <form role="form" class="taskModal">
+              <p class="taskContent">Task Creator : 
+                    <br>Release Date : dd/mm/yy time</p>
               <div class="taskForm">
+
               <div class="form-group">
                   <button id="taskFile" type="button" class="btn btn-info">Download File</button>
               </div>

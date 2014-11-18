@@ -64,8 +64,8 @@
               </div>
               <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center inner">
-                  <h1 class="animated fadeInDown">E-Government<span>Working Area</span></h1>
-                  <p class="animated fadeInUp delay-05s">A community for <em>working</em> together</p>
+                  <h1 class="animated fadeInDown">Hello, again<span>General Manager</span></h1>
+                  <p class="animated fadeInUp delay-05s">Time for <em>working</em> and <em>having fun</em></p>
                 </div>
               </div>
               <div class="row">
@@ -101,21 +101,21 @@
                       <i class="fa fa-th-list shadow"></i>
                     </div>
                     <h2><?php echo anchor('task','task')?></h2>
-                    <p>List for doing work, you can find the proper work from here.</p>
+                    <p>Create, Update and Delete your task here</p>
                   </div>
                   <div class="col-md-4 wp2 delay-05s">
                     <div class="icon">
                       <i class=" fa fa-cloud-upload shadow"></i>
                     </div>
                     <h2><?php echo anchor('send','new update task')?></h2>
-                    <p>Uploading work to us just a click.</p>
+                    <p>Check out new updated task from developer</p>
                   </div>
                   <div class="col-md-4 wp2 delay-1s">
                     <div class="icon">
                       <i class="fa fa-check-square shadow"></i>
                     </div>
                     <h2><a href="#">Progress</a></h2>
-                    <p>How will you know that your work is done ,Click it!.</p>
+                    <p>See all task progress and status</p>
                   </div>
                   <div class="clearfix"></div>
                 </div>
