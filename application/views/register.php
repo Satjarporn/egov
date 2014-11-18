@@ -42,12 +42,7 @@
         </nav>
         
 
-       <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
-        <h3>Sign out</h3>  
-        <a href="#">View Profile</a>
-                       
-        <a href="http://localhost:8888/egov/index.php/auth/logout"><div class="btn btn-danger noborder maxwidth">Sign out</div></a>
-        </nav>
+
 
         
 
@@ -57,12 +52,6 @@
 
               <div class="col-md-1 text-right navicon">
                   <a id="nav-toggle"  class="nav_slide_button" href="#"><span></span></a>
-                </div>
-
-                <div class="col-md-12 text-right navicon">
-                  <div class="gear">
-                  <a id="showRightPush" class="fa fa-cog" href="#"><span></span></a>
-                  </div>
                 </div>
 
               

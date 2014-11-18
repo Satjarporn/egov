@@ -43,7 +43,8 @@
         
 
        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
-        <h3>Sign out</h3>  
+        <h3>Your Menu</h3>  
+          <?php echo anchor('homepage', 'Homepage') ?>
         <a href="#">View Profile</a>
                        
         <a href="http://localhost:8888/egov/index.php/auth/logout"><div class="btn btn-danger noborder maxwidth">Sign out</div></a>

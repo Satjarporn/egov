@@ -66,7 +66,7 @@ class Auth extends CI_Controller {
 				//redirect them back to the home page
 				$this->session->set_flashdata('message', $this->ion_auth->messages());
 				//redirect('/', 'refresh');
-				redirect('/auth', 'refresh');
+				redirect('homepage', 'refresh');
 			}
 			else
 			{

@@ -44,6 +44,7 @@ $route['devtask'] = "main/devtask";
 $route['send'] = "main/send";
 $route['progress'] = "main/progress";
 $route['register']="main/register";
+$route['homepage']='main/homepage';
 $route['auth']="auth";
 $route['wel']="welcome";
 
