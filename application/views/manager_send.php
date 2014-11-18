@@ -22,6 +22,7 @@
     	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/component.css" />
       <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/frontpage.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/task.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/manager_send.css" />
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -67,7 +68,7 @@
 
               
               <div class="col-md-8 col-md-offset-2">
-                <h1>Workspace<span>Your Working Area<br>add, edit, delete tasks here</span></h1>
+                <h1>Complete or Reject<span>Complete or Reject the tasks you created here<br></span></h1>
                 <a href="#tarea" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
               </div>
             </div>
@@ -112,7 +113,7 @@
               <div class="panel-heading">
                 <h4 class="panel-title">
                   <a data-toggle="collapse" data-target="#task1" data-parent="#alltask">task1</a>
-                  <a class="toRight">On Progress</a>
+                 
                 </h4>
               </div>
               <div id="task1" class="panel-collapse collapse">
@@ -138,7 +139,7 @@
             <div class="panel panel-info">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a data-toggle="collapse" data-target="#task3" data-parent="#alltask">task3</a>
+                  <a data-toggle="collapse" data-target="#task3" data-parent="#alltask">task2</a>
                   <a class="toRight">New</a>
                 </h4>
               </div>
