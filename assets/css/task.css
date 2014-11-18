@@ -73,6 +73,10 @@ div a .taskmenufont:hover{
 	font-size: 10px;
 }
 
+.nocomment{
+	color: #848484;
+	
+}
 
 #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after{
 	background: white;

@@ -199,6 +199,9 @@
                    <br>
                    <p class="taskContent">task content</p>
                    <hr>
+                   <p class="taskContent">Mentor : </p>
+                    <textarea readonly id="comment" class="form-control" rows="5" placeholder="Mentor's Comment" style="padding-bottom: 10px;"></textarea>  
+                   <hr>
                     <p class="taskUpdateInfo">
                     Last Update dd/mm/yy time
                     </p>
@@ -227,6 +230,9 @@
                    <br>
                    <p class="taskContent">task content</p>
                    <hr>
+                   <p class="taskContent">Mentor : </p>
+                    <textarea readonly id="comment" class="form-control" rows="5" placeholder="Mentor's Comment" style="padding-bottom: 10px;"></textarea>
+                   <hr>
                     <p class="taskUpdateInfo">
                     Last Update dd/mm/yy time
                     </p>
@@ -250,6 +256,10 @@
                  <button id="taskFile" type="button" class="btn btn-info">Download File</button>
                    <br>
                    <p class="taskContent">task content</p>
+                   <hr>
+                   <p class="taskContent">Mentor : </p>
+                    <textarea readonly id="comment" class="form-control" rows="5" placeholder="Mentor's Comment" style="padding-bottom: 10px;"></textarea>
+          
                    <hr>
                    <p class="taskUpdateInfo">
                     Last Update dd/mm/yy time
@@ -279,6 +289,10 @@
                    <br>
                    <p class="taskContent">task content</p>
                    <hr>
+                   <p class="taskContent">Mentor : </p>
+                    <textarea readonly id="comment" class="form-control" rows="5" placeholder="Mentor's Comment" style="padding-bottom: 10px;"></textarea>
+          
+                   <hr>
                     <p class="taskUpdateInfo">
                     Last Update dd/mm/yy time
                     </p>
@@ -289,6 +303,34 @@
               </div>
               </div>
             </div> <!-- task 4 -->
+
+             <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-target="#task5" data-parent="#alltask">task5</a>
+                  <a class="toRight">On Progress</a>
+                </h4>
+              </div>
+              <div id="task5" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <p class="taskContent">Task Creator : 
+                    <br>Release Date : dd/mm/yy time</p>
+                  <button id="taskFile" type="button" class="btn btn-info">Download File</button>
+                   <br>
+                   <p class="taskContent">task content</p>
+                   <hr>
+                   <p class="taskContent nocomment"><em>- No comment -</em></p>
+                  <hr>
+                    <p class="taskUpdateInfo">
+                    Last Update dd/mm/yy time
+                    </p>
+                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updateTask">Update Task</button>
+                   <!--button type="button" class="btn btn-success">Complete Task</button-->
+                   <!--button type="button" class="btn btn-danger">Stop Releasing Task</button-->
+                  
+              </div>
+              </div>
+            </div> <!-- task 5 -->
 
 
 
