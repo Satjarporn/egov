@@ -46,7 +46,7 @@
         
             <?php echo form_open("auth/login");?>
             <div class="form-group">
-            <a for="user">User</a>
+            <a for="user">e-mail</a>
             <input class="login-margin" type="text" name="identity" value="" id="identity">
             <a for="password">Password</a>
             <input class="login-margin" type="password" name="password" value="" id="password">
