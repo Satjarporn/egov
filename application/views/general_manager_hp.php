@@ -34,7 +34,7 @@
         <a href="#">Forum</a>
         <a href="#">Links</a>
         <a href="#">About</a>
-        <a href="#">FAQ</a>
+        <?php echo anchor('faq', 'FAQ') ?>
         </nav>
         
 

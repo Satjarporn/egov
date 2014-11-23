@@ -47,6 +47,8 @@ $route['register']="main/register";
 $route['homepage']='main/homepage';
 $route['auth']="auth";
 $route['wel']="welcome";
+$route['faq'] = "main/faq";
+
 
 $route['404_override'] = '';
 
