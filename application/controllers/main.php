@@ -17,9 +17,20 @@ class Main extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
+
 	public function index()
 	{
-		$this->load->view('home');
+		if ($this->ion_auth->logged_in())
+		{
+			$user = $this->ion_auth->user()->row();
+			//save username to be data
+			$data['username'] = $user->username;
+			//open home page
+			redirect('homepage', 'refresh');
+		} else{
+		 	$this->load->view('home');
+		}
+		//$this->load->view('home');
 	}
 	public function register()
 	{
