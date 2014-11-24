@@ -43,7 +43,6 @@
 
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
         <h3>Join</h3>
-        
             <?php echo form_open("auth/login");?>
             <div class="form-group">
             <a for="user">e-mail</a>
@@ -86,7 +85,7 @@
               <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center">
                   <a href="#" id="showRightPush" class="learn-more-btn">Log in</a>
-                  <br><br><?php echo anchor('register','New Account')?>
+                  <br><br><?php echo anchor('auth/create_user','New Account')?>
                   
                 </div>
               </div>
