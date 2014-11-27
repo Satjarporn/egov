@@ -43,10 +43,14 @@
         
 
        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+
         <h3>Your Menu</h3>  
+        <center>
+        <a href="#"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="140" height="140" class="img-circle"></a>
+        </center>
           <?php echo anchor('homepage', 'Homepage') ?>
-        <a href="#">View Profile</a>
-        <a href="#">Edit Profile</a>
+        <a href="#" data-toggle="modal" data-target="#myModal">View Profile</a>
+        <?php echo anchor('edit_profile', 'Edit Profile') ?>
   
         <a href="http://localhost:8888/egov/index.php/auth/logout"><div class="btn btn-danger noborder maxwidth">Sign out</div></a>
         </nav>
@@ -67,7 +71,7 @@
 
               
               <div class="col-md-8 col-md-offset-2">
-                <h1>Edit Profile<span><br>Let's make it easy...</span></h1>
+                <h1>Edit your Profile<span><br>Let's make it easy...</span></h1>
                 <a href="#edit" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
               </div>
             </div>
@@ -75,86 +79,86 @@
         </section>
 
 
-<section class="edit" id="edit">
+        <section class="edit" id="edit">
 
-<div class="container">
-    <hr>
-  <div class="row">
-      <!-- left column -->
-      <div class="col-md-3">
-        <div class="text-center">
-          <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
-          <h6>Upload a different photo...</h6>
-          
-          <input type="file" class="form-control">
-        </div>
-      </div>
-      
-      <!-- edit form column -->
-      <div class="col-md-9 personal-info">
-        <div class="alert alert-info alert-dismissable">
-          <a class="panel-close close" data-dismiss="alert">×</a> 
-          <i class="fa fa-coffee"></i>
-          Please type your information below.
-        </div>
-        <h3>Personal info</h3>
-        
-        <form class="form-horizontal" role="form">
-          <div class="form-group">
-            <label class="col-lg-3 control-label">First name:</label>
-            <div class="col-lg-8">
-              <input class="form-control" type="text" value="">
+          <div class="container">
+              <hr>
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-3">
+                  <div class="text-center">
+                    <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
+                    <h6>Upload a different photo...</h6>
+                    
+                    <input type="file" class="form-control">
+                  </div>
+                </div>
+                
+                <!-- edit form column -->
+                <div class="col-md-9 personal-info">
+                  <div class="alert alert-info alert-dismissable">
+                    <a class="panel-close close" data-dismiss="alert">×</a> 
+                    <i class="fa fa-coffee"></i>
+                    Please type your information below.
+                  </div>
+                  <h3>Personal info</h3>
+                  
+                  <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                      <label class="col-lg-3 control-label">First name:</label>
+                      <div class="col-lg-8">
+                        <input class="form-control" type="text" value="">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-lg-3 control-label">Last name:</label>
+                      <div class="col-lg-8">
+                        <input class="form-control" type="text" value="">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-lg-3 control-label">Company:</label>
+                      <div class="col-lg-8">
+                        <input class="form-control" type="text" value="">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-lg-3 control-label">Email:</label>
+                      <div class="col-lg-8">
+                        <input class="form-control" type="text" value="admin@admin.com">
+                      </div>
+                    </div>
+                   
+                    <div class="form-group">
+                      <label class="col-md-3 control-label">Username:</label>
+                      <div class="col-md-8">
+                        <input class="form-control" type="text" value="admin@admin.com">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-md-3 control-label">Password:</label>
+                      <div class="col-md-8">
+                        <input class="form-control" type="password" value="">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-md-3 control-label">Confirm password:</label>
+                      <div class="col-md-8">
+                        <input class="form-control" type="password" value="">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-md-3 control-label"></label>
+                      <div class="col-md-8">
+                        <input type="button" class="btn btn-primary" value="Save Changes">
+                        <span></span>
+                        <input type="reset" class="btn btn-default" value="Cancel">
+                      </div>
+                    </div>
+                  </form>
+                </div>
             </div>
           </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Last name:</label>
-            <div class="col-lg-8">
-              <input class="form-control" type="text" value="">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Company:</label>
-            <div class="col-lg-8">
-              <input class="form-control" type="text" value="">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Email:</label>
-            <div class="col-lg-8">
-              <input class="form-control" type="text" value="admin@admin.com">
-            </div>
-          </div>
-         
-          <div class="form-group">
-            <label class="col-md-3 control-label">Username:</label>
-            <div class="col-md-8">
-              <input class="form-control" type="text" value="admin@admin.com">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-md-3 control-label">Password:</label>
-            <div class="col-md-8">
-              <input class="form-control" type="password" value="">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-md-3 control-label">Confirm password:</label>
-            <div class="col-md-8">
-              <input class="form-control" type="password" value="">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-md-3 control-label"></label>
-            <div class="col-md-8">
-              <input type="button" class="btn btn-primary" value="Save Changes">
-              <span></span>
-              <input type="reset" class="btn btn-default" value="Cancel">
-            </div>
-          </div>
-        </form>
-      </div>
-  </div>
-</div>
         </section>
 
 <hr>
@@ -175,6 +179,40 @@
           </div>
         </footer>
 
+
+<!-- Modal Responsive-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                    <h4 class="modal-title" id="myModalLabel">More About User</h4>
+                    </div>
+                <div class="modal-body">
+                    <center>
+                    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
+                    <h3 class="media-heading">Danny <small>USA</small></h3>
+                    <span><strong>Skills: </strong></span>
+                        <span class="label label-warning">HTML5/CSS</span>
+                        <span class="label label-info">Adobe CS 5.5</span>
+                        <span class="label label-info">Microsoft Office</span>
+                        <span class="label label-success">Windows XP, Vista, 7</span>
+                    </center>
+                    <hr>
+                    <center>
+                    <p class="text-left"><strong>Bio: </strong><br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sem dui, tempor sit amet commodo a, vulputate vel tellus.</p>
+                    <br>
+                    </center>
+                </div>
+                <div class="modal-footer">
+                    <center>
+                    <button type="button" class="btn btn-default" data-dismiss="modal"> Ok </button>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
     
 
       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

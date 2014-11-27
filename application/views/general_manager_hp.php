@@ -40,12 +40,49 @@
 
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
         <h3>Your Menu</h3>  
-        <?php echo anchor('homepage', 'Homepage') ?>
-        <a href="#">View Profile</a>
-                       
-        <?php echo anchor('auth/logout','<div class="btn btn-danger noborder maxwidth">Sign out</div>')?>
-
+        <center>
+        <a href="#"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="140" height="140" class="img-circle"></a>
+        </center>
+          <?php echo anchor('homepage', 'Homepage') ?>
+        <a href="#" data-toggle="modal" data-target="#myModal">View Profile</a>
+        <?php echo anchor('edit_profile', 'Edit Profile') ?>
+  
+        <a href="http://localhost:8888/egov/index.php/auth/logout"><div class="btn btn-danger noborder maxwidth">Sign out</div></a>
         </nav>
+
+        <!-- Modal Responsive-->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                          <h4 class="modal-title" id="myModalLabel">More About User</h4>
+                          </div>
+                      <div class="modal-body">
+                          <center>
+                          <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
+                          <h3 class="media-heading">Danny <small>USA</small></h3>
+                          <span><strong>Skills: </strong></span>
+                              <span class="label label-warning">HTML5/CSS</span>
+                              <span class="label label-info">Adobe CS 5.5</span>
+                              <span class="label label-info">Microsoft Office</span>
+                              <span class="label label-success">Windows XP, Vista, 7</span>
+                          </center>
+                          <hr>
+                          <center>
+                          <p class="text-left"><strong>Bio: </strong><br>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sem dui, tempor sit amet commodo a, vulputate vel tellus.</p>
+                          <br>
+                          </center>
+                      </div>
+                      <div class="modal-footer">
+                          <center>
+                          <button type="button" class="btn btn-default" data-dismiss="modal"> Ok </button>
+                          </center>
+                      </div>
+                  </div>
+              </div>
+          </div>
 
 
 
