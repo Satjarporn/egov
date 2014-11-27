@@ -4,7 +4,7 @@
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>E-Goverment Working Area</title>
+      <title>Edit your Profile</title>
     
 
 
@@ -46,14 +46,10 @@
         <h3>Your Menu</h3>  
           <?php echo anchor('homepage', 'Homepage') ?>
         <a href="#">View Profile</a>
-        <?php echo anchor('edit_profile', 'Edit Profile') ?>
-
-
-                       
+        <a href="#">Edit Profile</a>
+  
         <a href="http://localhost:8888/egov/index.php/auth/logout"><div class="btn btn-danger noborder maxwidth">Sign out</div></a>
         </nav>
-
-        
 
         <section class="swag text-center">
           <div class="container">
@@ -71,45 +67,98 @@
 
               
               <div class="col-md-8 col-md-offset-2">
-                <h1>FAQ<span>Frequency Asking Question<br>We will explain to you</span></h1>
-                <a href="#features" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
+                <h1>Edit Profile<span><br>Let's make it easy...</span></h1>
+                <a href="#edit" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
               </div>
             </div>
           </div>
         </section>
 
 
+<section class="edit" id="edit">
 
-
-        <!--task container-->
-
-
-
-<section class="features text-center section-padding" id="features">
+<div class="container">
+    <hr>
+  <div class="row">
+      <!-- left column -->
+      <div class="col-md-3">
+        <div class="text-center">
+          <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
+          <h6>Upload a different photo...</h6>
           
-                <div class="features-wrapper">
-                  <div class="col-md-4 wp2">
-                    <h1>FAQ.</h1>
-                    
-                  </div>
-                </div>
-              
-        </section>
-          
-
-
-
-
-
+          <input type="file" class="form-control">
+        </div>
+      </div>
       
+      <!-- edit form column -->
+      <div class="col-md-9 personal-info">
+        <div class="alert alert-info alert-dismissable">
+          <a class="panel-close close" data-dismiss="alert">×</a> 
+          <i class="fa fa-coffee"></i>
+          Please type your information below.
+        </div>
+        <h3>Personal info</h3>
+        
+        <form class="form-horizontal" role="form">
+          <div class="form-group">
+            <label class="col-lg-3 control-label">First name:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Last name:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Company:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Email:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" value="admin@admin.com">
+            </div>
+          </div>
+         
+          <div class="form-group">
+            <label class="col-md-3 control-label">Username:</label>
+            <div class="col-md-8">
+              <input class="form-control" type="text" value="admin@admin.com">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">Password:</label>
+            <div class="col-md-8">
+              <input class="form-control" type="password" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">Confirm password:</label>
+            <div class="col-md-8">
+              <input class="form-control" type="password" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label"></label>
+            <div class="col-md-8">
+              <input type="button" class="btn btn-primary" value="Save Changes">
+              <span></span>
+              <input type="reset" class="btn btn-default" value="Cancel">
+            </div>
+          </div>
+        </form>
+      </div>
+  </div>
+</div>
+        </section>
 
-
-
-
-
-
-
-        <footer>
+<hr>
+<footer>
           <div class="container">
             <div class="row">
               <div class="col-md-6">
