@@ -142,8 +142,14 @@
               <input id="taskName" type="text" class="form-control" placeholder="Task name">
                 </div>
               <div class="form-group">
-                  <input type="file" id="taskFile">
-                  <p class="help-block">upload your task description file.</p>
+                   <div style="position:relative;">
+        <a class='btn btn-primary' href='javascript:;'>
+            Upload Task Description File
+            <input type="file" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#upload-file-info").html($(this).val());'>
+        </a>
+        &nbsp;
+        <span class='label label-info' id="upload-file-info"></span>
+      </div>
               </div>
             <div class="form-group">
               <textarea class="form-control" rows="10" placeholder="Add task description" style="padding-bottom: 10px;"></textarea>

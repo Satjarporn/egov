@@ -222,11 +222,15 @@
             <form role="form" class="taskModal">
                    <div class="taskForm">
               <div class="form-group">
+                
                   <p class="taskContent">Task Creator : 
                     <br>Release Date : dd/mm/yy time</p>
-                  <button id="taskFile" type="button" class="btn btn-info">Download File</button>
-              
+                   
+                  <button id="taskFile" type="button" class="btn btn-info">Current Task Description File</button> 
+    
+                  <button id="taskFile" type="button" class="btn btn-success">Developer Uploded File</button>
               </div>
+              
             <div class="form-group">
               <textarea readonly class="form-control" rows="10" placeholder="Add task description" style="padding-bottom: 10px;"></textarea>
             </div>

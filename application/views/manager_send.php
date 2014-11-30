@@ -158,7 +158,10 @@
                 <div class="panel-body">
                   <p class="taskContent">Task Creator : 
                     <br>Release Date : dd/mm/yy time</p>
-                  <button id="taskFile" type="button" class="btn btn-info">Download File</button>
+                  
+                  <button id="taskFile" type="button" class="btn btn-info">Current Task Description File</button> 
+    
+                  <button id="taskFile" type="button" class="btn btn-success">Developer Uploded File</button>
                    <br>
                    <p class="taskContent">task content</p>
                    <hr>
@@ -190,7 +193,11 @@
                 <div class="panel-body">
                   <p class="taskContent">Task Creator : 
                    <br>Release Date : dd/mm/yy time</p>
-                 <button id="taskFile" type="button" class="btn btn-info">Download File</button>
+                
+                  <button id="taskFile" type="button" class="btn btn-info">Current Task Description File</button> 
+    
+                  <button id="taskFile" type="button" class="btn btn-success">Developer Uploded File</button>
+              
                    <br>
                    <p class="taskContent">task content</p>
                    <hr>
