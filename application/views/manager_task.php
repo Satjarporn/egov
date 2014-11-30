@@ -225,8 +225,10 @@
 
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-target="#task1" data-parent="#alltask">task1</a>
+                <h4 class="panel-title" data-toggle="collapse" data-target="#task1" data-parent="#alltask" class="collapsed" aria-expanded="false">
+                  <a class="col-md-2">dd/mm/yy</a>
+                  <a>task1</a>
+                  
                   <a class="toRight">On Progress</a>
                 </h4>
               </div>
@@ -234,7 +236,9 @@
                 <div class="panel-body">
                   <p class="taskContent">Task Creator : 
                     <br>Release Date : dd/mm/yy time</p>
-                  <button id="taskFile" type="button" class="btn btn-info">Download File</button>
+                 <button id="taskFile" type="button" class="btn btn-info">Current Task Description File</button> 
+    
+                  <button id="taskFile" type="button" class="btn btn-success">Developer Uploded File</button>
                    <br>
                    <p class="taskContent">task content</p>
                    <hr>
@@ -256,8 +260,9 @@
 
           <div class="panel panel-success">
               <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-target="#task2" data-parent="#alltask">task2</a>
+                <h4 class="panel-title"  data-toggle="collapse" data-target="#task2" data-parent="#alltask">
+                  <a class="col-md-2">dd/mm/yy</a>
+                  <a>task2</a>
                   <a class="toRight">Completed</a>
                 </h4>
               </div>
@@ -265,7 +270,9 @@
                 <div class="panel-body">
                   <p class="taskContent">Task Creator : 
                     <br>Release Date : dd/mm/yy time</p>
-                  <button id="taskFile" type="button" class="btn btn-info">Download File</button>
+                  <button id="taskFile" type="button" class="btn btn-info">Current Task Description File</button> 
+    
+                  <button id="taskFile" type="button" class="btn btn-success">Developer Uploded File</button>
                    <br>
                    <p class="taskContent">task content</p>
                    <hr>
@@ -283,8 +290,9 @@
 
             <div class="panel panel-info">
               <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-target="#task3" data-parent="#alltask">task3</a>
+                <h4 class="panel-title" data-toggle="collapse" data-target="#task3" data-parent="#alltask">
+                  <a class="col-md-2">dd/mm/yy</a>
+                  <a >task3</a>
                   <a class="toRight">New</a>
                 </h4>
               </div>
@@ -292,7 +300,9 @@
                 <div class="panel-body">
                   <p class="taskContent">Task Creator : 
                    <br>Release Date : dd/mm/yy time</p>
-                 <button id="taskFile" type="button" class="btn btn-info">Download File</button>
+                 <button id="taskFile" type="button" class="btn btn-info">Current Task Description File</button> 
+    
+                  <button id="taskFile" type="button" class="btn btn-success">Developer Uploded File</button>
                    <br>
                    <p class="taskContent">task content</p>
                    <hr>
@@ -315,8 +325,9 @@
 
             <div class="panel panel-danger">
               <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-target="#task4" data-parent="#alltask">task4</a>
+                <h4 class="panel-title" data-toggle="collapse" data-target="#task4" data-parent="#alltask">
+                   <a class="col-md-2">dd/mm/yy</a>
+                  <a>task4</a>
                   <a class="toRight">Stop Releasing</a>
                 </h4>
               </div>
@@ -324,7 +335,9 @@
                 <div class="panel-body">
                   <p class="taskContent">Task Creator : 
                     <br>Release Date : dd/mm/yy time</p>
-                 <button id="taskFile" type="button" class="btn btn-info">Download File</button>
+                 <button id="taskFile" type="button" class="btn btn-info">Current Task Description File</button> 
+    
+                  <button id="taskFile" type="button" class="btn btn-success">Developer Uploded File</button>
                    <br>
                    <p class="taskContent">task content</p>
                    <hr>
@@ -345,8 +358,9 @@
 
              <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-target="#task5" data-parent="#alltask">task5</a>
+                <h4 class="panel-title" data-toggle="collapse" data-target="#task5" data-parent="#alltask">
+                    <a class="col-md-2">dd/mm/yy</a>
+                  <a>task5</a>
                   <a class="toRight">On Progress</a>
                 </h4>
               </div>
@@ -354,7 +368,9 @@
                 <div class="panel-body">
                   <p class="taskContent">Task Creator : 
                     <br>Release Date : dd/mm/yy time</p>
-                  <button id="taskFile" type="button" class="btn btn-info">Download File</button>
+                  <button id="taskFile" type="button" class="btn btn-info">Current Task Description File</button> 
+    
+                  <button id="taskFile" type="button" class="btn btn-success">Developer Uploded File</button>
                    <br>
                    <p class="taskContent">task content</p>
                    <hr>
@@ -390,11 +406,26 @@
               <input id="taskName" type="text" class="form-control" placeholder="Task name">
                 </div>
               <div class="form-group">
+                
                   <p class="taskContent">Task Creator : 
                     <br>Release Date : dd/mm/yy time</p>
-                  <button id="taskFile" type="button" class="btn btn-info">Download File</button> or <input type="file" style="display: inline-flex;" id="taskFile">
-                  <p class="help-block">upload your task description file.</p>
+                   
+                  <button id="taskFile" type="button" class="btn btn-info">Current Task Description File</button> 
+    
+                  <button id="taskFile" type="button" class="btn btn-success">Developer Uploded File</button>
               </div>
+              <div class="form-group">
+                <h10>Upload New Description File</h10>
+              <div style="position:relative;">
+        <a class='btn btn-primary' href='javascript:;'>
+            Choose File...
+            <input type="file" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#upload-file-info").html($(this).val());'>
+        </a>
+        &nbsp;
+        <span class='label label-info' id="upload-file-info"></span>
+      </div>
+            </div>
+
             <div class="form-group">
               <textarea class="form-control" rows="10" placeholder="Add task description" style="padding-bottom: 10px;"></textarea>
             </div>
