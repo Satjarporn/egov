@@ -71,7 +71,7 @@
 
               
               <div class="col-md-8 col-md-offset-2">
-                <h1>Edit your Profile<span><br>Let's make it easy...</span></h1>
+                <h1>Edit your Profile<span><br>Connect you with the other</span></h1>
                 <a href="#edit" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
               </div>
             </div>
@@ -88,7 +88,7 @@
                 <div class="col-md-3">
                   <div class="text-center">
                     <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
-                    <h6>Upload a different photo...</h6>
+                    <h6>Upload new photo...</h6>
                     
                     <input type="file" class="form-control">
                   </div>
@@ -99,7 +99,7 @@
                   <div class="alert alert-info alert-dismissable">
                     <a class="panel-close close" data-dismiss="alert">×</a> 
                     <i class="fa fa-coffee"></i>
-                    Please type your information below.
+                    Please enter your information below.
                   </div>
                   <h3>Personal info</h3>
                   
@@ -123,16 +123,22 @@
                       </div>
                     </div>
                     <div class="form-group">
+                      <label class="col-lg-3 control-label">Mobile Phone Number:</label>
+                      <div class="col-lg-8">
+                        <input class="form-control" type="text" value="">
+                      </div>
+                    </div>
+                    <div class="form-group">
                       <label class="col-lg-3 control-label">Email:</label>
                       <div class="col-lg-8">
-                        <input class="form-control" type="text" value="admin@admin.com">
+                        <input class="form-control" type="text" value="admin@admin.com" readonly>
                       </div>
                     </div>
                    
                     <div class="form-group">
                       <label class="col-md-3 control-label">Username:</label>
                       <div class="col-md-8">
-                        <input class="form-control" type="text" value="admin@admin.com">
+                        <input class="form-control" type="text" value="admin@admin.com" readonly>
                       </div>
                     </div>
                     <div class="form-group">
