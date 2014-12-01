@@ -537,7 +537,7 @@
         <div class="modal-content">
             
             <div class="headerNewTask">
-                Are you going to delete this task permanently?
+                Do you want to delete this task permanently?
             </div>
             <div class="modal-footer">
                
