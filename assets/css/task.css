@@ -73,6 +73,10 @@ div a .taskmenufont:hover{
 	font-size: 10px;
 }
 
+.deleteBtn {
+	color: firebrick;
+}
+
 .nocomment{
 	color: #848484;
 	

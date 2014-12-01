@@ -231,11 +231,12 @@
 
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 class="panel-title" data-toggle="collapse" data-target="#task1" data-parent="#alltask" class="collapsed" aria-expanded="false">
+                <h4 class="panel-title collapsed" data-toggle="collapse" data-target="#task1" data-parent="#alltask" aria-expanded="false">
                   <a class="col-md-2">dd/mm/yy</a>
-                  <a>task1</a>
+                  <a>task name</a>
+                 <a class="toRight">On Progress</a>
                   
-                  <a class="toRight">On Progress</a>
+
                 </h4>
               </div>
               <div id="task1" class="panel-collapse collapse">
@@ -257,7 +258,8 @@
                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updateTask">Update Task</button>
                    <!--button type="button" class="btn btn-success">Complete Task</button-->
                    <!--button type="button" class="btn btn-danger">Stop Releasing Task</button-->
-                  
+                    <button type="button" class="btn btn-warning">Stop Releasing Task</button>
+                     <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#deleteTask">Delete Task Permanently</button>
               </div>
               </div>
             </div> <!-- task1 -->
@@ -268,7 +270,7 @@
               <div class="panel-heading">
                 <h4 class="panel-title"  data-toggle="collapse" data-target="#task2" data-parent="#alltask">
                   <a class="col-md-2">dd/mm/yy</a>
-                  <a>task2</a>
+                  <a>task name</a>
                   <a class="toRight">Completed</a>
                 </h4>
               </div>
@@ -296,10 +298,12 @@
 
             <div class="panel panel-info">
               <div class="panel-heading">
-                <h4 class="panel-title" data-toggle="collapse" data-target="#task3" data-parent="#alltask">
+               <h4 class="panel-title collapsed" data-toggle="collapse" data-target="#task3" data-parent="#alltask" aria-expanded="false">
                   <a class="col-md-2">dd/mm/yy</a>
-                  <a >task3</a>
-                  <a class="toRight">New</a>
+                  <a>task name</a>
+                 <a class="toRight">New</a>
+                  
+
                 </h4>
               </div>
               <div id="task3" class="panel-collapse collapse">
@@ -322,7 +326,8 @@
                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updateTask">Update Task</button>
                    <!--button type="button" class="btn btn-success">Complete Task</button-->
                    <!--button type="button" class="btn btn-danger">Stop Releasing Task</button-->
-                 
+                   <button type="button" class="btn btn-warning">Stop Releasing Task</button>
+                   <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#deleteTask">Delete Task Permanently</button>
               </div>
               </div>
             </div> <!-- task 3 -->
@@ -331,10 +336,12 @@
 
             <div class="panel panel-danger">
               <div class="panel-heading">
-                <h4 class="panel-title" data-toggle="collapse" data-target="#task4" data-parent="#alltask">
-                   <a class="col-md-2">dd/mm/yy</a>
-                  <a>task4</a>
-                  <a class="toRight">Stop Releasing</a>
+                <h4 class="panel-title collapsed" data-toggle="collapse" data-target="#task4" data-parent="#alltask" aria-expanded="false">
+                  <a class="col-md-2">dd/mm/yy</a>
+                  <a>task name</a>
+                 <a class="toRight">Stop Releasing</a>
+                  
+
                 </h4>
               </div>
               <div id="task4" class="panel-collapse collapse">
@@ -356,18 +363,20 @@
                     </p>
                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updateTask">Update Task</button>
                    <!--button type="button" class="btn btn-success">Complete Task</button-->
-                   <button type="button" class="btn btn-warning">Re-release Task</button>
-                   <button type="button" class="btn btn-danger">Delete Task Permanently</button>
+                   <button type="button" class="btn btn-info">Re-release Task</button>
+                    <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#deleteTask">Delete Task Permanently</button>
               </div>
               </div>
             </div> <!-- task 4 -->
 
              <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 class="panel-title" data-toggle="collapse" data-target="#task5" data-parent="#alltask">
-                    <a class="col-md-2">dd/mm/yy</a>
-                  <a>task5</a>
+               <h4 class="panel-title collapsed" data-toggle="collapse" data-target="#task5" data-parent="#alltask" aria-expanded="false">
+                  <a class="col-md-2">dd/mm/yy</a>
+                  <a>task name</a>
                   <a class="toRight">On Progress</a>
+                  
+
                 </h4>
               </div>
               <div id="task5" class="panel-collapse collapse">
@@ -387,7 +396,8 @@
                     </p>
                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updateTask">Update Task</button>
                    <!--button type="button" class="btn btn-success">Complete Task</button-->
-                   <!--button type="button" class="btn btn-danger">Stop Releasing Task</button-->
+                   <button type="button" class="btn btn-warning">Stop Releasing Task</button>
+                     <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#deleteTask">Delete Task Permanently</button>
                   
               </div>
               </div>
@@ -521,14 +531,23 @@
           </div><!-- see completed task detail -->
 
 
-
-              <!-- if no task show this
-
-           <div class="container">
-
-         <font class="taskfont"><i>Oops! No Task
-          <br>Add new task <a href="#">here</a></i></font>
-        </div> -->
+        <!--delete task-->
+        <div class="modal fade" id="deleteTask" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            
+            <div class="headerNewTask">
+                Are you going to delete this task permanently?
+            </div>
+            <div class="modal-footer">
+               
+                <button type="button" class="btn btn-success">Yes, I am</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+        </div>
+    </div>
+  </div>
+</div>
+        <!-- delete task -->
 
 
 
