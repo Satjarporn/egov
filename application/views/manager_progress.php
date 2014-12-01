@@ -155,8 +155,9 @@
 
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="modal" data-target="#seeTask" data-parent="#alltask">task1</a>
+                <h4 class="panel-title" data-toggle="modal" data-target="#seeTask" data-parent="#alltask">
+                  <a class="col-md-2">dd/mm/yy</a>
+                  <a>task1</a>
                   <a class="toRight">On Progress</a>
                 </h4>
               </div>
@@ -166,8 +167,9 @@
 
           <div class="panel panel-success">
               <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="modal" data-target="#seeTask" data-parent="#alltask">task2</a>
+                <h4 class="panel-title" data-toggle="modal" data-target="#seeTask" data-parent="#alltask">
+                  <a class="col-md-2">dd/mm/yy</a>
+                  <a>task2</a>
                   <a class="toRight">Completed</a>
                 </h4>
               </div>
@@ -177,8 +179,9 @@
 
             <div class="panel panel-info">
               <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="modal" data-target="#seeTask" data-parent="#alltask">task3</a>
+                <h4 class="panel-title"data-toggle="modal" data-target="#seeTask" data-parent="#alltask">
+                  <a class="col-md-2">dd/mm/yy</a>
+                  <a>task3</a>
                   <a class="toRight">New</a>
                 </h4>
               </div>
@@ -189,8 +192,9 @@
 
             <div class="panel panel-danger">
               <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="modal" data-target="#seeTask" data-parent="#alltask">task4</a>
+                <h4 class="panel-title" data-toggle="modal" data-target="#seeTask" data-parent="#alltask">
+                  <a class="col-md-2">dd/mm/yy</a>
+                  <a>task4</a>
                   <a class="toRight">Stop Releasing</a>
                 </h4>
               </div>
@@ -199,8 +203,9 @@
 
              <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="modal" data-target="#seeTask" data-parent="#alltask">task5</a>
+                <h4 class="panel-title" data-toggle="modal" data-target="#seeTask" data-parent="#alltask">
+                  <a class="col-md-2">dd/mm/yy</a>
+                  <a>task5</a>
                   <a class="toRight">On Progress</a>
                 </h4>
               </div>
