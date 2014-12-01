@@ -106,7 +106,7 @@
 
               
               <div class="col-md-8 col-md-offset-2">
-                <h1>Workspace<span>Your Working Area<br>add, edit, delete tasks here</span></h1>
+                <h1>All Task Progess<span>Check all task progress here</span></h1>
                 <a href="#tarea" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
               </div>
             </div>
@@ -127,25 +127,28 @@
 
 
 
-          <!--filter-->
-           <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-default active">
-              <input type="checkbox" autocomplete="off" checked> ALL TASK
-            </label>
-            <label class="btn btn-primary">
-              <input type="checkbox" autocomplete="off"> New & Updated task
-            </label>
-            <label class="btn btn-success">
-              <input type="checkbox" autocomplete="off"> Completed task
-            </label>
-            <label class="btn btn-danger">
-              <input type="checkbox" autocomplete="off"> Unreleased task
-            </label>
-
-          </div><!--filter-->
+         
 
 
           </div> <!-- task menu -->
+
+          <!-- progress -->
+          <div class="progress">
+  <div class="progress-bar progress-bar-success" style="width: 35%">
+    35%
+  </div>
+  <div class="progress-bar progress-bar-primary" style="width: 10%">
+    10%
+  </div>
+  <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%">
+    20%
+  </div>
+  <div class="progress-bar progress-bar-danger" style="width: 10%">
+    10%
+  </div>
+</div>
+          <!-- progress -->
+
            
            <!-- task list -->
 

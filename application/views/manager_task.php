@@ -506,12 +506,14 @@
             <hr>
 
             <form role="form" class="taskModal">
-              <p class="taskContent">Task Creator : 
+              <p class="taskContent taskForm">Task Creator : 
                     <br>Release Date : dd/mm/yy time</p>
               <div class="taskForm">
 
               <div class="form-group">
-                  <button id="taskFile" type="button" class="btn btn-info">Download File</button>
+                   <button id="taskFile" type="button" class="btn btn-info">Current Task Description File</button> 
+    
+                  <button id="taskFile" type="button" class="btn btn-success">Developer Uploded File</button>
               </div>
             <div class="form-group">
               <textarea readonly id ="completedTaskDetailTextArea" class="form-control" rows="10" placeholder="Add task description" style="padding-bottom: 10px;"></textarea>
