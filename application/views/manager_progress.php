@@ -133,19 +133,21 @@
           </div> <!-- task menu -->
 
           <!-- progress -->
-          <div class="progress">
-  <div class="progress-bar progress-bar-success" style="width: 35%">
-    35%
-  </div>
-  <div class="progress-bar progress-bar-primary" style="width: 10%">
-    10%
-  </div>
-  <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%">
-    20%
-  </div>
-  <div class="progress-bar progress-bar-danger" style="width: 10%">
-    10%
-  </div>
+          <div class="progress" style="height: 100px;">
+  <a href="#"><div class="progress-bar progress-bar-striped" style="width: 50%">
+    <p class="progressBarText">On Progress</p>
+    
+  </div></a>
+ 
+  <a href="#"><div class="progress-bar progress-bar-warning" style="width: 30%">
+
+    <p class="progressBarText">Stop Releasing</p>
+    
+  </div></a>
+  
+  <a href="#"><div class="progress-bar progress-bar-success" style="width: 20%">
+      <p class="progressBarText">Complete</p>
+  </div></a>
 </div>
           <!-- progress -->
 
@@ -180,16 +182,6 @@
             </div> <!-- task 2 -->
 
 
-            <div class="panel panel-info">
-              <div class="panel-heading">
-                <h4 class="panel-title"data-toggle="modal" data-target="#seeTask" data-parent="#alltask">
-                  <a class="col-md-2">dd/mm/yy</a>
-                  <a>task3</a>
-                  <a class="toRight">New</a>
-                </h4>
-              </div>
-              
-            </div> <!-- task 3 -->
 
 
 
