@@ -52,7 +52,7 @@
         <a href="#" data-toggle="modal" data-target="#myModal">View Profile</a>
         <?php echo anchor('edit_profile', 'Edit Profile') ?>
   
-        <a href="http://localhost:8888/egov/index.php/auth/logout"><div class="btn btn-danger noborder maxwidth">Sign out</div></a>
+        <?php echo anchor('auth/logout', '<div class="btn btn-danger noborder maxwidth">Sign out</div>') ?>
         </nav>
 
         <!-- Modal Responsive-->

@@ -47,7 +47,7 @@
         <a href="#" data-toggle="modal" data-target="#myModal">View Profile</a>
         <?php echo anchor('edit_profile', 'Edit Profile') ?>
   
-        <a href="http://localhost:8888/egov/index.php/auth/logout"><div class="btn btn-danger noborder maxwidth">Sign out</div></a>
+        <?php echo anchor('auth/logout', '<div class="btn btn-danger noborder maxwidth">Sign out</div>') ?>
         </nav>
 
         <!-- Modal Responsive-->
@@ -135,24 +135,24 @@
               <div class="col-md-12">
                 <div class="features-wrapper">
                   <div class="col-md-4 wp2">
-                    <div class="icon">
+                    <?php echo anchor('task','<div class="icon">
                       <i class="fa fa-th-list shadow"></i>
                     </div>
-                    <h2><?php echo anchor('task','task')?></h2>
+                    <h2>task</h2>')?>
                     <p>Create, Update and Delete your task here</p>
                   </div>
                   <div class="col-md-4 wp2 delay-05s">
-                    <div class="icon">
+                    <?php echo anchor('send','<div class="icon">
                       <i class=" fa fa-cloud-upload shadow"></i>
                     </div>
-                    <h2><?php echo anchor('send','new update task')?></h2>
+                    <h2>new update task</h2>')?>
                     <p>Check out new updated task from developer</p>
                   </div>
                   <div class="col-md-4 wp2 delay-1s">
-                    <div class="icon">
+                    <?php echo anchor('progress','<div class="icon">
                       <i class="fa fa-check-square shadow"></i>
                     </div>
-                    <h2><a href="#">Progress</a></h2>
+                    <h2>Progress</h2>')?>
                     <p>See all task progress and status</p>
                   </div>
                   <div class="clearfix"></div>
