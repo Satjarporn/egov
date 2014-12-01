@@ -148,10 +148,10 @@
 
 
             <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title" data-toggle="collapse" data-target="#task1" data-parent="#alltask" class="collapsed" aria-expanded="false">
+              <div class="panel-heading" data-toggle="collapse" data-target="#task1" data-parent="#alltask" aria-expanded="false">
+                <h4 class="panel-title">
                   <a class="col-md-2">dd/mm/yy</a>
-                  <a>task1</a>
+                  <a>task name</a>
                  
                 </h4>
               </div>
@@ -184,10 +184,10 @@
 
 
             <div class="panel panel-info">
-              <div class="panel-heading">
-                <h4 class="panel-title" data-toggle="collapse" data-target="#task3" data-parent="#alltask">
+              <div class="panel-heading" data-toggle="collapse" data-target="#task3" data-parent="#alltask" aria-expanded="false">
+                <h4 class="panel-title">
                   <a class="col-md-2">dd/mm/yy</a>
-                  <a >task2</a>
+                  <a >task name</a>
                   <a class="toRight">New</a>
                 </h4>
               </div>
