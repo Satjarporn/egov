@@ -82,16 +82,6 @@ div a .taskmenufont:hover{
 	
 }
 
-.progressBarText{
-    left: 35%;
-    right: 35%;   
-    color: white;
-    font-size: large;
-    padding-bottom: 20px;
-    padding-top: 20px;
-
-}
-
 #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after{
 	background: white;
 }

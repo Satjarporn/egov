@@ -50,6 +50,15 @@ $route['wel']="welcome";
 $route['faq'] = "main/faq";
 $route['edit_profile'] = "main/edit_profile";
 
+/////// test
+
+$route['news'] = 'news';
+$route['news/(:any)'] = 'news/view/$1';
+$route['news/create'] = 'news/create';
+
+$route['task/test'] = 'task';
+$route['task/create'] = 'task/create';
+//// end test
 
 
 $route['404_override'] = '';
