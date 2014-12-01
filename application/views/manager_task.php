@@ -230,8 +230,8 @@
 
 
             <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title collapsed" data-toggle="collapse" data-target="#task1" data-parent="#alltask" aria-expanded="false">
+              <div class="panel-heading" data-toggle="collapse" data-target="#task1" data-parent="#alltask" aria-expanded="false">
+                <h4 class="panel-title collapsed">
                   <a class="col-md-2">dd/mm/yy</a>
                   <a>task name</a>
                  <a class="toRight">On Progress</a>
@@ -267,8 +267,8 @@
 
 
           <div class="panel panel-success">
-              <div class="panel-heading">
-                <h4 class="panel-title"  data-toggle="collapse" data-target="#task2" data-parent="#alltask">
+              <div class="panel-heading" data-toggle="collapse" data-target="#task2" data-parent="#alltask" aria-expanded="false">
+                <h4 class="panel-title">
                   <a class="col-md-2">dd/mm/yy</a>
                   <a>task name</a>
                   <a class="toRight">Completed</a>
@@ -297,8 +297,8 @@
 
 
             <div class="panel panel-info">
-              <div class="panel-heading">
-               <h4 class="panel-title collapsed" data-toggle="collapse" data-target="#task3" data-parent="#alltask" aria-expanded="false">
+              <div class="panel-heading" data-toggle="collapse" data-target="#task3" data-parent="#alltask" aria-expanded="false">
+               <h4 class="panel-title collapsed">
                   <a class="col-md-2">dd/mm/yy</a>
                   <a>task name</a>
                  <a class="toRight">New</a>
@@ -335,8 +335,8 @@
 
 
             <div class="panel panel-danger">
-              <div class="panel-heading">
-                <h4 class="panel-title collapsed" data-toggle="collapse" data-target="#task4" data-parent="#alltask" aria-expanded="false">
+              <div class="panel-heading" data-toggle="collapse" data-target="#task4" data-parent="#alltask" aria-expanded="false">
+                <h4 class="panel-title collapsed">
                   <a class="col-md-2">dd/mm/yy</a>
                   <a>task name</a>
                  <a class="toRight">Stop Releasing</a>
@@ -370,8 +370,8 @@
             </div> <!-- task 4 -->
 
              <div class="panel panel-default">
-              <div class="panel-heading">
-               <h4 class="panel-title collapsed" data-toggle="collapse" data-target="#task5" data-parent="#alltask" aria-expanded="false">
+              <div class="panel-heading" data-toggle="collapse" data-target="#task1" data-parent="#alltask" aria-expanded="false">
+               <h4 class="panel-title collapsed">
                   <a class="col-md-2">dd/mm/yy</a>
                   <a>task name</a>
                   <a class="toRight">On Progress</a>
