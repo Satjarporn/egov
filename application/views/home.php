@@ -33,8 +33,8 @@
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
         <h3>Menu</h3>
         <?php echo anchor('', 'Home') ?>
-        <a href="#">Wiki</a>
-        <a href="#">Forum</a>
+        <a href="mediawiki">Wiki</a>
+        <a href="phorum">Forum</a>
         <a href="#">Links</a>
         <a href="#">About</a>
         <?php echo anchor('faq','FAQ')?>
