@@ -17,5 +17,5 @@ WIKI -> Wikimedia open source// https://www.mediawiki.org/<br>
 Forum -> Phorum // http://www.phorum.org/
 <br>
 set configuration variables before you start application services.
-<br>
-%server folder%/application/config/database.php <<<<< set DB name, username, password of fornt page.
+<br><br>
+<b>/%server folder%/application/config/database.php <<<<< set DB name, username, password of fornt page.</b>
