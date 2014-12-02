@@ -19,5 +19,5 @@ Forum -> Phorum // http://www.phorum.org/
 
 set configuration variables before you start application services.
 <br><br>
-<b>database.sql</b> : it will create DB tables for Front page. Dump to your DB!
+<b>database.sql</b> : it will create DB tables for Front page. Dump to your DB!<br>
 <b>Front page</b> : /%server folder%/application/config/database.php <<<<< set DB name, username, password of fornt page.
