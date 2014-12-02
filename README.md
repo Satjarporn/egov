@@ -16,6 +16,8 @@ WIKI -> Wikimedia open source// https://www.mediawiki.org/<br>
 
 Forum -> Phorum // http://www.phorum.org/
 <br>
+
 set configuration variables before you start application services.
 <br><br>
-<b>/%server folder%/application/config/database.php <<<<< set DB name, username, password of fornt page.</b>
+<b>database.sql</b> : it will create DB tables for Front page. Dump to your DB!
+<b>Front page</b> : /%server folder%/application/config/database.php <<<<< set DB name, username, password of fornt page.
