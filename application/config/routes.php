@@ -49,6 +49,8 @@ $route['auth']="auth";
 $route['wel']="welcome";
 $route['faq'] = "main/faq";
 $route['edit_profile'] = "main/edit_profile";
+$route['admin'] = "main/admin";
+
 
 /////// test
 
