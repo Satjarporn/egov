@@ -33,4 +33,7 @@ class Task_model extends CI_Model {
 
 	return $this->db->insert('task', $data);
 	}
+	public function delete_task($id){
+		$this->db->delete('task', array('id' => $id));
+	}
 }

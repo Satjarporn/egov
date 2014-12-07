@@ -60,6 +60,7 @@ $route['news/create'] = 'news/create';
 
 $route['task/test'] = 'task';
 $route['task/create'] = 'task/create';
+$route['task/delete/(:any)']='task/delete/$1';
 //// end test
 
 

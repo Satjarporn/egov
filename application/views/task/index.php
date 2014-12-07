@@ -272,12 +272,12 @@
                     <?php if($task_item['type']==0): ?>
                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updateTask">Update Task</button>
                     <button type="button" class="btn btn-warning">Stop Releasing Task</button>
-                     <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#deleteTask">Delete Task Permanently</button>
+                     <button type="button" class="btn btn-danger del"  data-toggle="modal" data-target="#deleteTask" value=<?php echo $task_item['ID']; ?>>Delete Task Permanently</button>
               		
               		<?php elseif($task_item['type']==1): ?>
               		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updateTask">Update Task</button>
                    <button type="button" class="btn btn-info">Re-release Task</button>
-                    <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#deleteTask">Delete Task Permanently</button>
+                    <button type="button" class="btn btn-danger del"  data-toggle="modal" data-target="#deleteTask" value=<?php echo $task_item['ID']; ?>>Delete Task Permanently</button>
 
                 	<?php else: ?>
                 	<button type="button" class="btn btn-default" data-toggle="modal" data-target="#completedTaskDetail">See Detail</button>
@@ -426,8 +426,7 @@
                 Do you want to delete this task permanently?
             </div>
             <div class="modal-footer">
-               
-                <button type="button" class="btn btn-success">Yes</button>
+                <a id="del_link"><button type="button" class="btn btn-success" >Yes</button></a>
                 <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
         </div>
     </div>
@@ -509,6 +508,9 @@
 			          classie.toggle( showRightPush, 'disabled' );
 			        }
 			      }
+			     $(".del").click(function(){
+    				$("#del_link").attr('href',<?php echo "'".base_url()."'"; ?>+'index.php/task/delete/'+ $(this).val());
+  					});
 			    </script>
 
 

@@ -17,25 +17,26 @@ class Task extends CI_Controller {
 	}
 
 	public function create(){
-	$this->load->helper('form');
-	$this->load->library('form_validation');
+		$this->load->helper('form');
+		$this->load->library('form_validation');
 
-	$data['title'] = 'Create a news item';
+		$data['title'] = 'Create a news item';
 
-	$this->form_validation->set_rules('name', 'Name', 'required');
-	$this->form_validation->set_rules('desc', 'Desc', 'required');
+		$this->form_validation->set_rules('name', 'Name', 'required');
+		$this->form_validation->set_rules('desc', 'Desc', 'required');
 
-	if ($this->form_validation->run() === FALSE)
-	{
-		//$this->load->view('templates/header', $data);
-		$this->load->view('task/create');
-		//$this->load->view('templates/footer');
-
+		if ($this->form_validation->run() === FALSE){
+			//$this->load->view('templates/header', $data);
+			$this->load->view('task/create');
+			//$this->load->view('templates/footer');
+		}
+		else{
+			$this->task_model->set_task();
+			$this->load->view('task/');
+		}
 	}
-	else
-	{
-		$this->task_model->set_task();
-		$this->load->view('task/success');
-	}
+	public function delete($id){
+		$this->task_model->delete_task($id);
+		redirect('task', 'refresh');
 	}
 }
