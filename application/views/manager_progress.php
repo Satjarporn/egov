@@ -16,6 +16,7 @@
     	<link href="<?php echo base_url(); ?>assets/css/styles.css" rel="stylesheet">
     	<link href="<?php echo base_url(); ?>assets/css/queries.css" rel="stylesheet">
     	<link href="<?php echo base_url(); ?>assets/css/animate.css" rel="stylesheet">
+      <link href="<?php echo base_url(); ?>assets/css/progress_status.css" rel="stylesheet">
 
     	<!-- Push & slide css -->
     	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/default.css" />
@@ -133,20 +134,63 @@
           </div> <!-- task menu -->
 
           <!-- progress -->
-          <div class="progress">
-  <div class="progress-bar progress-bar-success" style="width: 35%">
-    35%
-  </div>
-  <div class="progress-bar progress-bar-primary" style="width: 10%">
-    10%
-  </div>
-  <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%">
-    20%
-  </div>
-  <div class="progress-bar progress-bar-danger" style="width: 10%">
-    10%
-  </div>
-</div>
+           <div class="row">
+             <div class="col-xs-6 col-md-3">
+           
+            <div class="panel status panel-all">
+                <div class="panel-heading">
+                    <h1 class="panel-title text-center">2</h1>
+                </div>
+                <div class="panel-body text-center">                        
+                    <strong>All Task</strong>
+                </div>
+            </div>
+
+         
+        </div>
+
+
+             <div class="col-xs-6 col-md-3">
+           
+            <div class="panel status panel-inprogress">
+                <div class="panel-heading">
+                    <h1 class="panel-title text-center">2</h1>
+                </div>
+                <div class="panel-body text-center">                        
+                    <strong>In Progress</strong>
+                </div>
+            </div>
+
+         
+        </div>
+        <div class="col-xs-6 col-md-3">
+            
+            <div class="panel status panel-complete">
+                <div class="panel-heading">
+                    <h1 class="panel-title text-center">25</h1>
+                </div>
+                <div class="panel-body text-center ">                        
+                    <strong>Complete</strong>
+                </div>
+            </div>
+
+        </div>          
+        <div class="col-xs-6 col-md-3">
+          
+            <div class="panel status panel-stop">
+                <div class="panel-heading">
+                    <h1 class="panel-title text-center">17</h1>
+                </div>
+                <div class="panel-body text-center">                        
+                    <strong>Stop Releasing</strong>
+                </div>
+            </div>
+
+        </div>
+       
+       
+    </div>
+       
           <!-- progress -->
 
            
@@ -158,7 +202,7 @@
 
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 class="panel-title" data-toggle="modal" data-target="#seeTask" data-parent="#alltask">
+                <h4 class="panel-title" data-toggle="modal" data-target="#seeTask" data-parent="#alltask" id="task1" >
                   <a class="col-md-2">dd/mm/yy</a>
                   <a>task1</a>
                   <a class="toRight">On Progress</a>
@@ -317,16 +361,6 @@
 
 
 
-              <!-- if no task show this
-
-           <div class="container">
-
-         <font class="taskfont"><i>Oops! No Task
-          <br>Add new task <a href="#">here</a></i></font>
-        </div> -->
-
-
-
 
 
       </div>
@@ -400,6 +434,8 @@
 			        }
 			      }
 			    </script>
+
+          
 
 
       </body>
