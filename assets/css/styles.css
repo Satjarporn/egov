@@ -211,6 +211,8 @@ nav ul li a:hover, nav ul li a:focus { text-decoration: none; color: rgba(255, 2
 .pull { display: none; }
 .gear {font-size: 45px;}
 
+
+
 /* ==========================================================================
 Hero
 ========================================================================== */
@@ -262,6 +264,7 @@ Aboutus
 .about h1 span { display: block; font-size: 25px; margin-top: 20px; }
 .down-arrow-btn { width: 40px; height: 40px; border-radius: 50%; -moz-border-radius: 50%; -webkit-border-radius: 50%; -o-border-radius: 50%; background: #47a3da; display: inline-block; margin: 10px auto 20px; color: #fff; font-size: 16px; line-height: 40px; text-align: center; }
 .down-arrow-btn:hover, .down-arrow-btn:focus { color: #fff; background: rgba(71, 163, 218, 1);}
+
 /* ==========================================================================
 Portfolio
 ========================================================================== */

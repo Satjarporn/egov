@@ -4,7 +4,7 @@
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>E-Goverment Working Area</title>
+      <title>Edit FAQ</title>
     
 
 
@@ -33,26 +33,11 @@
   <body id="top" class="cbp-spmenu-push">
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
         <h3>Menu</h3>
-        <?php echo anchor('', 'Home') ?>
-        <a href="#">Wiki</a>
-        <a href="#">Forum</a>
-        <a href="#">Links</a>
-        <a href="#">About</a>
-        <a href="#">FAQ</a>
+        <?php echo anchor('admin_hp', 'DashBoard') ?>
+        <?php echo anchor('edit_hp', 'Information Configuration') ?>
+        <?php echo anchor('edit_faq', 'Edit FAQ') ?>
         </nav>
         
-
-       <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
-        <h3>Your Menu</h3>  
-        <center>
-        <a href="#"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="140" height="140" class="img-circle"></a>
-        </center>
-          <?php echo anchor('homepage', 'Homepage') ?>
-        <a href="#" data-toggle="modal" data-target="#myModal">View Profile</a>
-        <?php echo anchor('edit_profile', 'Edit Profile') ?>
-  
-        <a href="http://localhost:8888/egov/index.php/auth/logout"><div class="btn btn-danger noborder maxwidth">Sign out</div></a>
-        </nav>
 
         
 
@@ -72,7 +57,7 @@
 
               
               <div class="col-md-8 col-md-offset-2">
-                <h1>FAQ<span>Frequency Asking Question<br>We will explain to you</span></h1>
+                <h1>FAQ Editing<span>Frequency Asking Question<br>Create your FAQ</span></h1>
                 <a href="#features" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
               </div>
             </div>
@@ -86,45 +71,143 @@
 
 
 
-<section class="features text-center section-padding" id="features">
+<section class="features section-padding" id="features">
           
                 <div class="container">
                     <div class="row">
                   <div class="col-md-3">
                     <h1>FAQ.</h1>
                     </div>
-                        <div class="col-md-9 personal-info">
-                              <p>Q : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. </p>
-                              <p>A: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. </p>
+                        <div class="col-md-9">
+                              <form class="form-horizontal" role="form">
+                              <div class="form-group">
+                                  <label>Q:</label>
+                                  <div class="col-lg-8">
+                                    <input class="form-control" type="text" value="">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label>A:</label>
+                                  <div class="col-lg-8">
+                                    <input class="form-control" type="text" value="">
+                                  </div>
+                              </div>
                               <br></br>
-                              <p>Q : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. </p>
-                              <p>A : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. </p>
+                              <div class="form-group">
+                                  <label>Q:</label>
+                                  <div class="col-lg-8">
+                                    <input class="form-control" type="text" value="">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label>A:</label>
+                                  <div class="col-lg-8">
+                                    <input class="form-control" type="text" value="">
+                                  </div>
+                              </div>
+                              <br></br><div class="form-group">
+                                  <label>Q:</label>
+                                  <div class="col-lg-8">
+                                    <input class="form-control" type="text" value="">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label>A:</label>
+                                  <div class="col-lg-8">
+                                    <input class="form-control" type="text" value="">
+                                  </div>
+                              </div>
+                              <br></br><div class="form-group">
+                                  <label>Q:</label>
+                                  <div class="col-lg-8">
+                                    <input class="form-control" type="text" value="">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label>A:</label>
+                                  <div class="col-lg-8">
+                                    <input class="form-control" type="text" value="">
+                                  </div>
+                              </div>
+                              <br></br><div class="form-group">
+                                  <label>Q:</label>
+                                  <div class="col-lg-8">
+                                    <input class="form-control" type="text" value="">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label>A:</label>
+                                  <div class="col-lg-8">
+                                    <input class="form-control" type="text" value="">
+                                  </div>
+                              </div>
+                              <br></br><div class="form-group">
+                                  <label>Q:</label>
+                                  <div class="col-lg-8">
+                                    <input class="form-control" type="text" value="">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label>A:</label>
+                                  <div class="col-lg-8">
+                                    <input class="form-control" type="text" value="">
+                                  </div>
+                              </div>
+                              <br></br><div class="form-group">
+                                  <label>Q:</label>
+                                  <div class="col-lg-8">
+                                    <input class="form-control" type="text" value="">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label>A:</label>
+                                  <div class="col-lg-8">
+                                    <input class="form-control" type="text" value="">
+                                  </div>
+                              </div>
+                              <br></br><div class="form-group">
+                                  <label>Q:</label>
+                                  <div class="col-lg-8">
+                                    <input class="form-control" type="text" value="">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label>A:</label>
+                                  <div class="col-lg-8">
+                                    <input class="form-control" type="text" value="">
+                                  </div>
+                              </div>
+                              <br></br><div class="form-group">
+                                  <label>Q:</label>
+                                  <div class="col-lg-8">
+                                    <input class="form-control" type="text" value="">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label>A:</label>
+                                  <div class="col-lg-8">
+                                    <input class="form-control" type="text" value="">
+                                  </div>
+                              </div>
+                              <br></br><div class="form-group">
+                                  <label>Q:</label>
+                                  <div class="col-lg-8">
+                                    <input class="form-control" type="text" value="">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label>A:</label>
+                                  <div class="col-lg-8">
+                                    <input class="form-control" type="text" value="">
+                                  </div>
+                              </div>
                               <br></br>
-                              <p>Q : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. </p>
-                              <p>A : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. </p>
-                              <br></br>
-                              <p>Q : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. </p>
-                              <p>A : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. </p>
-                              <br></br>
-                              <p>Q : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. </p>
-                              <p>A : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. </p>
-                              <br></br>
-                              <p>Q : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. </p>
-                              <p>A: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. </p>
-                              <br></br>
-                              <p>Q : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. </p>
-                              <p>A : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. </p>
-                              <br></br>
-                              <p>Q : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. </p>
-                              <p>A : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. </p>
-                              <br></br>
-                              <p>Q : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. </p>
-                              <p>A : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. </p>
-                              <br></br>
-                              <p>Q : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. </p>
-                              <p>A : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. </p>
                               
+                              </form>
                         </div>
+                    </div>
+                    <div class="col-md-6 col-md-offset-3 text-center">    
+                        <a href="#"  class="learn-more-btn">Save Change</a>  
                     </div>
                 </div>
               

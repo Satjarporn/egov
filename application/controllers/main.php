@@ -153,6 +153,34 @@ class Main extends CI_Controller {
 		}
 		// $this->load->view('manager_task');
 	}
+	public function edit_hp()
+	{
+		if ($this->ion_auth->logged_in())
+		{
+			$user = $this->ion_auth->user()->row();
+			//save username to be data
+			$data['username'] = $user->username;
+			//open home page
+			$this->load->view('edit_hp',$data);
+		} else{
+		 	redirect('', 'refresh');
+		}
+		// $this->load->view('manager_task');
+	}
+	public function edit_faq()
+	{
+		if ($this->ion_auth->logged_in())
+		{
+			$user = $this->ion_auth->user()->row();
+			//save username to be data
+			$data['username'] = $user->username;
+			//open home page
+			$this->load->view('edit_faq',$data);
+		} else{
+		 	redirect('', 'refresh');
+		}
+		// $this->load->view('manager_task');
+	}
 }
 
 /* End of file welcome.php */
