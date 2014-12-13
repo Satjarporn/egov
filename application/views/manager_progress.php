@@ -164,18 +164,6 @@
          
         </div>
         <div class="col-xs-6 col-md-3">
-            
-            <div class="panel status panel-complete">
-                <div class="panel-heading">
-                    <h1 class="panel-title text-center">25</h1>
-                </div>
-                <div class="panel-body text-center ">                        
-                    <strong>Complete</strong>
-                </div>
-            </div>
-
-        </div>          
-        <div class="col-xs-6 col-md-3">
           
             <div class="panel status panel-stop">
                 <div class="panel-heading">
@@ -187,13 +175,46 @@
             </div>
 
         </div>
+
+        <div class="col-xs-6 col-md-3">
+            
+            <div class="panel status panel-complete">
+                <div class="panel-heading">
+                    <h1 class="panel-title text-center">25</h1>
+                </div>
+                <div class="panel-body text-center ">                        
+                    <strong>Complete</strong>
+                </div>
+            </div>
+
+        </div>          
+        
        
        
     </div>
        
           <!-- progress -->
 
-           
+            <!--filter-->
+            <div class="row">
+           <div id="taskFilterSelect" class="btn-group col-md-12" data-toggle="buttons">
+            <label class="btn btn-default active  col-md-3 colo-xs-6">
+              <input type="radio" name="taskFilter" autocomplete="off" value="all" checked> ALL TASK
+            </label>
+            <label class="btn btn-primary col-md-3 colo-xs-6">
+              <input type="radio" name="taskFilter" autocomplete="off" value="inprog"> In progress task
+            </label>
+            <label class="btn btn-danger col-md-3 colo-xs-6">
+              <input type="radio" name="taskFilter" autocomplete="off" value="stop"> Unreleased task
+            </label>
+             <label class="btn btn-success col-md-3 colo-xs-6">
+              <input type="radio" name="taskFilter" autocomplete="off" value="complete"> Completed task
+            </label>
+
+          </div>
+        </div><!--filter-->
+
+     
            <!-- task list -->
 
            <div class="panel-group" id="alltask">
@@ -202,10 +223,10 @@
 
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 class="panel-title" data-toggle="modal" data-target="#seeTask" data-parent="#alltask" id="task1" >
+                <h4 class="panel-title" data-toggle="modal" data-target="#seeTask" data-parent="#alltask">
                   <a class="col-md-2">dd/mm/yy</a>
                   <a>task1</a>
-                  <a class="toRight">On Progress</a>
+                  <a class="toRight">In Progress</a>
                 </h4>
               </div>
             </div> <!-- task1 -->
@@ -224,17 +245,7 @@
             </div> <!-- task 2 -->
 
 
-            <div class="panel panel-info">
-              <div class="panel-heading">
-                <h4 class="panel-title"data-toggle="modal" data-target="#seeTask" data-parent="#alltask">
-                  <a class="col-md-2">dd/mm/yy</a>
-                  <a>task3</a>
-                  <a class="toRight">New</a>
-                </h4>
-              </div>
-              
-            </div> <!-- task 3 -->
-
+        
 
 
             <div class="panel panel-danger">
@@ -253,7 +264,7 @@
                 <h4 class="panel-title" data-toggle="modal" data-target="#seeTask" data-parent="#alltask">
                   <a class="col-md-2">dd/mm/yy</a>
                   <a>task5</a>
-                  <a class="toRight">On Progress</a>
+                  <a class="toRight">In Progress</a>
                 </h4>
               </div>
               
@@ -433,9 +444,13 @@
 			          classie.toggle( showRightPush, 'disabled' );
 			        }
 			      }
+
 			    </script>
 
-          
+           <!--animate pizza-->
+  <script> 
+
+</script> 
 
 
       </body>
