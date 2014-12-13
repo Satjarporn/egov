@@ -125,6 +125,8 @@
                     <div class="col-sm-6 col-md-4 ">
                         <div class="thumbnail">
                           <br><img src="//placehold.it/200" class="avatar img-circle" alt="avatar"></br>
+                          <input type="file" class="form-control">
+
                           <div class="caption">
                             <h2><input class="form-control" type="text" value="Creative Mind"></h2>
                             <p><input class="form-control" type="text" value=""></p>
@@ -135,6 +137,7 @@
                     <div class="col-md-4 wp4 delay-05s">
                       <div class="thumbnail">
                           <br><img src="//placehold.it/200" class="avatar img-circle" alt="avatar"></br>
+                          <input type="file" class="form-control">
                           <div class="caption">
                             <h2><input class="form-control" type="text" value="Creative Idea"></h2>
                             <p><input class="form-control" type="text" value=""></p>
@@ -144,6 +147,7 @@
                     <div class="col-md-4 wp4 delay-1s">
                       <div class="thumbnail">
                           <br><img src="//placehold.it/200" class="avatar img-circle" alt="avatar"></br>
+                          <input type="file" class="form-control">
                           <div class="caption">
                             <h2><input class="form-control" type="text" value="Creative Heart"></h2>
                             <p><input class="form-control" type="text" value=""></p>
@@ -156,6 +160,7 @@
                         <div class="col-sm-6 col-md-4 ">
                           <div class="thumbnail">
                             <br><img src="//placehold.it/200" class="avatar img-circle" alt="avatar"></br>
+                            <input type="file" class="form-control">
                             <div class="caption">
                               <h2><input class="form-control" type="text" value="Creative Mind"></h2>
                               <p><input class="form-control" type="text" value=""></p>
@@ -167,6 +172,7 @@
                         <div class="col-sm-6 col-md-4 ">
                           <div class="thumbnail">
                             <br><img src="//placehold.it/200" class="avatar img-circle" alt="avatar"></br>
+                            <input type="file" class="form-control">
                             <div class="caption">
                               <h2><input class="form-control" type="text" value="Creative Heart"></h2>
                               <p><input class="form-control" type="text" value=""></p>
@@ -178,6 +184,7 @@
                         <div class="col-sm-6 col-md-4 ">
                           <div class="thumbnail">
                             <br><img src="//placehold.it/200" class="avatar img-circle" alt="avatar"></br>
+                            <input type="file" class="form-control">
                             <div class="caption">
                               <h2><input class="form-control" type="text" value="Creative Ideas"></h2>
                               <p><input class="form-control" type="text" value=""></p>
