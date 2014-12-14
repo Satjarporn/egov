@@ -149,10 +149,12 @@
 
             <div class="panel panel-default">
               <div class="panel-heading" data-toggle="collapse" data-target="#task1" data-parent="#alltask" aria-expanded="false">
-                <h4 class="panel-title">
+                 <h4 class="panel-title collapsed">
                   <a class="col-md-2">dd/mm/yy</a>
                   <a>task name</a>
-                 
+                 <a class="toRight">In Progress</a>
+                  
+
                 </h4>
               </div>
               <div id="task1" class="panel-collapse collapse">
@@ -163,6 +165,7 @@
                   <button id="taskFile" type="button" class="btn btn-info">Current Task Description File</button> 
     
                   <button id="taskFile" type="button" class="btn btn-success">Developer Uploded File</button>
+                  
                    <br>
                    <p class="taskContent">task content</p>
                    <hr>
@@ -174,21 +177,21 @@
                     Last Update dd/mm/yy time
                     </p>
                    
-                   <button type="button" class="btn btn-success">Complete</button>
+                   <button type="button" class="btn btn-success" data-toggle="modal" data-target="#sendBox">Send your work</button>
                   
-                   <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#rejectBox">Reject</button>
+                   <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#rejectBox">Un-join task</button>
                   
               </div>
               </div>
             </div> <!-- task1 -->
 
 
-            <div class="panel panel-info">
+            <div class="panel panel-danger">
               <div class="panel-heading" data-toggle="collapse" data-target="#task3" data-parent="#alltask" aria-expanded="false">
                 <h4 class="panel-title">
                   <a class="col-md-2">dd/mm/yy</a>
                   <a >task name</a>
-                  <a class="toRight">New</a>
+                  <a class="toRight">Rejected</a>
                 </h4>
               </div>
               <div id="task3" class="panel-collapse collapse">
@@ -209,10 +212,10 @@
                    <p class="taskUpdateInfo">
                     Last Update dd/mm/yy time
                     </p>
-                   <button type="button" class="btn btn-success">Complete</button>
+                   <button type="button" class="btn btn-success" data-toggle="modal" data-target="#sendBox">Send your work</button>
                   
-                   <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#rejectBox">Reject</button>
-                 
+                   <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#rejectBox">Un-join task</button>
+                  
               </div>
               </div>
             </div> <!-- task 3 -->
@@ -227,7 +230,7 @@
             <div id="rejectBox" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
            <div class="modal-dialog modal-lg">
            <div class="modal-content">
-            <h1 class="headerNewTask">Reject Reason</h1>
+            <h1 class="headerNewTask">Are you sure to un-join this task?</h1>
             <hr>
 
             <form role="form" class="taskModal">
@@ -235,10 +238,9 @@
               
                    <div class="taskForm">
               
-             <p class="taskContent">Task Creator : 
-                 </p>
+            
             <div class="form-group">
-              <textarea id="rejectReason" class="form-control" rows="10" placeholder="Reject reason" style="padding-bottom: 10px;"></textarea>
+              <textarea id="rejectReason" class="form-control" rows="10" placeholder="Please give your reasons" style="padding-bottom: 10px;"></textarea>
             </div>
 
           </div>
@@ -253,22 +255,52 @@
             
            </div> <!-- modal content -->
            </div>
-          </div>  <!-- update task -->
+          </div>  <!-- Reason box -->
+
+
+           <!-- Send work box -->
+            <div id="sendBox" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+           <div class="modal-dialog modal-lg">
+           <div class="modal-content">
+            <h1 class="headerNewTask">Send your work</h1>
+            <hr>
+
+            <form role="form" class="taskModal">
+
+              
+                   <div class="taskForm">
+               <div class="form-group">
+                   <div style="position:relative;">
+        <a class='btn btn-primary' href='javascript:;'>
+            Upload your work...
+            <input type="file" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#work-upload-file").html($(this).val());'>
+        </a>
+        &nbsp;
+        <span class='label label-info' id="work-upload-file"></span>
+      </div>
+              </div>
+            
+            <div class="form-group">
+              <textarea id="rejectReason" class="form-control" rows="10" placeholder="Add more description..." style="padding-bottom: 10px;"></textarea>
+            </div>
+
+          </div>
+            <div class="modal-footer">
+               <button type="submit" class="btn btn-primary">Send</button>
+               <button type="submit" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            </div>
+              </form> 
+
+
+           
+            
+           </div> <!-- modal content -->
+           </div>
+          </div>  <!-- Reason box -->
 
 
 
-
-
-
-              <!-- if no task show this
-
-           <div class="container">
-
-         <font class="taskfont"><i>Oops! No Task
-          <br>Add new task <a href="#">here</a></i></font>
-        </div> -->
-
-
+         
 
 
 

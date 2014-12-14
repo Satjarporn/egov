@@ -22,7 +22,6 @@
     	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/component.css" />
       <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/frontpage.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/task.css" />
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/manager_send.css" />
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -88,6 +87,7 @@
                   </div>
               </div>
           </div>
+
         
 
         <section class="swag text-center">
@@ -106,7 +106,7 @@
 
               
               <div class="col-md-8 col-md-offset-2">
-                <h1>check out<br>new updated task<span>Complete or Reject the tasks you created here<br></span></h1>
+                <h1>Choose tasks to Join now!<span>you are developer<br>select and join tasks here</span></h1>
                 <a href="#tarea" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
               </div>
             </div>
@@ -124,19 +124,8 @@
 
           <!-- task menu -->
           <div class="taskmenu">
-             <!--filter-->
-           <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-default active">
-              <input type="checkbox" autocomplete="off" checked> ALL TASK
-            </label>
-            <label class="btn btn-primary">
-              <input type="checkbox" autocomplete="off"> New task
-            </label>
-            <label class="btn btn-success">
-              <input type="checkbox" autocomplete="off"> Task
-            </label>
 
-          </div><!--filter-->
+          
 
 
           </div> <!-- task menu -->
@@ -149,73 +138,38 @@
 
             <div class="panel panel-default">
               <div class="panel-heading" data-toggle="collapse" data-target="#task1" data-parent="#alltask" aria-expanded="false">
-                <h4 class="panel-title">
+                <h4 class="panel-title collapsed">
                   <a class="col-md-2">dd/mm/yy</a>
                   <a>task name</a>
-                 
+                 <a class="toRight">In Progress</a>
+                  
+
                 </h4>
               </div>
               <div id="task1" class="panel-collapse collapse">
                 <div class="panel-body">
                   <p class="taskContent">Task Creator : 
                     <br>Release Date : dd/mm/yy time</p>
-                  
-                  <button id="taskFile" type="button" class="btn btn-info">Current Task Description File</button> 
+                 <button id="taskFile" type="button" class="btn btn-info">Current Task Description File</button> 
     
-                  <button id="taskFile" type="button" class="btn btn-success">Developer Uploded File</button>
+                
                    <br>
                    <p class="taskContent">task content</p>
                    <hr>
                    <p class="taskContent">Mentor : </p>
-                    <textarea readonly id="comment" class="form-control" rows="5" placeholder="Mentor's Comment" style="padding-bottom: 10px;"></textarea>
-          
+                    <textarea readonly id="comment" class="form-control" rows="5" placeholder="Mentor's Comment" style="padding-bottom: 10px;"></textarea>  
                    <hr>
                     <p class="taskUpdateInfo">
                     Last Update dd/mm/yy time
                     </p>
-                   
-                   <button type="button" class="btn btn-success">Complete</button>
-                  
-                   <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#rejectBox">Reject</button>
-                  
+                   <button type="button" class="btn btn-danger">JOIN</button>
+                   <!--button type="button" class="btn btn-success">Complete Task</button-->
+                   <!--button type="button" class="btn btn-danger">Stop Releasing Task</button-->
+                
               </div>
               </div>
             </div> <!-- task1 -->
 
-
-            <div class="panel panel-info">
-              <div class="panel-heading" data-toggle="collapse" data-target="#task3" data-parent="#alltask" aria-expanded="false">
-                <h4 class="panel-title">
-                  <a class="col-md-2">dd/mm/yy</a>
-                  <a >task name</a>
-                  <a class="toRight">New</a>
-                </h4>
-              </div>
-              <div id="task3" class="panel-collapse collapse">
-                <div class="panel-body">
-                  <p class="taskContent">Task Creator : 
-                   <br>Release Date : dd/mm/yy time</p>
-                
-                  <button id="taskFile" type="button" class="btn btn-info">Current Task Description File</button> 
-    
-                  <button id="taskFile" type="button" class="btn btn-success">Developer Uploded File</button>
-              
-                   <br>
-                   <p class="taskContent">task content</p>
-                   <hr>
-                   <p class="taskContent">Mentor : </p>
-                    <textarea readonly id="comment" class="form-control" rows="5" placeholder="Mentor's Comment" style="padding-bottom: 10px;"></textarea>
-                    <hr>
-                   <p class="taskUpdateInfo">
-                    Last Update dd/mm/yy time
-                    </p>
-                   <button type="button" class="btn btn-success">Complete</button>
-                  
-                   <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#rejectBox">Reject</button>
-                 
-              </div>
-              </div>
-            </div> <!-- task 3 -->
 
 
 
@@ -223,50 +177,11 @@
            </div> <!-- all task -->
 
 
-           <!-- Reason box -->
-            <div id="rejectBox" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-           <div class="modal-dialog modal-lg">
-           <div class="modal-content">
-            <h1 class="headerNewTask">Reject Reason</h1>
-            <hr>
-
-            <form role="form" class="taskModal">
-
-              
-                   <div class="taskForm">
-              
-             <p class="taskContent">Task Creator : 
-                 </p>
-            <div class="form-group">
-              <textarea id="rejectReason" class="form-control" rows="10" placeholder="Reject reason" style="padding-bottom: 10px;"></textarea>
-            </div>
-
-          </div>
-            <div class="modal-footer">
-               <button type="submit" class="btn btn-primary">Send</button>
-               <button type="submit" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-            </div>
-              </form> 
-
-
-           
-            
-           </div> <!-- modal content -->
-           </div>
-          </div>  <!-- update task -->
+         
 
 
 
 
-
-
-              <!-- if no task show this
-
-           <div class="container">
-
-         <font class="taskfont"><i>Oops! No Task
-          <br>Add new task <a href="#">here</a></i></font>
-        </div> -->
 
 
 

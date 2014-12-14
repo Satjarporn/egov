@@ -111,6 +111,37 @@ class Main extends CI_Controller {
 		// $this->load->view('developer_task');
 	}
 
+	public function devsend()
+	{
+		if ($this->ion_auth->logged_in())
+		{
+			$user = $this->ion_auth->user()->row();
+			//save username to be data
+			$data['username'] = $user->username;
+			//open home page
+			$this->load->view('developer_send',$data);
+		} else{
+		 	redirect('', 'refresh');
+		}
+		// $this->load->view('developer_task');
+	}
+
+	public function devprogress()
+	{
+		if ($this->ion_auth->logged_in())
+		{
+			$user = $this->ion_auth->user()->row();
+			//save username to be data
+			$data['username'] = $user->username;
+			//open home page
+			$this->load->view('developer_progress',$data);
+		} else{
+		 	redirect('', 'refresh');
+		}
+		// $this->load->view('developer_task');
+	}
+
+
 	public function faq()
 	{
 		if ($this->ion_auth->logged_in())
