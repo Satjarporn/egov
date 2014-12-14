@@ -14,8 +14,8 @@
 | path to your installation.
 |
 */
-// $config['base_url']	= 'http://localhost/egov/';
-$config['base_url']	= 'http://localhost:8888/egov/';
+$config['base_url']	= 'http://localhost/egov/';
+// $config['base_url']	= 'http://localhost:8888/egov/';
 
 /*
 |--------------------------------------------------------------------------

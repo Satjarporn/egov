@@ -17,6 +17,12 @@ class Main extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
+	public function __construct()  // load the model
+	{
+		parent::__construct();
+		// $this->load->model('form_model');
+
+	}
 
 	public function index()
 	{
@@ -40,11 +46,8 @@ class Main extends CI_Controller {
 	{
 		if ($this->ion_auth->logged_in())
 		{
-			$user = $this->ion_auth->user()->row();
-			//save username to be data
-			$data['username'] = $user->username;
-			//open home page
-			$this->load->view('general_manager_hp',$data);
+			if ($this->ion_auth->in_group('dev')) $this->load->view('developer_hp');
+			else $this->load->view('general_manager_hp');
 		} else{
 		 	redirect('', 'refresh');
 		}
@@ -58,7 +61,8 @@ class Main extends CI_Controller {
 			//save username to be data
 			$data['username'] = $user->username;
 			//open home page
-			$this->load->view('manager_task',$data);
+			if ($this->ion_auth->in_group('dev')) $this->load->view('developer_task');
+			else $this->load->view('manager_task',$data);
 		} else{
 		 	redirect('', 'refresh');
 		}
@@ -73,7 +77,8 @@ class Main extends CI_Controller {
 			//save username to be data
 			$data['username'] = $user->username;
 			//open home page
-			$this->load->view('manager_send',$data);
+			if ($this->ion_auth->in_group('dev')) $this->load->view('developer_send');
+			else $this->load->view('manager_send',$data);
 		} else{
 		 	redirect('', 'refresh');
 		}
@@ -88,7 +93,8 @@ class Main extends CI_Controller {
 			//save username to be data
 			$data['username'] = $user->username;
 			//open home page
-			$this->load->view('manager_progress',$data);
+			if ($this->ion_auth->in_group('dev')) $this->load->view('developer_progress');
+			else $this->load->view('manager_progress',$data);
 		} else{
 		 	redirect('', 'refresh');
 		}
