@@ -27,12 +27,12 @@ class Task extends CI_Controller {
 
 		if ($this->form_validation->run() === FALSE){
 			//$this->load->view('templates/header', $data);
-			$this->load->view('task/create');
+			redirect('task', 'refresh');
 			//$this->load->view('templates/footer');
 		}
 		else{
 			$this->task_model->set_task();
-			$this->load->view('task/');
+			redirect('task', 'refresh');
 		}
 	}
 	public function delete($id){

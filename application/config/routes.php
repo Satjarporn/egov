@@ -39,10 +39,10 @@
 */
 
 $route['default_controller'] = "main";
-$route['task'] = "main/task";
-$route['devtask'] = "main/devtask";
-$route['devsend'] = "main/devsend";
-$route['devprogress'] = "main/devprogress";
+$route['task'] = "task";
+//$route['devtask'] = "main/devtask";
+//$route['devsend'] = "main/devsend";
+//$route['devprogress'] = "main/devprogress";
 $route['send'] = "main/send";
 $route['progress'] = "main/progress";
 $route['register']="main/register";
@@ -59,11 +59,11 @@ $route['edit_faq'] = "main/edit_faq";
 
 /////// test
 
-$route['news'] = 'news';
-$route['news/(:any)'] = 'news/view/$1';
-$route['news/create'] = 'news/create';
+//$route['news'] = 'news';
+//$route['news/(:any)'] = 'news/view/$1';
+//$route['news/create'] = 'news/create';
 
-$route['task/test'] = 'task';
+//$route['task/test'] = 'task';
 $route['task/create'] = 'task/create';
 $route['task/delete/(:any)']='task/delete/$1';
 //// end test
