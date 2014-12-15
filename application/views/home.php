@@ -59,8 +59,8 @@
 			<!-- <button type="button" class="btn btn-primary maxwidth">Sign in</button> -->
             <input type="submit" class="btn btn-primary maxwidth login-margin" name="submit" value="Login">
             <?php echo form_close();?>
-            <button type="button" class="btn btn-warning maxwidth login-margin">Forgot Password ?</button>
-            <button type="button" class="btn btn-success maxwidth login-margin">New Account</button>
+            <?php echo anchor('#','<button type="button" class="btn btn-warning" style="width:90%">Forgot Password ?</button>')?>
+            <?php echo anchor('auth/create_user','<button type="button" class="btn btn-success" style="width:90%">New Account</button>')?>
 
         </nav>
 
