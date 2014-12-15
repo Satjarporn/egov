@@ -126,14 +126,12 @@
           <div class="taskmenu">
              <!--filter-->
            <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-default active">
-              <input type="checkbox" autocomplete="off" checked> ALL TASK
-            </label>
+           
             <label class="btn btn-primary">
-              <input type="checkbox" autocomplete="off"> New task
+              <input type="checkbox" autocomplete="off"> In progress task
             </label>
-            <label class="btn btn-success">
-              <input type="checkbox" autocomplete="off"> Task
+            <label class="btn btn-danger">
+              <input type="checkbox" autocomplete="off">Rejected Task
             </label>
 
           </div><!--filter-->
