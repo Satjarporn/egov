@@ -65,6 +65,7 @@ $route['edit_faq'] = "main/edit_faq";
 
 //$route['task/test'] = 'task';
 $route['task/create'] = 'task/create';
+$route['task/update'] = 'task/update';
 $route['task/delete/(:any)']='task/delete/$1';
 //// end test
 

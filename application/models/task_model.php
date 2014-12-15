@@ -33,6 +33,19 @@ class Task_model extends CI_Model {
 
 	return $this->db->insert('task', $data);
 	}
+
+	public function update_task(){
+		$data = array(
+               'name' => $this->input->post('name'),
+               'desc' => $this->input->post('desc'),
+               'last_update_date' => date("Y-m-d H:i:s"),
+               'release_date' => date("Y-m-d H:i:s"),
+               'type' => $this->input->post('type')
+            );
+
+		$this->db->update('task', $data, "ID = ".$this->input->post('id'));
+	}
+
 	public function delete_task($id){
 		$this->db->delete('task', array('id' => $id));
 	}

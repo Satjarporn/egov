@@ -239,7 +239,7 @@
               <?php echo "<div class=\"panel-heading\" data-toggle=\"collapse\" data-target=\"#task".($i)."\" data-parent=\"#alltask\" aria-expanded=\"false\">"; ?>
                 <h4 class="panel-title collapsed">
                   <a class="col-md-2"><?php echo $task_item['create_date']; ?></a>
-                  <a><?php echo $task_item['name']; ?></a>
+                  <?php echo "<a id=\"it1p".$i."\">".$task_item['name']; ?></a>
                  <a class="toRight">
                  	<?php 	if($task_item['type']==0) echo "On Progress";
                  			else if($task_item['type']==1) echo "Stop Releasing";
@@ -252,7 +252,7 @@
               </div>
               <?php echo "<div id=\"task".$i."\" class=\"panel-collapse collapse\">"; ?>
                 <div class="panel-body">
-                  <p class="taskContent">Task Creator : <?php echo $task_item['owner_name']; ?>
+                  <?php echo "<p class=\"taskContent\" id=\"it2p".$i."\">" ?>Task Creator : <?php echo $task_item['owner_name']; ?>
                     <br>Release Date : <?php 	if($task_item['type']==0) echo $task_item['release_date'];
                  			else if($task_item['type']==1) echo "-";
                  			else echo $task_item['release_date'];
@@ -261,7 +261,7 @@
     
                   <button id="taskFile" type="button" class="btn btn-success">Developer Uploded File</button>
                    <br>
-                   <p class="taskContent"><?php echo $task_item['desc']; ?></p>
+                   <?php echo "<p class=\"taskContent\" id=\"it3p".$i."\">".$task_item['desc']; ?></p>
                    <hr>
                    <p class="taskContent">Mentor : </p>
                     <textarea readonly id="comment" class="form-control" rows="5" placeholder="Mentor's Comment" style="padding-bottom: 10px;"><?php echo $task_item['comment']; ?></textarea>  
@@ -269,13 +269,14 @@
                     <p class="taskUpdateInfo">
                     Last Update <?php echo $task_item['last_update_date']; ?>
                     </p>
+                    <?php echo "<input id=\"it0p".$i."\" type=\"hidden\" value=".$task_item['ID'].">" ?>
                     <?php if($task_item['type']==0): ?>
-                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updateTask">Update Task</button>
+                   <button type="button" class="btn btn-primary update" data-toggle="modal" data-target="#updateTask" value=<?php echo $i ?>>Update Task</button>
                     <button type="button" class="btn btn-warning">Stop Releasing Task</button>
                      <button type="button" class="btn btn-danger del"  data-toggle="modal" data-target="#deleteTask" value=<?php echo $task_item['ID']; ?>>Delete Task Permanently</button>
               		
               		<?php elseif($task_item['type']==1): ?>
-              		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updateTask">Update Task</button>
+              		<button type="button" class="btn btn-primary update" data-toggle="modal" data-target="#updateTask" value=<?php echo $i ?>>Update Task</button>
                    <button type="button" class="btn btn-info">Re-release Task</button>
                     <button type="button" class="btn btn-danger del"  data-toggle="modal" data-target="#deleteTask" value=<?php echo $task_item['ID']; ?>>Delete Task Permanently</button>
 
@@ -299,15 +300,16 @@
             <h1 class="headerNewTask">Update Task</h1>
             <hr>
 
-            <form role="form" class="taskModal">
+            <div class="taskModal">
+            <?php echo form_open('task/update') ?>
                    <div class="taskForm">
               <div class="form-group">
-             
-              <input id="taskName" type="text" class="form-control" placeholder="Task name">
+             <input id="up0" name="id" type="hidden">
+              <input id="up1" name="name" type="text" class="form-control" placeholder="Task name">
                 </div>
               <div class="form-group">
                 
-                  <p class="taskContent">Task Creator : 
+                  <p class="taskContent" id="up2">Task Creator :
                     <br>Release Date : dd/mm/yy time</p>
                    
                   <button id="taskFile" type="button" class="btn btn-info">Current Task Description File</button> 
@@ -327,7 +329,7 @@
             </div>
 
             <div class="form-group">
-              <textarea class="form-control" rows="10" placeholder="Add task description" style="padding-bottom: 10px;"></textarea>
+              <textarea class="form-control" rows="10" placeholder="Add task description" style="padding-bottom: 10px;" id="up3" name="desc"></textarea>
             </div>
 
 
@@ -366,11 +368,12 @@
 
           </div>
             <div class="modal-footer">
-               <button type="submit" class="btn btn-primary">Update & Release</button>
-               <button type="submit" class="btn btn-success">Update Only (not release)</button>
+               <button type="submit" class="btn btn-primary" name="type" value="0">Update & Release</button>
+               <button type="submit" class="btn btn-success" name="type" value="1">Update Only (not release)</button>
                <button type="submit" class="btn btn-danger" data-dismiss="modal">Cancel</button>
             </div>
-              </form> 
+              </form>
+            </div>
 
 
            
@@ -511,6 +514,19 @@
 			     $(".del").click(function(){
     				$("#del_link").attr('href',<?php echo "'".base_url()."'"; ?>+'index.php/task/delete/'+ $(this).val());
   					});
+           $(".update").click(function(){
+            $("#up1").val($("#it1p"+$(this).val()).text());
+            var y="#it2p"+$(this).val();
+            y=$(y).html();
+            $("#up2").html(y);
+            y="#it3p"+$(this).val();
+            y=$(y).text();
+            $("#up3").val(y);
+            y="#it0p"+$(this).val();
+            y=$(y).val();
+            $("#up0").val(y);
+            //alert(y);
+            });
 			    </script>
 
 
