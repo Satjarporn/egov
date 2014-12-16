@@ -47,6 +47,7 @@ class Main extends CI_Controller {
 		if ($this->ion_auth->logged_in())
 		{
 			if ($this->ion_auth->in_group('dev')) $this->load->view('developer_hp');
+			else if ($this->ion_auth->in_group('mentor')) $this->load->view('mentor_hp');
 			else $this->load->view('general_manager_hp');
 		} else{
 		 	redirect('', 'refresh');
@@ -62,6 +63,7 @@ class Main extends CI_Controller {
 			$data['username'] = $user->username;
 			//open home page
 			if ($this->ion_auth->in_group('dev')) $this->load->view('developer_task');
+			else if ($this->ion_auth->in_group('mentor')) $this->load->view('mentor_task');
 			else $this->load->view('manager_task',$data);
 		} else{
 		 	redirect('', 'refresh');
@@ -78,6 +80,7 @@ class Main extends CI_Controller {
 			$data['username'] = $user->username;
 			//open home page
 			if ($this->ion_auth->in_group('dev')) $this->load->view('developer_send');
+			else if ($this->ion_auth->in_group('dev')) $this->load->view('mentor_send');
 			else $this->load->view('manager_send',$data);
 		} else{
 		 	redirect('', 'refresh');
