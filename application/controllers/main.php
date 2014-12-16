@@ -255,7 +255,7 @@ class Main extends CI_Controller {
 		{
 			if ($this->ion_auth->in_group('super')) $this->load->view('create_annoucement');
 			
-			else $this->load->view('all_annoucement',$data);
+			else $this->load->view('all_annoucement');
 		} else{
 		 	redirect('', 'refresh');
 		}

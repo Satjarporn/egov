@@ -106,7 +106,7 @@
 
               
               <div class="col-md-8 col-md-offset-2">
-                <h1>Workspace<span>Your Working Area<br>add, edit, delete tasks here</span></h1>
+                <h1>Announcement</h1>
                 <a href="#tarea" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
               </div>
             </div>
@@ -125,6 +125,44 @@
           <!-- task menu -->
           <div class="taskmenu">
 
+
+
+          <!-- create task-->
+          <button class="btn btn-success" data-toggle="modal" data-target="#createNewTask"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create New Annoucement</button>
+          <div id="createNewTask" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+           <div class="modal-dialog modal-lg">
+           <div class="modal-content">
+            <h1 class="headerNewTask">Create New Announcement</h1>
+            <hr>
+
+            <form role="form" class="taskModal">
+              <div class="taskForm">
+              <div class="form-group">
+             
+              <input id="taskName" type="text" class="form-control" placeholder="Annoucement Topic">
+                </div>
+              
+            <div class="form-group">
+              <textarea class="form-control" rows="10" placeholder="Add announcement content..." style="padding-bottom: 10px;"></textarea>
+
+            </div>
+          </div>
+
+
+            <div class="modal-footer">
+               <button type="submit" class="btn btn-primary">Submit</button>
+               <button type="submit" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            </div>
+              </form>
+
+
+           
+            
+           </div> <!-- modal content -->
+           </div> <!-- modal-dialog modal-lg -->
+          </div> <!-- create annoucement-->
+
+
           </div> <!-- task menu -->
            
            <!-- task list -->
@@ -139,7 +177,7 @@
                   <a class="col-md-2">dd/mm/yy</a>
                  
 
-                  <a>annoucement topic</a>
+                  <a>announcement topic</a>
                  <a class="toRight">manager name</a>
                   
 
@@ -149,7 +187,7 @@
                 <div class="panel-body">
                 
                 
-                   <p class="taskContent">annoucement content</p>
+                   <p class="taskContent">announcement content</p>
                 
                   
                    <hr>
@@ -159,7 +197,7 @@
                     </p>
               
                   
-                  
+                     <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#deleteTask">Delete This Announcement Permanently</button>
               </div>
               </div>
             </div> <!-- task1 -->
@@ -170,6 +208,31 @@
 
 
            </div> <!-- all task -->
+
+
+
+
+
+
+
+        <!--delete announcement-->
+        <div class="modal fade" id="deleteTask" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            
+            <div class="headerNewTask">
+                Do you want to delete this announcement permanently?
+            </div>
+            <div class="modal-footer">
+               
+                <button type="button" class="btn btn-success">Yes</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+        </div>
+    </div>
+  </div>
+</div>
+       <!--delete announcement-->
+
 
 
 
