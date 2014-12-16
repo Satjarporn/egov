@@ -106,7 +106,7 @@
 
               
               <div class="col-md-8 col-md-offset-2">
-                <h1>check out<br>new updated task<span>Complete or Reject the tasks you created here<br></span></h1>
+                <h1>Commented task<span>list of task you already gave comment</span></h1>
                 <a href="#tarea" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
               </div>
             </div>
@@ -124,19 +124,7 @@
 
           <!-- task menu -->
           <div class="taskmenu">
-             <!--filter-->
-           <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-default active">
-              <input type="checkbox" autocomplete="off" checked> ALL TASK
-            </label>
-            <label class="btn btn-primary">
-              <input type="checkbox" autocomplete="off"> New task
-            </label>
-            <label class="btn btn-success">
-              <input type="checkbox" autocomplete="off"> Task
-            </label>
-
-          </div><!--filter-->
+         
 
 
           </div> <!-- task menu -->
@@ -147,12 +135,12 @@
 
 
 
-            <div class="panel panel-default">
+            <div class="panel panel-success">
               <div class="panel-heading" data-toggle="collapse" data-target="#task1" data-parent="#alltask" aria-expanded="false">
                  <h4 class="panel-title collapsed">
                   <a class="col-md-2">dd/mm/yy</a>
                   <a>task name</a>
-                 <a class="toRight">In Progress</a>
+                 <a class="toRight">Commented</a>
                   
 
                 </h4>
@@ -164,7 +152,7 @@
                   
                   <button id="taskFile" type="button" class="btn btn-info">Current Task Description File</button> 
     
-                  <button id="taskFile" type="button" class="btn btn-success">Developer Uploded File</button>
+                
                   
                    <br>
                    <p class="taskContent">task content</p>
@@ -177,48 +165,13 @@
                     Last Update dd/mm/yy time
                     </p>
                    
-                   <button type="button" class="btn btn-success" data-toggle="modal" data-target="#sendBox">Send your work</button>
-                  
-                   <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#rejectBox">Un-join task</button>
+                
                   
               </div>
               </div>
             </div> <!-- task1 -->
 
 
-            <div class="panel panel-danger">
-              <div class="panel-heading" data-toggle="collapse" data-target="#task3" data-parent="#alltask" aria-expanded="false">
-                <h4 class="panel-title">
-                  <a class="col-md-2">dd/mm/yy</a>
-                  <a >task name</a>
-                  <a class="toRight">Rejected</a>
-                </h4>
-              </div>
-              <div id="task3" class="panel-collapse collapse">
-                <div class="panel-body">
-                  <p class="taskContent">Task Creator : 
-                   <br>Release Date : dd/mm/yy time</p>
-                
-                  <button id="taskFile" type="button" class="btn btn-info">Current Task Description File</button> 
-    
-                  <button id="taskFile" type="button" class="btn btn-success">Developer Uploded File</button>
-              
-                   <br>
-                   <p class="taskContent">task content</p>
-                   <hr>
-                   <p class="taskContent">Mentor : </p>
-                    <textarea readonly id="comment" class="form-control" rows="5" placeholder="Mentor's Comment" style="padding-bottom: 10px;"></textarea>
-                    <hr>
-                   <p class="taskUpdateInfo">
-                    Last Update dd/mm/yy time
-                    </p>
-                   <button type="button" class="btn btn-success" data-toggle="modal" data-target="#sendBox">Send your work</button>
-                  
-                   <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#rejectBox">Un-join task</button>
-                  
-              </div>
-              </div>
-            </div> <!-- task 3 -->
 
 
 
