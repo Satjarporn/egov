@@ -48,6 +48,7 @@ class Main extends CI_Controller {
 		{
 			if ($this->ion_auth->in_group('dev')) $this->load->view('developer_hp');
 			else if ($this->ion_auth->in_group('mentor')) $this->load->view('mentor_hp');
+			else if ($this->ion_auth->in_group('super')) $this->load->view('super_manager_hp');
 			else if ($this->ion_auth->in_group('admin')) $this->load->view('admin_hp');
 			else $this->load->view('general_manager_hp');
 		} else{
@@ -61,6 +62,7 @@ class Main extends CI_Controller {
 		{
 			if ($this->ion_auth->in_group('dev')) $this->load->view('developer_task');
 			else if ($this->ion_auth->in_group('mentor')) $this->load->view('mentor_task');
+			else if ($this->ion_auth->in_group('super')) $this->load->view('super_manager_task');
 			else $this->load->view('manager_task',$data);
 		} else{
 		 	redirect('', 'refresh');
@@ -108,6 +110,7 @@ class Main extends CI_Controller {
 			//open home page
 			if ($this->ion_auth->in_group('dev')) $this->load->view('developer_send');
 			else if ($this->ion_auth->in_group('mentor')) $this->load->view('mentor_send');
+			else if ($this->ion_auth->in_group('super')) $this->load->view('super_manager_send');
 			else $this->load->view('manager_send',$data);
 		} else{
 		 	redirect('', 'refresh');
@@ -124,6 +127,7 @@ class Main extends CI_Controller {
 			$data['username'] = $user->username;
 			//open home page
 			if ($this->ion_auth->in_group('dev')) $this->load->view('developer_progress');
+			else if ($this->ion_auth->in_group('super')) $this->load->view('super_manager_send');
 			else $this->load->view('manager_progress',$data);
 		} else{
 		 	redirect('', 'refresh');
@@ -253,7 +257,11 @@ class Main extends CI_Controller {
 	{
 		if ($this->ion_auth->logged_in())
 		{
-			if ($this->ion_auth->in_group('super')) $this->load->view('create_announcement');
+			$user = $this->ion_auth->user()->row();
+			//save username to be data
+			$data['username'] = $user->username;
+
+			if ($this->ion_auth->in_group('super')) $this->load->view('create_announcement',$data);
 			
 			else $this->load->view('all_announcement');
 		} else{

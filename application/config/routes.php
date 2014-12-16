@@ -57,7 +57,8 @@ $route['admin'] = "main/admin";
 $route['edit_hp'] = "main/edit_hp";
 $route['edit_faq'] = "main/edit_faq";
 $route['edit_role'] = "main/edit_role";
-$route['announcement'] = "main/announcement";
+
+$route['announcement'] = "announcement";
 
 
 /////// test
@@ -73,6 +74,7 @@ $route['task/delete/(:any)']='task/delete/$1';
 $route['task/stop_rel'] = 'task/stop_rel';
 $route['task/comment'] = 'task/comment';
 $route['faq/edit']='faq/edit';
+$route['announcement/create'] = "announcement/create";
 //// end test
 
 

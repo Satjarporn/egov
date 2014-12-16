@@ -34,7 +34,7 @@
         <a href="#">Forum</a>
         <a href="#">Links</a>
         <a href="#">About</a>
-        <?php echo anchor('#', 'New annoucement') ?>
+        <?php echo anchor('#', 'New announcement') ?>
         <?php echo anchor('faq', 'FAQ') ?>
         </nav>
         
@@ -157,11 +157,11 @@
                     <p>See all task progress and status</p>
                   </div>
                   <div class="col-md-6 wp2 delay-1s">
-                    <?php echo anchor('#','<div class="icon">
-                      <i class="fa fa-check-square shadow"></i>
+                    <?php echo anchor('announcement','<div class="icon">
+                      <i class="fa fa-calendar shadow"></i>
                     </div>
-                    <h2>New Annoucement</h2>')?>
-                    <p>create new annoucement</p>
+                    <h2>New Announcement</h2>')?>
+                    <p>create new announcement</p>
                   </div>
                   <div class="clearfix"></div>
                 </div>
@@ -173,7 +173,7 @@
           <div class="container">
             <div class="row">
               <div class="col-md-8 col-md-offset-2">
-                <h1>Annoucement<span>News&Information</span></h1>
+                <h1>Announcement<span>News&Information</span></h1>
                 <a href="#responsive" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
               </div>
             </div>
