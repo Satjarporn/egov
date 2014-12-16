@@ -276,7 +276,7 @@
                     <input name="test" type="hidden" value="<?php echo $task_item['ID']; ?>">
                     <button name="type" type="submit" class="btn btn-warning" value=1>Stop Releasing Task</button>
                      <button type="button" class="btn btn-danger del"  data-toggle="modal" data-target="#deleteTask" value=<?php echo $task_item['ID']; ?>>Delete Task Permanently</button>
-                     </from>
+                     </form>
               		
               		<?php elseif($task_item['type']==1): ?>
                   <?php echo form_open('task/stop_rel') ?>
@@ -284,7 +284,7 @@
                   <input name="test" type="hidden" value="<?php echo $task_item['ID']; ?>">
                   <button name="type" type="submit" class="btn btn-warning" value=0>Re-release Task</button>
                   <button type="button" class="btn btn-danger del"  data-toggle="modal" data-target="#deleteTask" value=<?php echo $task_item['ID']; ?>>Delete Task Permanently</button>
-                  </from>
+                  </form>
                 	<?php else: ?>
                 	<button type="button" class="btn btn-default" data-toggle="modal" data-target="#completedTaskDetail">See Detail</button>
                     <?php endif; ?>
