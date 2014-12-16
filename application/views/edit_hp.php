@@ -34,6 +34,7 @@
         <h3>Menu</h3>
         <?php echo anchor('admin', 'DashBoard') ?>
         <?php echo anchor('edit_hp', 'Information Configuration') ?>
+        <?php echo anchor('edit_role', 'Edit member Role') ?>
         <?php echo anchor('edit_faq', 'Edit FAQ') ?>
         </nav>
         
@@ -248,7 +249,7 @@
             </div>
 
             <div class="col-md-6 col-md-offset-3 text-center">    
-                  <a href="#"  class="learn-more-btn">Save Change</a>  
+                  <a href="#"  class="learn-more-btn">Save Changes</a>  
               </div>
           </div>
         </section>

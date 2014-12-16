@@ -40,6 +40,7 @@
         <h3>Menu</h3>
         <?php echo anchor('admin_hp', 'DashBoard') ?>
         <?php echo anchor('edit_hp', 'Information Configuration') ?>
+        <?php echo anchor('edit_role', 'Edit member Role') ?>
         <?php echo anchor('edit_faq', 'Edit FAQ') ?>
         </nav>
 

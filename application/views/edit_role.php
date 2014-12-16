@@ -4,7 +4,7 @@
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Edit FAQ</title>
+      <title>Edit Role</title>
     
 
 
@@ -33,7 +33,7 @@
   <body id="top" class="cbp-spmenu-push">
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
         <h3>Menu</h3>
-        <?php echo anchor('admin_hp', 'DashBoard') ?>        
+        <?php echo anchor('admin_hp', 'DashBoard') ?>
         <?php echo anchor('edit_hp', 'Information Configuration') ?>
         <?php echo anchor('edit_role', 'Edit member Role') ?>
         <?php echo anchor('edit_faq', 'Edit FAQ') ?>
@@ -56,7 +56,7 @@
 
               
               <div class="col-md-8 col-md-offset-2">
-                <h1>FAQ Editing<span>Frequency Asking Question<br>Create your FAQ</span></h1>
+                <h1>Role Editing<span>Manage your members<br>Ability</span></h1>
                 <a href="#features" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
               </div>
             </div>
@@ -75,134 +75,17 @@
                 <div class="container">
                     <div class="row">
                   <div class="col-md-3">
-                    <h1>FAQ.</h1>
+                    <h1>Choose your members</h1>
                     </div>
                         <div class="col-md-9">
-                              <form class="form-horizontal" role="form">
-                              <div class="form-group">
-                                  <label>Q:</label>
-                                  <div class="col-lg-8">
-                                    <input class="form-control" type="text" value="">
-                                  </div>
-                              </div>
-                              <div class="form-group">
-                                  <label>A:</label>
-                                  <div class="col-lg-8">
-                                    <input class="form-control" type="text" value="">
-                                  </div>
-                              </div>
-                              <br></br>
-                              <div class="form-group">
-                                  <label>Q:</label>
-                                  <div class="col-lg-8">
-                                    <input class="form-control" type="text" value="">
-                                  </div>
-                              </div>
-                              <div class="form-group">
-                                  <label>A:</label>
-                                  <div class="col-lg-8">
-                                    <input class="form-control" type="text" value="">
-                                  </div>
-                              </div>
-                              <br></br><div class="form-group">
-                                  <label>Q:</label>
-                                  <div class="col-lg-8">
-                                    <input class="form-control" type="text" value="">
-                                  </div>
-                              </div>
-                              <div class="form-group">
-                                  <label>A:</label>
-                                  <div class="col-lg-8">
-                                    <input class="form-control" type="text" value="">
-                                  </div>
-                              </div>
-                              <br></br><div class="form-group">
-                                  <label>Q:</label>
-                                  <div class="col-lg-8">
-                                    <input class="form-control" type="text" value="">
-                                  </div>
-                              </div>
-                              <div class="form-group">
-                                  <label>A:</label>
-                                  <div class="col-lg-8">
-                                    <input class="form-control" type="text" value="">
-                                  </div>
-                              </div>
-                              <br></br><div class="form-group">
-                                  <label>Q:</label>
-                                  <div class="col-lg-8">
-                                    <input class="form-control" type="text" value="">
-                                  </div>
-                              </div>
-                              <div class="form-group">
-                                  <label>A:</label>
-                                  <div class="col-lg-8">
-                                    <input class="form-control" type="text" value="">
-                                  </div>
-                              </div>
-                              <br></br><div class="form-group">
-                                  <label>Q:</label>
-                                  <div class="col-lg-8">
-                                    <input class="form-control" type="text" value="">
-                                  </div>
-                              </div>
-                              <div class="form-group">
-                                  <label>A:</label>
-                                  <div class="col-lg-8">
-                                    <input class="form-control" type="text" value="">
-                                  </div>
-                              </div>
-                              <br></br><div class="form-group">
-                                  <label>Q:</label>
-                                  <div class="col-lg-8">
-                                    <input class="form-control" type="text" value="">
-                                  </div>
-                              </div>
-                              <div class="form-group">
-                                  <label>A:</label>
-                                  <div class="col-lg-8">
-                                    <input class="form-control" type="text" value="">
-                                  </div>
-                              </div>
-                              <br></br><div class="form-group">
-                                  <label>Q:</label>
-                                  <div class="col-lg-8">
-                                    <input class="form-control" type="text" value="">
-                                  </div>
-                              </div>
-                              <div class="form-group">
-                                  <label>A:</label>
-                                  <div class="col-lg-8">
-                                    <input class="form-control" type="text" value="">
-                                  </div>
-                              </div>
-                              <br></br><div class="form-group">
-                                  <label>Q:</label>
-                                  <div class="col-lg-8">
-                                    <input class="form-control" type="text" value="">
-                                  </div>
-                              </div>
-                              <div class="form-group">
-                                  <label>A:</label>
-                                  <div class="col-lg-8">
-                                    <input class="form-control" type="text" value="">
-                                  </div>
-                              </div>
-                              <br></br><div class="form-group">
-                                  <label>Q:</label>
-                                  <div class="col-lg-8">
-                                    <input class="form-control" type="text" value="">
-                                  </div>
-                              </div>
-                              <div class="form-group">
-                                  <label>A:</label>
-                                  <div class="col-lg-8">
-                                    <input class="form-control" type="text" value="">
-                                  </div>
-                              </div>
-                              <br></br>
-                              
-                              </form>
+                              <h1>Choose your member role</h1>
+                              <ul class="list-group">
+                              <li class="list-group-item">ad</li>
+                              <li class="list-group-item">Dapibus ac facilisis in</li>
+                              <li class="list-group-item">Morbi leo risus</li>
+                              <li class="list-group-item">Porta ac consectetur ac</li>
+                              <li class="list-group-item">Vestibulum at eros</li>
+                            </ul>
                         </div>
                     </div>
                     <div class="col-md-6 col-md-offset-3 text-center">    
