@@ -34,7 +34,7 @@
         <a href="#">Forum</a>
         <a href="#">Links</a>
         <a href="#">About</a>
-        <?php echo anchor('#', 'New announcement') ?>
+        <?php echo anchor('announcement', 'Announcement') ?>
         <?php echo anchor('faq', 'FAQ') ?>
         </nav>
         
@@ -146,8 +146,8 @@
                     <?php echo anchor('send','<div class="icon">
                       <i class=" fa fa-cloud-upload shadow"></i>
                     </div>
-                    <h2>new update task</h2>')?>
-                    <p>Check out new updated task from developer</p>
+                    <h2>Complete or Reject</h2>')?>
+                    <p>Check out updated tasks from developer</p>
                   </div>
                   <div class="col-md-6 wp2 delay-1s">
                     <?php echo anchor('progress','<div class="icon">

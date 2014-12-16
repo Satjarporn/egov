@@ -124,19 +124,7 @@
 
           <!-- task menu -->
           <div class="taskmenu">
-             <!--filter-->
-           <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-default active">
-              <input type="checkbox" autocomplete="off" checked> ALL TASK
-            </label>
-            <label class="btn btn-primary">
-              <input type="checkbox" autocomplete="off"> New task
-            </label>
-            <label class="btn btn-success">
-              <input type="checkbox" autocomplete="off"> Task
-            </label>
-
-          </div><!--filter-->
+           
 
 
           </div> <!-- task menu -->
@@ -152,6 +140,7 @@
                 <h4 class="panel-title">
                   <a class="col-md-2">dd/mm/yy</a>
                   <a>task name</a>
+                  <a class="toRight">In progress</a>
                  
                 </h4>
               </div>
@@ -182,40 +171,6 @@
               </div>
             </div> <!-- task1 -->
 
-
-            <div class="panel panel-info">
-              <div class="panel-heading" data-toggle="collapse" data-target="#task3" data-parent="#alltask" aria-expanded="false">
-                <h4 class="panel-title">
-                  <a class="col-md-2">dd/mm/yy</a>
-                  <a >task name</a>
-                  <a class="toRight">New</a>
-                </h4>
-              </div>
-              <div id="task3" class="panel-collapse collapse">
-                <div class="panel-body">
-                  <p class="taskContent">Task Creator : 
-                   <br>Release Date : dd/mm/yy time</p>
-                
-                  <button id="taskFile" type="button" class="btn btn-info">Current Task Description File</button> 
-    
-                  <button id="taskFile" type="button" class="btn btn-success">Developer Uploded File</button>
-              
-                   <br>
-                   <p class="taskContent">task content</p>
-                   <hr>
-                   <p class="taskContent">Mentor : </p>
-                    <textarea readonly id="comment" class="form-control" rows="5" placeholder="Mentor's Comment" style="padding-bottom: 10px;"></textarea>
-                    <hr>
-                   <p class="taskUpdateInfo">
-                    Last Update dd/mm/yy time
-                    </p>
-                   <button type="button" class="btn btn-success">Complete</button>
-                  
-                   <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#rejectBox">Reject</button>
-                 
-              </div>
-              </div>
-            </div> <!-- task 3 -->
 
 
 

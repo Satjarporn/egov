@@ -107,7 +107,7 @@
 
               
               <div class="col-md-8 col-md-offset-2">
-                <h1>All Task Progess<span>Check all task progress here</span></h1>
+                <h1>All Task Progess<span>Check all task progress of yours and from all manager here</span></h1>
                 <a href="#tarea" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
               </div>
             </div>
