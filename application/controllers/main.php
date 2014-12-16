@@ -248,6 +248,19 @@ class Main extends CI_Controller {
 		}
 		// $this->load->view('manager_task');
 	}
+
+	public function annoucement()
+	{
+		if ($this->ion_auth->logged_in())
+		{
+			if ($this->ion_auth->in_group('super')) $this->load->view('create_annoucement');
+			
+			else $this->load->view('all_annoucement',$data);
+		} else{
+		 	redirect('', 'refresh');
+		}
+		// $this->load->view('manager_task');
+	}
 }
 
 /* End of file welcome.php */
