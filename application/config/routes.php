@@ -51,7 +51,7 @@ $route['register']="main/register";
 $route['homepage']='main/homepage';
 $route['auth']="auth";
 $route['wel']="welcome";
-$route['faq'] = "main/faq";
+$route['faq'] = "faq";
 $route['edit_profile'] = "main/edit_profile";
 $route['admin'] = "main/admin";
 $route['edit_hp'] = "main/edit_hp";
@@ -69,6 +69,7 @@ $route['edit_faq'] = "main/edit_faq";
 $route['task/create'] = 'task/create';
 $route['task/update'] = 'task/update';
 $route['task/delete/(:any)']='task/delete/$1';
+$route['faq/edit']='faq/edit';
 //// end test
 
 

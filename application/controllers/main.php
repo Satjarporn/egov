@@ -48,6 +48,7 @@ class Main extends CI_Controller {
 		{
 			if ($this->ion_auth->in_group('dev')) $this->load->view('developer_hp');
 			else if ($this->ion_auth->in_group('mentor')) $this->load->view('mentor_hp');
+			else if ($this->ion_auth->in_group('admin')) $this->load->view('admin_hp');
 			else $this->load->view('general_manager_hp');
 		} else{
 		 	redirect('', 'refresh');
