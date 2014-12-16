@@ -40,6 +40,7 @@
 
 $route['default_controller'] = "main";
 $route['task'] = "task";
+$route['mentortask'] = "main/mentortask";
 //$route['devtask'] = "main/devtask";
 //$route['devsend'] = "main/devsend";
 //$route['devprogress'] = "main/devprogress";

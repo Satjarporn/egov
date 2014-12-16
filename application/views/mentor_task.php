@@ -106,7 +106,7 @@
 
               
               <div class="col-md-8 col-md-offset-2">
-                <h1>Choose tasks to Join now!<span>you are developer<br>select and join tasks here</span></h1>
+                <h1>Choose tasks to comment<span>you are mentor<br>please give your comments</span></h1>
                 <a href="#tarea" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
               </div>
             </div>
@@ -141,7 +141,7 @@
                 <h4 class="panel-title collapsed">
                   <a class="col-md-2">dd/mm/yy</a>
                   <a>task name</a>
-                 <a class="toRight">In Progress</a>
+                 <a class="toRight">Waiting for commment</a>
                   
 
                 </h4>
@@ -157,18 +157,49 @@
                    <p class="taskContent">task content</p>
                    <hr>
                    <p class="taskContent">Mentor : </p>
-                    <textarea readonly id="comment" class="form-control" rows="5" placeholder="Mentor's Comment" style="padding-bottom: 10px;"></textarea>  
+                    <textarea id="comment" class="form-control" rows="5" placeholder="========= GIVE YOUR COMMENT HERE =========" style="padding-bottom: 10px;"></textarea>  
                    <hr>
                     <p class="taskUpdateInfo">
                     Last Update dd/mm/yy time
                     </p>
-                   <button type="button" class="btn btn-danger">JOIN</button>
+                   <button type="button" class="btn btn-success">Save changes</button>
+                   <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#noCommentBox" >No comment</button>
                    <!--button type="button" class="btn btn-success">Complete Task</button-->
-                   <!--button type="button" class="btn btn-danger">Stop Releasing Task</button-->
+                   
                 
               </div>
               </div>
             </div> <!-- task1 -->
+
+             <!-- Reason box -->
+            <div id="noCommentBox" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+           <div class="modal-dialog modal-lg">
+           <div class="modal-content">
+            
+
+          
+
+              
+                   <div class="taskForm">
+              
+             <p class="taskContent"><p class="headerNewTask">Are you sure? </p><p class="headerNewTask">This area will be shown as "No comment"</p>
+
+                 </p>
+            
+
+          </div>
+            <div class="modal-footer">
+               <button type="submit" class="btn btn-success">Yes, I am</button>
+               <button type="submit" class="btn btn-danger" data-dismiss="modal">No</button>
+            </div>
+            
+
+
+           
+            
+           </div> <!-- modal content -->
+           </div>
+          </div>  <!-- update task -->
 
 
 

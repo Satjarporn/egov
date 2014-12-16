@@ -71,6 +71,21 @@ class Main extends CI_Controller {
 		// $this->load->view('manager_task');
 	}
 
+	public function mentortask()
+	{
+		if ($this->ion_auth->logged_in())
+		{
+			$user = $this->ion_auth->user()->row();
+			//save username to be data
+			$data['username'] = $user->username;
+			//open home page
+			$this->load->view('mentor_task',$data);
+		} else{
+		 	redirect('', 'refresh');
+		}
+		// $this->load->view('developer_task');
+	}
+
 	public function send()
 	{
 		if ($this->ion_auth->logged_in())
