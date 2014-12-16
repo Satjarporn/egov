@@ -59,10 +59,6 @@ class Main extends CI_Controller {
 	{
 		if ($this->ion_auth->logged_in())
 		{
-			$user = $this->ion_auth->user()->row();
-			//save username to be data
-			$data['username'] = $user->username;
-			//open home page
 			if ($this->ion_auth->in_group('dev')) $this->load->view('developer_task');
 			else if ($this->ion_auth->in_group('mentor')) $this->load->view('mentor_task');
 			else $this->load->view('manager_task',$data);

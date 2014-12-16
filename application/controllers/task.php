@@ -9,11 +9,15 @@ class Task extends CI_Controller {
 
 	public function index()
 	{
-		$data['task'] = $this->task_model->get_task();
-
-	//$this->load->view('templates/header', $data);
-	$this->load->view('task/index', $data);
-	//$this->load->view('templates/footer');
+		if ($this->ion_auth->logged_in())
+		{
+			$data['task'] = $this->task_model->get_task();
+			if ($this->ion_auth->in_group('dev')) $this->load->view('developer_task');
+			else if ($this->ion_auth->in_group('mentor')) $this->load->view('mentor_task');
+			else $this->load->view('task/index', $data);
+		} else{
+		 	redirect('', 'refresh');
+		}
 	}
 
 	public function create(){
@@ -55,18 +59,12 @@ class Task extends CI_Controller {
 		}
 	}
 
-	public function stop_and_rel(){
+
+
+	public function stop_rel(){
 		$this->load->helper('form');
-		$this->load->library('form_validation');
-		if ($this->form_validation->run() === FALSE){
-			//$this->load->view('templates/header', $data);
-			redirect('task', 'refresh');
-			//$this->load->view('templates/footer');
-		}
-		else{
-			$this->task_model->st_re_task();
-			redirect('task', 'refresh');
-		}
+		$this->task_model->st_rel_task();
+		redirect('task', 'refresh');
 	}
 
 	public function delete($id){
