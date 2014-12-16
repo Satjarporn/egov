@@ -249,13 +249,13 @@ class Main extends CI_Controller {
 		// $this->load->view('manager_task');
 	}
 
-	public function annoucement()
+	public function announcement()
 	{
 		if ($this->ion_auth->logged_in())
 		{
-			if ($this->ion_auth->in_group('super')) $this->load->view('create_annoucement');
+			if ($this->ion_auth->in_group('super')) $this->load->view('create_announcement');
 			
-			else $this->load->view('all_annoucement');
+			else $this->load->view('all_announcement');
 		} else{
 		 	redirect('', 'refresh');
 		}
