@@ -134,7 +134,7 @@
 
            <div class="panel-group" id="alltask">
 
-<?php $i=2;?>
+<?php $i=1;?>
 <?php foreach ($task as $task_item): ?>
             <div class="panel panel-default">
               <?php echo "<div class=\"panel-heading\" data-toggle=\"collapse\" data-target=\"#task".($i)."\" data-parent=\"#alltask\" aria-expanded=\"false\">"; ?>
@@ -150,6 +150,7 @@
               </div>
               <?php echo "<div id=\"task".$i."\" class=\"panel-collapse collapse\">"; ?>
                 <div class="panel-body">
+                  <?php echo form_open('task/comment') ?>
                   <?php echo "<p class=\"taskContent\" id=\"it2p".$i."\">" ?>Task Creator : <?php echo $task_item['owner_name']; ?>
                     <br>Release Date : <?php  if($task_item['type']==0) echo $task_item['release_date'];
                       else if($task_item['type']==1) echo "-";
@@ -160,14 +161,15 @@
                    <?php echo "<p class=\"taskContent\" id=\"it3p".$i."\">".$task_item['desc']; ?></p>
                    <hr>
                    <p class="taskContent">Mentor : </p>
-                    <textarea id="comment" class="form-control" rows="5" placeholder="========= GIVE YOUR COMMENT HERE =========" style="padding-bottom: 10px;"></textarea>
+                    <textarea class="form-control" name="comment<?php echo $task_item['ID']; ?>" rows="5" placeholder="========= GIVE YOUR COMMENT HERE =========" style="padding-bottom: 10px;"></textarea>
                    <hr>
                     <p class="taskUpdateInfo">
                     Last Update <?php echo $task_item['last_update_date']; ?>
                     </p>
-                    <?php echo "<input id=\"it0p".$i."\" type=\"hidden\" value=".$task_item['ID'].">" ?>
-                    <button type="button" class="btn btn-success">Save changes</button>
-                   <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#noCommentBox" >No comment</button>
+                    <?php echo "<input name=\"id\" type=\"hidden\" value=".$task_item['ID'].">" ?>
+                    <button name="comment_stat" type="submit" class="btn btn-success" value="1">Submit comment</button>
+                   <button name="comment_stat" type="submit" class="btn btn-danger" data-toggle="modal" data-target="#noCommentBox" value="2">No comment</button>
+                 </form>
               </div>
               </div>
             </div>

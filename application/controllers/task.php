@@ -77,6 +77,12 @@ class Task extends CI_Controller {
 		redirect('task', 'refresh');
 	}
 
+	public function comment(){
+		$this->load->helper('form');
+		$this->task_model->comment_task();
+		redirect('task', 'refresh');
+	}
+
 	public function delete($id){
 		$this->task_model->delete_task($id);
 		redirect('task', 'refresh');

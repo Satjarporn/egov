@@ -65,4 +65,13 @@ class Task_model extends CI_Model {
 
 		$this->db->update('task', $data, "ID = ".$this->input->post('test'));
 	}
+
+	public function comment_task(){
+		$data = array(
+               'comment' => $this->input->post('comment'.$this->input->post('id')),
+               'comment_stat' => $this->input->post('comment_stat')
+            );
+
+		$this->db->update('task', $data, "ID = ".$this->input->post('id'));
+	}
 }
