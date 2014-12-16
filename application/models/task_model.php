@@ -15,6 +15,16 @@ class Task_model extends CI_Model {
 		return $query->row_array();
 	}
 
+	public function get_mentor_task($slug = FALSE){
+		if ($slug === FALSE){
+		$query = $this->db->get('task');
+		return $query->result_array();
+		}
+
+		$query = $this->db->get_where('task', array('comment_stat' => $slug));
+		return $query->result_array();
+	}
+
 	public function set_task(){
 		$this->load->helper('url');
 		$userid=$this->ion_auth->user()->row()->id;

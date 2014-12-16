@@ -11,11 +11,21 @@ class Task extends CI_Controller {
 	{
 		if ($this->ion_auth->logged_in())
 		{
-			$data['task'] = $this->task_model->get_task();
-			if ($this->ion_auth->in_group('dev')) $this->load->view('developer_task');
-			else if ($this->ion_auth->in_group('mentor')) $this->load->view('mentor_task');
-			else $this->load->view('task/index', $data);
-		} else{
+			
+			if ($this->ion_auth->in_group('dev')){
+				$this->load->view('developer_task');
+			}
+			else if ($this->ion_auth->in_group('mentor')){
+				$data['task'] = $this->task_model->get_mentor_task(0);
+				$this->load->view('task/mentor/index',$data);
+			}
+			else {
+				$data['task'] = $this->task_model->get_task();
+				$this->load->view('task/index', $data);
+			}
+		}
+
+		else{
 		 	redirect('', 'refresh');
 		}
 	}

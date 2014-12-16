@@ -107,7 +107,7 @@ class Main extends CI_Controller {
 			$data['username'] = $user->username;
 			//open home page
 			if ($this->ion_auth->in_group('dev')) $this->load->view('developer_send');
-			else if ($this->ion_auth->in_group('dev')) $this->load->view('mentor_send');
+			else if ($this->ion_auth->in_group('mentor')) $this->load->view('mentor_send');
 			else $this->load->view('manager_send',$data);
 		} else{
 		 	redirect('', 'refresh');
