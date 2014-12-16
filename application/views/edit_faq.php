@@ -50,9 +50,7 @@
                 </div>
 
                 <div class="col-md-12 text-right navicon">
-                  <div class="gear">
-                  <a id="showRightPush" class="fa fa-cog" href="#"><span></span></a>
-                  </div>
+                 
                 </div>
 
               
