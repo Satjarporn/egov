@@ -93,7 +93,7 @@
                   <div class="col-md-3">
                     <h1>FAQ.</h1>
                     </div>
-                        <div class="col-md-9 personal-info">
+                        <div class="col-md-9 personal-info text-left">
                               <?php foreach ($faq as $faq_item): ?>
                               <?php
                                 if($faq_item['question']!=''){
