@@ -116,13 +116,13 @@
 
 
 
-        <!--task container-->
+        <!--announcement container-->
 
 
 
         <div class="col-md-12 taskarea" id="tarea"> 
 
-          <!-- task menu -->
+          <!-- announcement menu -->
           <div class="taskmenu">
 
 
@@ -164,51 +164,54 @@
           </div> <!-- create annoucement-->
 
 
-          </div> <!-- task menu -->
+          </div> <!-- announcement menu -->
            
-           <!-- task list -->
+           <!-- announcement list -->
+
 
            <div class="panel-group" id="alltask">
 
 
-
+<?php $i=1;?>
+<?php foreach ($announcement as $announcement_item): ?>
             <div class="panel panel-default">
-              <div class="panel-heading" data-toggle="collapse" data-target="#task1" data-parent="#alltask" aria-expanded="false">
+               <?php echo "<div class=\"panel-heading\" data-toggle=\"collapse\" data-target=\"#task".($i)."\" data-parent=\"#alltask\" aria-expanded=\"false\">";?>
                 <h4 class="panel-title collapsed">
-                  <a class="col-md-2">dd/mm/yy</a>
+                  <a class="col-md-2"><?php echo $announcement_item['release_date']; ?></a>
                  
 
-                  <a>announcement topic</a>
-                 <a class="toRight">manager name</a>
+                   <?php echo "<a id=\"it1p".$i."\">".$announcement_item['topic']; ?></a>
+                 <a class="toRight"><?php echo $announcement_item['owner_name']; ?></a>
                   
 
                 </h4>
               </div>
-              <div id="task1" class="panel-collapse collapse">
+              <?php echo "<div id=\"task".$i."\" class=\"panel-collapse collapse\">"; ?>
                 <div class="panel-body">
                 
                 
-                   <p class="taskContent">announcement content</p>
+                   <?php echo "<p class=\"taskContent\" id=\"it3p".$i."\">".$announcement_item['desc']; ?></p>
                 
                   
                    <hr>
-                   <p class="taskContent">by super manager name</p>
+                   <?php echo "<p class=\"taskContent\" id=\"it2p".$i."\">" ?>by <?php echo $announcement_item['owner_name']; ?>
                     <p class="taskUpdateInfo">
-                    Release date : dd/mm/yy time
+                    Release date : <?php echo $announcement_item['release_date']; ?>
                     </p>
               
                   
                      <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#deleteTask">Delete This Announcement Permanently</button>
               </div>
               </div>
-            </div> <!-- task1 -->
+            </div> <?php echo "<!-- announcement ".($i)."-->"; ?>
+<? $i++; ?>
+<?php endforeach ?>
 
 
 
 
 
-
-           </div> <!-- all task -->
+           </div> <!-- all announcement -->
 
 
 

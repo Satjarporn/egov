@@ -241,7 +241,7 @@
                   <a class="col-md-2"><?php echo $task_item['create_date']; ?></a>
                   <?php echo "<a id=\"it1p".$i."\">".$task_item['name']; ?></a>
                  <a class="toRight">
-                 	<?php 	if($task_item['type']==0) echo "On Progress";
+                 	<?php 	if($task_item['type']==0) echo "In Progress";
                  			else if($task_item['type']==1) echo "Stop Releasing";
                  			else echo "Completed";
                  	?>
