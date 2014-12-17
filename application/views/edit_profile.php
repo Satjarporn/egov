@@ -150,7 +150,7 @@
                     <div class="form-group">
                       <label class="col-md-3 control-label"></label>
                       <div class="col-md-8">
-                        <input type="button" class="btn btn-primary" value="Save Changes">
+                        <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#saveTask" value="Save Changes">
                         <span></span>
                         <input type="reset" class="btn btn-default" value="Cancel">
                       </div>
@@ -213,6 +213,24 @@
             </div>
         </div>
     </div>
+
+    <!--save task-->
+        <div class="modal fade" id="saveTask" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    
+                    <div class="headerNewTask">
+                        Do you want to save this task permanently?
+                    </div>
+                    <div class="modal-footer">
+                       
+                        <button type="button" class="btn btn-success">Yes</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!-- save task -->
     
 
       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

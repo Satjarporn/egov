@@ -206,11 +206,29 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-md-offset-3 text-center">    
-                        <a href="#"  class="learn-more-btn">Save Changes</a>  
+                        <a href="#"  class="learn-more-btn" data-toggle="modal" data-target="#saveTask">Save Changes</a>  
                     </div>
                 </div>
               
         </section>
+
+        <!--save task-->
+        <div class="modal fade" id="saveTask" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    
+                    <div class="headerNewTask">
+                        Do you want to save this task permanently?
+                    </div>
+                    <div class="modal-footer">
+                       
+                        <button type="button" class="btn btn-success">Yes</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!-- save task -->
           
 
 

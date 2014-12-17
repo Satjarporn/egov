@@ -21,6 +21,8 @@
     	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/default.css" />
     	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/component.css" />
       <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/frontpage.css" />
+              <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/task.css" />
+
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -249,10 +251,28 @@
             </div>
 
             <div class="col-md-6 col-md-offset-3 text-center">    
-                  <a href="#"  class="learn-more-btn">Save Changes</a>  
+                  <a href="#"  class="learn-more-btn" data-toggle="modal" data-target="#saveTask">Save Changes</a>  
               </div>
           </div>
         </section>
+
+        <!--save task-->
+        <div class="modal fade" id="saveTask" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    
+                    <div class="headerNewTask">
+                        Do you want to save this task permanently?
+                    </div>
+                    <div class="modal-footer">
+                       
+                        <button type="button" class="btn btn-success">Yes</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!-- save task -->
         
         <footer>
           <div class="container">

@@ -110,7 +110,7 @@
                                         </select>
                                       </div>
                                       </td>
-                                      <td><button type="button" class="btn btn-danger">Save Changes</button></td>
+                                      <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#saveTask" >Save Changes</button></td>
                                    </tr>
                                    <tr>
                                       <td>02</td>
@@ -126,7 +126,7 @@
                                         </select>
                                       </div>
                                       </td>
-                                      <td><button type="button" class="btn btn-danger">Save Changes</button></td>
+                                      <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#saveTask">Save Changes</button></td>
 
                                    </tr>
                                    <tr>
@@ -143,7 +143,7 @@
                                         </select>
                                       </div>
                                       </td>
-                                      <td><button type="button" class="btn btn-danger">Save Changes</button></td>
+                                      <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#saveTask">Save Changes</button></td>
 
                                    </tr>
                                    <tr>
@@ -160,7 +160,7 @@
                                         </select>
                                       </div>
                                       </td>
-                                      <td><button type="button" class="btn btn-danger">Save Changes</button></td>
+                                      <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#saveTask">Save Changes</button></td>
 
                                    </tr>
                                 </tbody>
@@ -173,6 +173,24 @@
                 </div>
               
         </section>
+
+        <!--save task-->
+        <div class="modal fade" id="saveTask" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    
+                    <div class="headerNewTask">
+                        Do you want to save this task permanently?
+                    </div>
+                    <div class="modal-footer">
+                       
+                        <button type="button" class="btn btn-success">Yes</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!-- save task -->
           
 
 
