@@ -75,7 +75,7 @@
                 <div class="container">
                     <div class="row">
                   <div class="col-md-3">
-                    <h1>Choose your members</h1>
+                    <h1>Choose to Edit</h1>
                     </div>
                         <div class="col-md-9">
                               <h1>Choose your member role</h1>
