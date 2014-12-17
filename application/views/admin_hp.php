@@ -15,6 +15,7 @@
 
     <!-- Custom CSS -->
     <link href="../assets/css/sb-admin.css" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/task.css" />
 
     <!-- Morris Charts CSS -->
     <link href="../assets/css/plugins/morris.css" rel="stylesheet">
@@ -99,9 +100,9 @@
                   <a id="nav-toggle"  class="nav_slide_button" href="#"><span></span></a>
                 </div>
 
-                <div class="col-md-12 text-right navicon">
+                  <div class="col-md-12 text-right navicon">
                   <div class="gear">
-                  <a id="showRightPush" class="fa fa-cog" href="#"><span></span></a>
+                  <a id="showRightPush" class="fa fa-cog" href="#" style="color:white;"><span></span></a>
                   </div>
                 </div>
 
@@ -136,6 +137,28 @@
 
 
                 <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <?php echo anchor('edit_role', '<div class="panel panel-red">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-smile-o fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <!--div class="huge">13</div-->
+                                        <div style="font-size:30px;">Member<br>Configuration</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    <span class="pull-left">View Details</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>') ?>
+                    </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
@@ -202,28 +225,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-red">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-smile-o fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge">13</div>
-                                        <div>New Members!</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#">
-                                <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                    
                 </div>
                 <!-- /.row -->
 

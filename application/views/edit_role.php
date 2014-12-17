@@ -21,7 +21,7 @@
       <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/default.css" />
       <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/component.css" />
       <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/frontpage.css" />
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/task.css" />
+      <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/task.css" />
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -38,6 +38,52 @@
         <?php echo anchor('edit_role', 'Edit member Role') ?>
         <?php echo anchor('edit_faq', 'Edit FAQ') ?>
         </nav>
+
+    <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+        <h3>Your Menu</h3>  
+        <center>
+        <a href="#"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="140" height="140" class="img-circle"></a>
+        </center>
+          <?php echo anchor('homepage', 'Homepage') ?>
+        <a href="#" data-toggle="modal" data-target="#myModal">View Profile</a>
+        <?php echo anchor('edit_profile', 'Edit Profile') ?>
+  
+        <?php echo anchor('auth/logout', '<div class="btn btn-danger noborder maxwidth">Sign out</div>') ?>
+        </nav>
+
+        <!-- Modal Responsive-->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                          <h4 class="modal-title" id="myModalLabel">More About User</h4>
+                          </div>
+                      <div class="modal-body">
+                          <center>
+                          <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
+                          <h3 class="media-heading">Danny <small>USA</small></h3>
+                          <span><strong>Skills: </strong></span>
+                              <span class="label label-warning">HTML5/CSS</span>
+                              <span class="label label-info">Adobe CS 5.5</span>
+                              <span class="label label-info">Microsoft Office</span>
+                              <span class="label label-success">Windows XP, Vista, 7</span>
+                          </center>
+                          <hr>
+                          <center>
+                          <p class="text-left"><strong>Bio: </strong><br>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sem dui, tempor sit amet commodo a, vulputate vel tellus.</p>
+                          <br>
+                          </center>
+                      </div>
+                      <div class="modal-footer">
+                          <center>
+                          <button type="button" class="btn btn-default" data-dismiss="modal"> Ok </button>
+                          </center>
+                      </div>
+                  </div>
+              </div>
+          </div>
         
 
         
@@ -52,6 +98,12 @@
 
                 <div class="col-md-12 text-right navicon">
                  
+                </div>
+
+                <div class="col-md-12 text-right navicon">
+                  <div class="gear">
+                  <a id="showRightPush" class="fa fa-cog" href="#" style="color:white;"><span></span></a>
+                  </div>
                 </div>
 
               

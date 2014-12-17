@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-	<head>
-		<meta charset="utf-8">
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
-    	<title>Editing Information</title>
-		
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Editing Information</title>
+    
 
 
-		<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-    	<link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+      <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
 
-    	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    	<link href="<?php echo base_url(); ?>assets/css/flexslider.css" rel="stylesheet" >
-    	<link href="<?php echo base_url(); ?>assets/css/styles.css" rel="stylesheet">
-    	<link href="<?php echo base_url(); ?>assets/css/queries.css" rel="stylesheet">
-    	<link href="<?php echo base_url(); ?>assets/css/animate.css" rel="stylesheet">
+      <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+      <link href="<?php echo base_url(); ?>assets/css/flexslider.css" rel="stylesheet" >
+      <link href="<?php echo base_url(); ?>assets/css/styles.css" rel="stylesheet">
+      <link href="<?php echo base_url(); ?>assets/css/queries.css" rel="stylesheet">
+      <link href="<?php echo base_url(); ?>assets/css/animate.css" rel="stylesheet">
 
-    	<!-- Push & slide css -->
-    	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/default.css" />
-    	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/component.css" />
+      <!-- Push & slide css -->
+      <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/default.css" />
+      <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/component.css" />
       <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/frontpage.css" />
               <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/task.css" />
 
@@ -29,9 +29,9 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-	</head>
+  </head>
 
-	<body id="top" class="cbp-spmenu-push">
+  <body id="top" class="cbp-spmenu-push">
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
         <h3>Menu</h3>
         <?php echo anchor('admin', 'DashBoard') ?>
@@ -292,50 +292,49 @@
         </footer>
 
 
-		
+    
 
-			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        	<!-- Include all compiled plugins (below), or include individual files as needed -->
-        	<script src="<?php echo base_url(); ?>assets/js/waypoints.min.js"></script>
-        	<script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
-        	<script src="<?php echo base_url(); ?>assets/js/scripts.js"></script>
-        	<script src="<?php echo base_url(); ?>assets/js/jquery.flexslider.js"></script>
-        	<script src="<?php echo base_url(); ?>assets/js/modernizr.js"></script>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+          <!-- Include all compiled plugins (below), or include individual files as needed -->
+          <script src="<?php echo base_url(); ?>assets/js/waypoints.min.js"></script>
+          <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
+          <script src="<?php echo base_url(); ?>assets/js/scripts.js"></script>
+          <script src="<?php echo base_url(); ?>assets/js/jquery.flexslider.js"></script>
+          <script src="<?php echo base_url(); ?>assets/js/modernizr.js"></script>
 
 
-        	<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
-    		<script src="<?php echo base_url(); ?>assets/js/classie.js"></script>
-    		<script>
-      			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
-          			menuRight = document.getElementById( 'cbp-spmenu-s2' ),
-        			showLeftPush = document.getElementById( 'nav-toggle' ),
-        			showRightPush = document.getElementById( 'showRightPush' ),
-        			body = document.body;
+          <!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
+        <script src="<?php echo base_url(); ?>assets/js/classie.js"></script>
+        <script>
+            var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+                menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+              showLeftPush = document.getElementById( 'nav-toggle' ),
+              showRightPush = document.getElementById( 'showRightPush' ),
+              body = document.body;
       
-      			showLeftPush.onclick = function() {
-			        classie.toggle( this, 'active' );
-			        classie.toggle( body, 'cbp-spmenu-push-toright' );
-			        classie.toggle( menuLeft, 'cbp-spmenu-open' );
-			        disableOther( 'showLeftPush' );
-			      };
-			    showRightPush.onclick = function() {
-			        classie.toggle( this, 'active' );
-			        classie.toggle( body, 'cbp-spmenu-push-toleft' );
-			        classie.toggle( menuRight, 'cbp-spmenu-open' );
-			        disableOther( 'showRightPush' );
-			      };
+            showLeftPush.onclick = function() {
+              classie.toggle( this, 'active' );
+              classie.toggle( body, 'cbp-spmenu-push-toright' );
+              classie.toggle( menuLeft, 'cbp-spmenu-open' );
+              disableOther( 'showLeftPush' );
+            };
+          showRightPush.onclick = function() {
+              classie.toggle( this, 'active' );
+              classie.toggle( body, 'cbp-spmenu-push-toleft' );
+              classie.toggle( menuRight, 'cbp-spmenu-open' );
+              disableOther( 'showRightPush' );
+            };
       
-
-			    function disableOther( button ) {
-			        if( button !== 'showLeftPush' ) {
-			          classie.toggle( showLeftPush, 'disabled' );
-			        }
-			        if( button !== 'showRightPush' ) {
-			          classie.toggle( showRightPush, 'disabled' );
-			        }
-			      }
-			    </script>
+          function disableOther( button ) {
+              if( button !== 'showLeftPush' ) {
+                classie.toggle( showLeftPush, 'disabled' );
+              }
+              if( button !== 'showRightPush' ) {
+                classie.toggle( showRightPush, 'disabled' );
+              }
+            }
+          </script>
 
 
       </body>
