@@ -35,8 +35,8 @@
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
         <h3>Menu</h3>
         <?php echo anchor('admin', 'DashBoard') ?>
-        <?php echo anchor('edit_hp', 'Information Configuration') ?>
-        <?php echo anchor('edit_role', 'Edit member Role') ?>
+        <?php echo anchor('edit_hp', 'Edit Homepage') ?>
+        <?php echo anchor('edit_role', 'Edit Member Role') ?>
         <?php echo anchor('edit_faq', 'Edit FAQ') ?>
         </nav>
 
@@ -105,7 +105,7 @@
 
               
               <div class="col-md-8 col-md-offset-2">
-                <h1>Edit your Home page</h1>
+                <h1>Edit<br>E-Government<br>Homepage</h1>
                 <a href="#hero" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
               </div>
             </div>

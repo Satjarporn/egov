@@ -169,6 +169,19 @@ ul.alert-dropdown {
     font-size: 40px;
 }
 
+.panel-primary {
+    border-color: #428bca;
+}
+
+.panel-primary .panel-heading {
+    border-color: #428bca;
+    color: #fff;
+    background-color: #428bca;
+}
+.panel-primary a{
+    color: #428bca;
+}
+
 .panel-green {
     border-color: #5cb85c;
 }
