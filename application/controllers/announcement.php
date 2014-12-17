@@ -22,10 +22,12 @@ class Announcement extends CI_Controller {
 				$this->load->view('announcement/all_announcement', $data);
 			}
 		}
+		else {
+				$data['announcement'] = $this->announcement_model->get_announcement();
+				$this->load->view('announcement/all_announcement', $data);
+			}
 
-		else{
-		 	redirect('', 'refresh');
-		}
+		
 	}
 
 	public function create(){

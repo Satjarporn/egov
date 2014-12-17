@@ -90,7 +90,7 @@
 
         
 
-        <section class="swag text-center">
+       <section class="annouce text-center">
           <div class="container">
             <div class="row">
 

@@ -182,6 +182,9 @@
                       </li>
                     </ul>
                   </div>
+                  <div id="servicesSlider" style="color: #848484;">
+                    <?php echo anchor('announcement','<font style="color:#848484;">see all announcement</font>')?>
+                  </div>
                 </div>
               </div>
             </div>
