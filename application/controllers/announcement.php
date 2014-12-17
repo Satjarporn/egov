@@ -1,5 +1,5 @@
 <?php
-class Task extends CI_Controller {
+class Announcement extends CI_Controller {
 
 	public function __construct()
 	{
@@ -13,11 +13,12 @@ class Task extends CI_Controller {
 		{
 			
 			if ($this->ion_auth->in_group('super')){
-				$this->load->view('announcement/create_announcement');
+				$data['announcement'] = $this->announcement_model->get_announcement();
+				$this->load->view('announcement/create_announcement',$data);
 			}
 			
 			else {
-				$data['announcement'] = $this->task_model->get_announcement();
+				$data['announcement'] = $this->announcement_model->get_announcement();
 				$this->load->view('announcement/all_announcement', $data);
 			}
 		}
@@ -42,7 +43,7 @@ class Task extends CI_Controller {
 			//$this->load->view('templates/footer');
 		}
 		else{
-			$this->task_model->set_task();
+			$this->announcement_model->set_announcement();
 			redirect('announcement', 'refresh');
 		}
 	}

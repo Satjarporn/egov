@@ -2,7 +2,7 @@
 
 <?php echo validation_errors(); ?>
 
-<?php echo form_open('task/create') ?>
+<?php echo form_open('announcement/create') ?>
 
 	<label for="topic">Name</label>
 	<input type="input" name="topic" /><br />

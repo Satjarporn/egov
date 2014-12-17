@@ -125,44 +125,6 @@
           <!-- task menu -->
           <div class="taskmenu">
 
-
-
-          <!-- create task-->
-          <button class="btn btn-success" data-toggle="modal" data-target="#createNewTask"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create New Annoucement</button>
-          <div id="createNewTask" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-           <div class="modal-dialog modal-lg">
-           <div class="modal-content">
-            <h1 class="headerNewTask">Create New Announcement</h1>
-            <hr>
-
-            <form role="form" class="taskModal">
-              <?php echo form_open('announcement/create') ?>
-              <div class="form-group">
-             
-              <input id="announcementTopic" name="topic" type="text" class="form-control" placeholder="Annoucement Topic">
-                </div>
-              
-            <div class="form-group">
-              <textarea class="form-control" name="desc" rows="10" placeholder="Add announcement content..." style="padding-bottom: 10px;"></textarea>
-
-            </div>
-          </div>
-
-
-            <div class="modal-footer">
-               <button type="submit" class="btn btn-primary">Create</button>
-               <button type="submit" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-            </div>
-              </form>
-
-
-           
-            
-           </div> <!-- modal content -->
-           </div> <!-- modal-dialog modal-lg -->
-          </div> <!-- create annoucement-->
-
-
           </div> <!-- task menu -->
            
            <!-- task list -->
@@ -197,7 +159,7 @@
                     </p>
               
                   
-                     <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#deleteTask">Delete This Announcement Permanently</button>
+                  
               </div>
               </div>
             </div> <!-- task1 -->
@@ -208,31 +170,6 @@
 
 
            </div> <!-- all task -->
-
-
-
-
-
-
-
-        <!--delete announcement-->
-        <div class="modal fade" id="deleteTask" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            
-            <div class="headerNewTask">
-                Do you want to delete this announcement permanently?
-            </div>
-            <div class="modal-footer">
-               
-                <button type="button" class="btn btn-success">Yes</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-        </div>
-    </div>
-  </div>
-</div>
-       <!--delete announcement-->
-
 
 
 

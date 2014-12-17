@@ -1,5 +1,5 @@
 <?php
-class Task_model extends CI_Model {
+class Announcement_model extends CI_Model {
 
 	public function __construct()
 	{
@@ -7,35 +7,32 @@ class Task_model extends CI_Model {
 	}
 	public function get_announcement($slug = FALSE){
 		if ($slug === FALSE){
-		$query = $this->db->get('task');
+		$query = $this->db->get('announcement');
 		return $query->result_array();
 		}
 
-		$query = $this->db->get_where('task', array('owner_ID' => $slug));
+		$query = $this->db->get_where('announcement', array('owner_id' => $slug));
 		return $query->row_array();
 	}
 
 	
 
-	public function set_task(){
+	public function set_announcement(){
 		$this->load->helper('url');
 		$userid=$this->ion_auth->user()->row()->id;
 		$data = array(
-			'name' => $this->input->post('name'),
+			'topic' => $this->input->post('topic'),
 			'desc' => $this->input->post('desc'),
-			'create_date' => date("Y-m-d H:i:s"),
-			'last_update_date' => date("Y-m-d H:i:s"),
 			'release_date' => date("Y-m-d H:i:s"),
-			'owner_ID' => $userid,
-			'owner_name' => $this->ion_auth->user()->row()->first_name." ".$this->ion_auth->user()->row()->last_name,
-			'type' => $this->input->post('type')
+			'owner_id' => $userid,
+			'owner_name' => $this->ion_auth->user()->row()->first_name." ".$this->ion_auth->user()->row()->last_name
 		);
 
-		return $this->db->insert('task', $data);
+		return $this->db->insert('announcement', $data);
 	}
 
-	public function delete_task($id){
-		$this->db->delete('task', array('id' => $id));
+	public function delete_announcement($id){
+		$this->db->delete('announcement', array('id' => $id));
 	}
 
 	
