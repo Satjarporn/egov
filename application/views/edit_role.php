@@ -73,24 +73,103 @@
 <section class="features section-padding" id="features">
           
                 <div class="container">
+                  <h1>Role Editing</h1>
                     <div class="row">
                   <div class="col-md-3">
-                    <h1>Choose to Edit</h1>
+                    
                     </div>
-                        <div class="col-md-9">
-                              <h1>Choose your member role</h1>
-                              <ul class="list-group">
-                              <li class="list-group-item">ad</li>
-                              <li class="list-group-item">Dapibus ac facilisis in</li>
-                              <li class="list-group-item">Morbi leo risus</li>
-                              <li class="list-group-item">Porta ac consectetur ac</li>
-                              <li class="list-group-item">Vestibulum at eros</li>
-                            </ul>
+                        <div>
+                              <h1>Change your members role</h1>
+                              <div class="panel panel-default">
+                              <!-- Default panel contents -->
+                              <div class="panel-heading">Member</div>
+                              <!-- Table -->
+                              <table class="table">
+                                <thead>
+                                   <tr>
+                                      <th>#</th>
+                                      <th>Firstname</th>
+                                      <th>Lastname</th>
+                                      <th>Email</th>
+                                      <th>Role</th>
+                                      <th></th>
+                                   </tr>
+                                </thead>
+                                <tbody>
+                                   <tr>
+                                      <td>01</td>
+                                      <td>Ezat</td>
+                                      <td>Malaya</td>
+                                      <td>Ezat@mentor.com</td>
+                                      <td><div class="form-group">
+                                        <select class="form-control" id="sel1">
+                                          <option>Super Manager</option>
+                                          <option>General Manager</option>
+                                          <option>Mentor</option>
+                                          <option>Developer</option>
+                                        </select>
+                                      </div>
+                                      </td>
+                                      <td><button type="button" class="btn btn-danger">Save Changes</button></td>
+                                   </tr>
+                                   <tr>
+                                      <td>02</td>
+                                      <td>Sandy</td>
+                                      <td>Shanghainese</td>
+                                      <td>Sandy@chinesegirl.com</td>
+                                      <td><div class="form-group">
+                                        <select class="form-control" id="sel1">
+                                          <option>Super Manager</option>
+                                          <option>General Manager</option>
+                                          <option>Mentor</option>
+                                          <option>Developer</option>
+                                        </select>
+                                      </div>
+                                      </td>
+                                      <td><button type="button" class="btn btn-danger">Save Changes</button></td>
+
+                                   </tr>
+                                   <tr>
+                                      <td>03</td>
+                                      <td>Danny</td>
+                                      <td>Grenday</td>
+                                      <td>Danny@farang.com</td>
+                                      <td><div class="form-group">
+                                        <select class="form-control" id="sel1">
+                                          <option>Super Manager</option>
+                                          <option>General Manager</option>
+                                          <option>Mentor</option>
+                                          <option>Developer</option>
+                                        </select>
+                                      </div>
+                                      </td>
+                                      <td><button type="button" class="btn btn-danger">Save Changes</button></td>
+
+                                   </tr>
+                                   <tr>
+                                      <td>04</td>
+                                      <td>Nissha</td>
+                                      <td>Kengenglish</td>
+                                      <td>Nissha@malay.com</td>
+                                      <td><div class="form-group">
+                                        <select class="form-control" id="sel1">
+                                          <option>Super Manager</option>
+                                          <option>General Manager</option>
+                                          <option>Mentor</option>
+                                          <option>Developer</option>
+                                        </select>
+                                      </div>
+                                      </td>
+                                      <td><button type="button" class="btn btn-danger">Save Changes</button></td>
+
+                                   </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            
                         </div>
                     </div>
-                    <div class="col-md-6 col-md-offset-3 text-center">    
-                        <a href="#"  class="learn-more-btn">Save Changes</a>  
-                    </div>
+                   
                 </div>
               
         </section>
