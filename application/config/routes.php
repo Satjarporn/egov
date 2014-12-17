@@ -75,6 +75,7 @@ $route['task/stop_rel'] = 'task/stop_rel';
 $route['task/comment'] = 'task/comment';
 $route['faq/edit']='faq/edit';
 $route['announcement/create'] = "announcement/create";
+$route['announcement/delete/(:any)']='announcement/delete/$1';
 //// end test
 
 

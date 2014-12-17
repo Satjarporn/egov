@@ -47,6 +47,11 @@ class Announcement extends CI_Controller {
 			redirect('announcement', 'refresh');
 		}
 	}
+
+	public function delete($id){
+		$this->announcement_model->delete_announcement($id);
+		redirect('announcement', 'refresh');
+	}
 	
 
 

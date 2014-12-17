@@ -200,7 +200,7 @@
                     </p>
               
                   
-                     <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#deleteTask">Delete This Announcement Permanently</button>
+                     <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#deleteTask" value=<?php echo "\"".$announcement_item['id']."\""; ?>>Delete This Announcement Permanently</button>
               </div>
               </div>
             </div> <?php echo "<!-- announcement ".($i)."-->"; ?>
@@ -229,7 +229,7 @@
             </div>
             <div class="modal-footer">
                
-                <button type="button" class="btn btn-success">Yes</button>
+                <a id="del_link"><button type="button" class="btn btn-success del">Yes</button></a>
                 <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
         </div>
     </div>
@@ -311,6 +311,11 @@
 			          classie.toggle( showRightPush, 'disabled' );
 			        }
 			      }
+
+            $(".del").click(function(){
+            $("#del_link").attr('href',<?php echo "'".base_url()."'"; ?>+'index.php/announcement/delete/'+$(this).val());
+            });
+
 			    </script>
 
 
