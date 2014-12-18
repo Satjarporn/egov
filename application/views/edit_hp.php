@@ -106,11 +106,16 @@
               
               <div class="col-md-8 col-md-offset-2">
                 <h1>Edit<br>E-Government<br>Homepage</h1>
+                 <div class="alert alert-info alert-dismissible" style="background:rgba(217,237,247,0.7);">Please input the value in the box then click "Save Changes" at the bottom of the page</div>
                 <a href="#hero" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
+
+               
               </div>
             </div>
           </div>
         </section>
+
+        <div></div>
 
           <section class="hero" id="hero">
             <div class="container">

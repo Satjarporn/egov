@@ -200,7 +200,7 @@
                     </p>
               
                   
-                     <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#deleteTask" value=<?php echo "\"".$announcement_item['id']."\""; ?>>Delete This Announcement Permanently</button>
+                     <button type="button" class="btn btn-danger del"  data-toggle="modal" data-target="#deleteTask" value=<?php echo $announcement_item['id']; ?>>Delete This Announcement Permanently</button>
               </div>
               </div>
             </div> <?php echo "<!-- announcement ".($i)."-->"; ?>
@@ -313,7 +313,7 @@
 			      }
 
             $(".del").click(function(){
-            $("#del_link").attr('href',<?php echo "'".base_url()."'"; ?>+'index.php/announcement/delete/'+$(this).val());
+            $("#del_link").attr('href','<?php echo base_url(); ?>index.php/announcement/delete/'+$(this).val());
             });
 
 			    </script>

@@ -171,6 +171,42 @@
               </div>
             </div> <!-- task1 -->
 
+            <div class="panel panel-danger">
+              <div class="panel-heading" data-toggle="collapse" data-target="#task2" data-parent="#alltask" aria-expanded="false">
+                 <h4 class="panel-title collapsed">
+                  <a class="col-md-2">dd/mm/yy</a>
+                  <a>task name</a>
+                 <a class="toRight">No Comment</a>
+                  
+
+                </h4>
+              </div>
+              <div id="task2" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <p class="taskContent">Task Creator : 
+                    <br>Release Date : dd/mm/yy time</p>
+                  
+                  <button id="taskFile" type="button" class="btn btn-info">Current Task Description File</button> 
+    
+                
+                  
+                   <br>
+                   <p class="taskContent">task content</p>
+                   <hr>
+                   <p class="taskContent">Mentor : </p>
+                   <p><i>- no comment -</i></p>
+          
+                   <hr>
+                    <p class="taskUpdateInfo">
+                    Last Update dd/mm/yy time
+                    </p>
+                   
+                
+                  
+              </div>
+              </div>
+            </div> <!-- task1 -->
+
 
 
 
