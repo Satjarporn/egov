@@ -200,7 +200,7 @@
                     </p>
               
                   
-                     <button type="button" class="btn btn-danger del"  data-toggle="modal" data-target="#deleteTask" value=<?php echo $announcement_item['id']; ?>>Delete This Announcement Permanently</button>
+                     <button type="button" class="btn btn-danger del"  data-toggle="modal" data-target="#deleteTask" value="<?php echo $announcement_item['id']; ?>">Delete This Announcement Permanently</button>
               </div>
               </div>
             </div> <?php echo "<!-- announcement ".($i)."-->"; ?>

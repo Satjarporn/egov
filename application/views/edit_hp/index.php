@@ -126,7 +126,7 @@
               <div class="row">
                 <div class="col-md-8 col-md-offset-1 text-center inner">
                   <h1 class="animated fadeInDown">E-Government<span>Working Area</span></h1>
-                  <input name="hp-head" class="form-control" type="text" value=<?php echo $hp['head']; ?>>
+                  <input name="hp-head" class="form-control" type="text" placeholder="<?php echo $hp['head']; ?>">
                 </div>
               </div>
             </div>
@@ -148,21 +148,21 @@
                       <i class="fa fa-th-list shadow"></i>
                     </div>
                     <h2>Task</h2>
-                    <p><input name="hp-task" class="form-control" type="text" value=<?php echo "\"".$hp['task']."\""; ?>></p>
+                    <p><input name="hp-task" class="form-control" type="text" value="<?php echo $hp['task']; ?>"></p>
                   </div>
                   <div class="col-md-4 wp2 delay-05s">
                     <div class="icon">
                       <i class=" fa fa-cloud-upload shadow"></i>
                     </div>
                     <h2>Send</h2>
-                    <p><input name="hp-send" class="form-control" type="text" value=<?php echo $hp['send']; ?>></p>
+                    <p><input name="hp-send" class="form-control" type="text" value="<?php echo $hp['send']; ?>"></p>
                   </div>
                   <div class="col-md-4 wp2 delay-1s">
                     <div class="icon">
                       <i class="fa fa-check-square shadow"></i>
                     </div>
                     <h2>Progress</h2>
-                    <p><input name="hp-progress" class="form-control" type="text" value=<?php echo $hp['progress']; ?>></p>
+                    <p><input name="hp-progress" class="form-control" type="text" value="<?php echo $hp['progress']; ?>"></p>
                   </div>
                   <div class="clearfix"></div>
                 </div>
@@ -184,8 +184,8 @@
                           <input type="file" class="form-control">
 
                           <div class="caption">
-                            <h2><input name="hp-about-head-1" class="form-control" type="text" value=<?php echo $hp['abtHead1']; ?>></h2>
-                            <p><input name="hp-about-desc-1" class="form-control" type="text" value=""></p>
+                            <h2><input name="hp-about-head-1" class="form-control" type="text" value="<?php echo $hp['abtHead1']; ?>"></h2>
+                            <p><input name="hp-about-desc-1" class="form-control" type="text" value="<?php echo $hp['abtDesc1']; ?>"></p>
                           </div>
                         </div>
                     
@@ -195,8 +195,8 @@
                           <br><img src="//placehold.it/200" class="avatar img-circle" alt="avatar"></br>
                           <input type="file" class="form-control">
                           <div class="caption">
-                            <h2><input name="hp-about-head-2" class="form-control" type="text" value=<?php echo $hp['abtHead2']; ?>></h2>
-                            <p><input name="hp-about-desc-2" class="form-control" type="text" value=""></p>
+                            <h2><input name="hp-about-head-2" class="form-control" type="text" value="<?php echo $hp['abtHead2']; ?>"></h2>
+                            <p><input name="hp-about-desc-2" class="form-control" type="text" value="<?php echo $hp['abtDesc2']; ?>"></p>
                           </div>
                         </div>
                     </div>
@@ -205,8 +205,8 @@
                           <br><img src="//placehold.it/200" class="avatar img-circle" alt="avatar"></br>
                           <input type="file" class="form-control">
                           <div class="caption">
-                            <h2><input name="hp-about-head-3" class="form-control" type="text" value="asdf"></h2>
-                            <p><input name="hp-about-desc-3" class="form-control" type="text" value=""></p>
+                            <h2><input name="hp-about-head-3" class="form-control" type="text" value="<?php echo $hp['abtHead3']; ?>"></h2>
+                            <p><input name="hp-about-desc-3" class="form-control" type="text" value="<?php echo $hp['abtDesc3']; ?>"></p>
                           </div>
                         </div>
                     </div>
@@ -218,8 +218,8 @@
                             <br><img src="//placehold.it/200" class="avatar img-circle" alt="avatar"></br>
                             <input type="file" class="form-control">
                             <div class="caption">
-                              <h2><input name="hp-about-head-4" class="form-control" type="text" value="Creative Mind"></h2>
-                              <p><input name="hp-about-desc-4" class="form-control" type="text" value=""></p>
+                              <h2><input name="hp-about-head-4" class="form-control" type="text" value="<?php echo $hp['abtHead4']; ?>"></h2>
+                              <p><input name="hp-about-desc-4" class="form-control" type="text" value="<?php echo $hp['abtDesc4']; ?>"></p>
                             </div>
                           </div>
                         </div>
@@ -230,8 +230,8 @@
                             <br><img src="//placehold.it/200" class="avatar img-circle" alt="avatar"></br>
                             <input type="file" class="form-control">
                             <div class="caption">
-                              <h2><input name="hp-about-head-5" class="form-control" type="text" value="Creative Heart"></h2>
-                              <p><input name="hp-about-desc-5" class="form-control" type="text" value=""></p>
+                              <h2><input name="hp-about-head-5" class="form-control" type="text" value="<?php echo $hp['abtHead5']; ?>"></h2>
+                              <p><input name="hp-about-desc-5" class="form-control" type="text" value="<?php echo $hp['abtDesc5']; ?>"></p>
                             </div>
                           </div>
                         </div>
@@ -242,8 +242,8 @@
                             <br><img src="//placehold.it/200" class="avatar img-circle" alt="avatar"></br>
                             <input type="file" class="form-control">
                             <div class="caption">
-                              <h2><input name="hp-about-head-6" class="form-control" type="text" value="Creative Ideas"></h2>
-                              <p><input name="hp-about-desc-6" class="form-control" type="text" value=""></p>
+                              <h2><input name="hp-about-head-6" class="form-control" type="text" value="<?php echo $hp['abtHead6']; ?>"></h2>
+                              <p><input name="hp-about-desc-6" class="form-control" type="text" value="<?php echo $hp['abtDesc6']; ?>"></p>
                             </div>
                           </div>
                         </div>
@@ -269,19 +269,19 @@
               <div class="col-md-4">
                 <div class="light-box box-hover">
                   <h2><i class="fa fa-map-marker"></i><span>Address</span></h2>
-                  <input name="hp-address" class="form-control" type="text" value="Kookmin University, Seoul, Korea">
+                  <input name="hp-address" class="form-control" type="text" value="<?php echo $hp['address']; ?>">
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="light-box box-hover">
                   <h2><i class="fa fa-mobile"></i><span>Phone</span></h2>
-                  <input name="hp-phone" class="form-control" type="text" value="+82 10-3043-xxxx">
+                  <input name="hp-phone" class="form-control" type="text" value="<?php echo $hp['phone']; ?>">
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="light-box box-hover">
                   <h2><i class="fa fa-paper-plane"></i><span>Email</span></h2>
-                  <input name="hp-email" class="form-control" type="text" value="emailme@gmail.com">
+                  <input name="hp-email" class="form-control" type="text" value="<?php echo $hp['email']; ?>">
                 </div>
               </div>
             </div>
@@ -289,15 +289,15 @@
                 <ul class="social-buttons">
                   <div class="col-md-4">
                   <li><a href="#" class="social-btn"><i class="fa fa-facebook"></i></a></li>
-                  <input class="form-control" type="text" value="">
+                  <input class="form-control" type="text" value="<?php echo $hp['facebook']; ?>">
                 </div>
                 <div class="col-md-4">
                   <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
-                  <input class="form-control" type="text" value="">
+                  <input class="form-control" type="text" value="<?php echo $hp['twitter']; ?>">
                 </div>
                 <div class="col-md-4">
                   <li><a href="#" class="social-btn"><i class="fa fa-google-plus"></i></a></li>
-                  <input class="form-control" type="text" value="">
+                  <input class="form-control" type="text" value="<?php echo $hp['googleplus']; ?>">
                 </div>
                 </ul>
              

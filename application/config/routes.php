@@ -54,11 +54,12 @@ $route['wel']="welcome";
 $route['faq'] = "faq";
 $route['edit_profile'] = "main/edit_profile";
 $route['admin'] = "main/admin";
-$route['edit_hp'] = "main/edit_hp";
+// $route['edit_hp'] = "main/edit_hp";
 $route['edit_faq'] = "main/edit_faq";
 $route['edit_role'] = "main/edit_role";
 
 $route['announcement'] = "announcement";
+$route['edit_hp'] = "edit_hp";
 
 
 /////// test
@@ -75,6 +76,7 @@ $route['task/comment'] = 'task/comment';
 $route['faq/edit']='faq/edit';
 $route['announcement/create'] = "announcement/create";
 $route['announcement/delete/(:any)']='announcement/delete/$1';
+$route['edit_hp/edit'] = "edit_hp/edit";
 //// end test
 
 

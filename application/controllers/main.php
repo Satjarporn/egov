@@ -218,7 +218,8 @@ class Main extends CI_Controller {
 			//save username to be data
 			$data['username'] = $user->username;
 			//open home page
-			$this->load->view('admin_hp',$data);
+			if ($this->ion_auth->in_group('admin')) $this->load->view('admin_hp',$data);
+			else redirect('', 'refresh');
 		} else{
 		 	redirect('', 'refresh');
 		}
@@ -232,7 +233,8 @@ class Main extends CI_Controller {
 			//save username to be data
 			$data['username'] = $user->username;
 			//open home page
-			$this->load->view('edit_hp',$data);
+			if ($this->ion_auth->in_group('admin')) $this->load->view('edit_hp',$data);
+			else redirect('', 'refresh');
 		} else{
 		 	redirect('', 'refresh');
 		}
@@ -246,7 +248,8 @@ class Main extends CI_Controller {
 			//save username to be data
 			$data['username'] = $user->username;
 			//open home page
-			$this->load->view('edit_faq',$data);
+			if ($this->ion_auth->in_group('admin')) $this->load->view('edit_faq',$data);
+			else redirect('', 'refresh');
 		} else{
 		 	redirect('', 'refresh');
 		}
@@ -273,7 +276,8 @@ class Main extends CI_Controller {
 			//save username to be data
 			$data['username'] = $user->username;
 			//open home page
-			$this->load->view('edit_role',$data);
+			if ($this->ion_auth->in_group('admin')) $this->load->view('edit_role',$data);
+			else redirect('', 'refresh');
 		} else{
 		 	redirect('', 'refresh');
 		}
