@@ -40,12 +40,12 @@
 
 $route['default_controller'] = "main";
 $route['task'] = "task";
-$route['mentortask'] = "main/mentortask";
-$route['mentorsend'] = "main/mentorsend";
+// $route['mentortask'] = "main/mentortask";
+// $route['mentorsend'] = "main/mentorsend";
 //$route['devtask'] = "main/devtask";
 //$route['devsend'] = "main/devsend";
 //$route['devprogress'] = "main/devprogress";
-$route['send'] = "main/send";
+$route['send'] = "task/send";
 $route['progress'] = "main/progress";
 $route['register']="main/register";
 $route['homepage']='main/homepage';
@@ -67,7 +67,6 @@ $route['announcement'] = "announcement";
 //$route['news/(:any)'] = 'news/view/$1';
 //$route['news/create'] = 'news/create';
 
-//$route['task/test'] = 'task';
 $route['task/create'] = 'task/create';
 $route['task/update'] = 'task/update';
 $route['task/delete/(:any)']='task/delete/$1';

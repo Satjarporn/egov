@@ -30,6 +30,23 @@ class Task extends CI_Controller {
 		}
 	}
 
+	public function send()
+	{
+		if ($this->ion_auth->logged_in())
+		{
+			if ($this->ion_auth->in_group('dev')) $this->load->view('developer_send');
+			else if ($this->ion_auth->in_group('mentor')){
+				$data['task'] = $this->task_model->get_mentor_task(1);
+				$this->load->view('task/mentor/send',$data);
+			}
+			else if ($this->ion_auth->in_group('super')) $this->load->view('super_manager_send');
+			else $this->load->view('manager_send',$data);
+		} else{
+		 	redirect('', 'refresh');
+		}
+		// $this->load->view('manager_task');
+	}
+
 	public function create(){
 		$this->load->helper('form');
 		$this->load->library('form_validation');

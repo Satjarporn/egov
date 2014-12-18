@@ -264,7 +264,11 @@
                    <?php echo "<p class=\"taskContent\" id=\"it3p".$i."\">".$task_item['desc']; ?></p>
                    <hr>
                    <p class="taskContent">Mentor : </p>
+                    <?php if($task_item['comment_stat']!=2): ?>
                     <textarea readonly id="comment" class="form-control" rows="5" placeholder="Mentor's Comment" style="padding-bottom: 10px;"><?php echo $task_item['comment']; ?></textarea>  
+                    <?php else: ?>
+                    <p><i>- no comment -</i></p>
+                    <?php endif; ?>
                    <hr>
                     <p class="taskUpdateInfo">
                     Last Update <?php echo $task_item['last_update_date']; ?>
