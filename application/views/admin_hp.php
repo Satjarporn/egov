@@ -136,28 +136,6 @@
                 <!-- /.row -->
 
                   <div class="container-fluid" id="tarea">
-
-                <div class="row">
-                    <div class="col-lg-12">
-                        <!-- <div class="panel panel-default"> -->
-                            <!-- <div class="panel-heading"
-                                <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Tasks Panel</h3>
-                            </div> -->
-                            <?php echo anchor('edit_hp', '
-                            <div class="panel-body" >
-                                <div class="list-group">
-                                  
-                                    <p class="list-group-item">
-                                        <span class="badge" style="background:red;">1</span>
-                                        <i class="fa fa-fw fa-user"></i> New User
-                                    </p>
-                                   
-                                </div>') ?>
-                            <!-- </div> -->
-                        </div>
-                    </div>
-                </div>
-                <!-- /.row -->
                 
                 <div class="row">
                   
