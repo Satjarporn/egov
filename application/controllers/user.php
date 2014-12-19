@@ -21,42 +21,22 @@ class user extends CI_Controller {
 		}
 	}
 
-	/*public function send()
+	public function role()
 	{
 		if ($this->ion_auth->logged_in())
 		{
-			if ($this->ion_auth->in_group('dev')) $this->load->view('developer_send');
-			else if ($this->ion_auth->in_group('mentor')){
-				$data['user'] = $this->user_model->get_mentor_user(1);
-				$this->load->view('user/mentor/send',$data);
+			if ($this->ion_auth->is_admin()){
+				$data['user'] = $this->user_model->get_user();
+				$this->load->view('user/role',$data);
 			}
-			else if ($this->ion_auth->in_group('super')) $this->load->view('super_manager_send');
-			else $this->load->view('manager_send',$data);
-		} else{
+		}
+
+		else{
 		 	redirect('', 'refresh');
 		}
-		// $this->load->view('manager_user');
 	}
 
-	public function create(){
-		$this->load->helper('form');
-		$this->load->library('form_validation');
-
-		$data['title'] = 'Create a news item';
-
-		$this->form_validation->set_rules('name', 'Name', 'required');
-		$this->form_validation->set_rules('desc', 'Desc', 'required');
-
-		if ($this->form_validation->run() === FALSE){
-			//$this->load->view('templates/header', $data);
-			redirect('user', 'refresh');
-			//$this->load->view('templates/footer');
-		}
-		else{
-			$this->user_model->set_user();
-			redirect('user', 'refresh');
-		}
-	}*/
+	
 	public function update(){
 		$this->load->helper('form');
 		$this->load->library('form_validation');
@@ -73,22 +53,19 @@ class user extends CI_Controller {
 		}
 	}
 
+	public function set_role()
+	{
+		if ($this->ion_auth->logged_in())
+		{
+			if ($this->ion_auth->is_admin()){
+				$this->user_model->set_role_user();
+				$data['user'] = $this->user_model->get_user();
+				$this->load->view('user/role',$data);
+			}
+		}
 
-	/*
-	public function stop_rel(){
-		$this->load->helper('form');
-		$this->user_model->st_rel_user();
-		redirect('user', 'refresh');
+		else{
+		 	redirect('', 'refresh');
+		}
 	}
-
-	public function comment(){
-		$this->load->helper('form');
-		$this->user_model->comment_user();
-		redirect('user', 'refresh');
-	}
-
-	public function delete($id){
-		$this->user_model->delete_user($id);
-		redirect('user', 'refresh');
-	}*/
 }

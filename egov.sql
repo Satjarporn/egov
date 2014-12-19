@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:8889
--- Generation Time: Dec 16, 2014 at 01:01 PM
+-- Generation Time: Dec 19, 2014 at 06:09 AM
 -- Server version: 5.5.38
 -- PHP Version: 5.6.2
 
@@ -13,6 +13,31 @@ SET time_zone = "+00:00";
 --
 -- Database: `egov`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `announcement`
+--
+
+CREATE TABLE `announcement` (
+`id` int(11) NOT NULL,
+  `topic` varchar(250) NOT NULL,
+  `desc` text NOT NULL,
+  `release_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `owner_id` int(11) NOT NULL,
+  `owner_name` varchar(100) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `announcement`
+--
+
+INSERT INTO `announcement` (`id`, `topic`, `desc`, `release_date`, `owner_id`, `owner_name`) VALUES
+(2, 'test 4', 'test an announcement\nsentence 1\nsentence 2\nsentence 3', '2014-12-17 04:59:13', 7, 'super manager test'),
+(3, 'test 5', 'test\nnew s1\nnew s2\nnew s3\n<p>paragraph</p>\n', '2014-12-17 19:15:09', 7, 'super manager test'),
+(4, 'test 6', 'test backslash\n\\nsentence1', '2014-12-17 19:16:01', 7, 'super manager test'),
+(5, 'test 7 test link', 'test link\n<a href="https://www.google.co.kr/">this link go to google</a>', '2014-12-17 19:17:11', 7, 'super manager test');
 
 -- --------------------------------------------------------
 
@@ -31,7 +56,7 @@ CREATE TABLE `faq` (
 --
 
 INSERT INTO `faq` (`ID`, `question`, `answer`) VALUES
-(1, 'qq1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet.'),
+(1, 'qq1eba', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet.'),
 (2, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet.', 'qwewqeqweqw'),
 (3, '', ''),
 (4, '', ''),
@@ -63,8 +88,47 @@ INSERT INTO `groups` (`id`, `name`, `description`) VALUES
 (2, 'members', 'General User'),
 (3, 'dev', 'Devloper User'),
 (4, 'manager', 'Manager'),
-(5, 'mentor', 'mentor'),
-(6, 'super', 'list of super manager');
+(5, 'mentor', 'Mentor'),
+(6, 'super', 'Super Manager');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `homepage`
+--
+
+CREATE TABLE `homepage` (
+`id` int(11) NOT NULL,
+  `head` varchar(200) NOT NULL,
+  `task` varchar(100) NOT NULL,
+  `send` varchar(100) NOT NULL,
+  `progress` varchar(100) NOT NULL,
+  `abtHead1` varchar(100) NOT NULL,
+  `abtDesc1` varchar(300) NOT NULL,
+  `abtHead2` varchar(100) NOT NULL,
+  `abtDesc2` varchar(300) NOT NULL,
+  `abtHead3` varchar(100) NOT NULL,
+  `abtDesc3` varchar(300) NOT NULL,
+  `abtHead4` varchar(100) NOT NULL,
+  `abtDesc4` varchar(300) NOT NULL,
+  `abtHead5` varchar(100) NOT NULL,
+  `abtDesc5` varchar(300) NOT NULL,
+  `abtHead6` varchar(100) NOT NULL,
+  `abtDesc6` varchar(300) NOT NULL,
+  `address` varchar(300) NOT NULL,
+  `phone` varchar(20) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `facebook` varchar(200) NOT NULL,
+  `twitter` varchar(200) NOT NULL,
+  `googleplus` varchar(200) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `homepage`
+--
+
+INSERT INTO `homepage` (`id`, `head`, `task`, `send`, `progress`, `abtHead1`, `abtDesc1`, `abtHead2`, `abtDesc2`, `abtHead3`, `abtDesc3`, `abtHead4`, `abtDesc4`, `abtHead5`, `abtDesc5`, `abtHead6`, `abtDesc6`, `address`, `phone`, `email`, `facebook`, `twitter`, `googleplus`) VALUES
+(1, 'JGYGJGfdsdsf', 'List for doing work, you can find the proper work from here.', 'Uploading work to us just a click.', 'How will you know that your work is done ,Click it!.', 'Creative Mind 1', '0', 'Creative Heart 1', '0', 'Creative Idea 1', '0', 'Creative Mind 2', '0', 'Creative Heart 2', '0', 'Creative Idea 2', '0', 'Kookmin University, Seoul, Korea', '+82 10-3043-xxxx', 'emailme@gmail.com', '0', '0', '0');
 
 -- --------------------------------------------------------
 
@@ -119,7 +183,7 @@ CREATE TABLE `task` (
   `type` int(11) NOT NULL DEFAULT '0',
   `comment` varchar(100) NOT NULL,
   `comment_stat` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `task`
@@ -129,7 +193,9 @@ INSERT INTO `task` (`ID`, `name`, `desc`, `create_date`, `release_date`, `last_u
 (3, 'test 111', 'stt', '2014-12-01 06:02:53', '2014-12-14 18:41:04', '2014-12-14 18:41:04', 1, '', 1, '', 0),
 (4, 'tst4', '0', '2014-12-01 06:03:04', '0000-00-00 00:00:00', '2014-12-01 14:03:04', 1, '', 2, 'test', 1),
 (11, 'sadsadasd', 'dsadasdasd', '2014-12-01 09:16:47', '2014-12-01 09:16:47', '2014-12-01 09:16:47', 1, 'Admin istrator', 0, '', 0),
-(12, 'tst3333333', '0', '2014-12-14 17:42:06', '2014-12-14 18:28:32', '2014-12-14 18:28:32', 1, 'Admin istrator', 0, '', 0);
+(12, 'tst3333333', '0', '2014-12-14 17:42:06', '2014-12-14 18:28:32', '2014-12-14 18:28:32', 1, 'Admin istrator', 0, '', 0),
+(17, '0', 'bbbb\n', '2014-12-17 02:14:36', '2014-12-17 02:14:36', '2014-12-17 02:14:36', 7, 'super manager test', 0, '', 0),
+(18, '0', 'fjgjgjj', '2014-12-17 02:14:44', '2014-12-17 02:14:44', '2014-12-17 02:14:44', 7, 'super manager test', 0, '', 0);
 
 -- --------------------------------------------------------
 
@@ -162,13 +228,13 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'admin', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1418730075, 1, 'Admin', 'istrator', 'ADMIN', '0'),
+(1, '127.0.0.1', 'admin', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1418903250, 1, 'Admin', 'istrator', 'ADMIN', '0'),
 (2, '::1', 'test', '$2y$08$k0oIRVg.TW1PL7cQkWVxK.Err62IyiiFX5unr98J0EEHKP12VzwEy', NULL, 'q@q.com', NULL, NULL, NULL, NULL, 1415983703, 1415985730, 1, 'test', 'test', 'test', '02131'),
 (3, '::1', 'tsetg stestg', '$2y$08$Vf2FhOhn/qEal9cTBRYg7ejEi0NYDhVWWAuR8w9VOaAt0bkLIDyg6', NULL, 'g@g.com', NULL, NULL, NULL, NULL, 1418582759, 1418730760, 1, 'tsetg', 'stestg', '0', '0'),
 (4, '::1', 'dev dev', '$2y$08$kBSoEZc6DCEF1Op5Ic5SQOihG.I4cJhhpwjFOe.pk9Ox4CI9BelyO', NULL, 'dev@dev.com', NULL, NULL, NULL, NULL, 1418583670, 1418717820, 1, 'dev', 'dev', '0', '0'),
 (5, '::1', 'ascdadcacf fdzcfasfa', '$2y$08$7Abb98BWHpJHj83D0dNRH.ImyqXFDXRRZKgj6lpbZZHJTlCTKf4Yi', NULL, 'dd@dd.com', NULL, NULL, NULL, NULL, 1418608037, 1418608060, 1, 'ascdadcaCF', 'FDZCFASFA', '0', '0'),
-(6, '::1', 'mentor mmmm', '$2y$08$mPj7xEoYzbBoQclWENAfVerkeL5g7W327f0bsTezVr7Q6zKG2dKiW', NULL, 'm@m.com', NULL, NULL, NULL, NULL, 1418715879, 1418730717, 1, 'mentor', 'mmmm', '0', '0'),
-(7, '::1', 'super manager test', '$2y$08$ZDRkh0CfDQF5JtduPU87juXW6LRJXaqpZo1MNAJ3fvPoRlAov3mR2', NULL, 'super@super.com', NULL, NULL, NULL, NULL, 1418729545, 1418729670, 1, 'super manager', 'test', '0', '0');
+(6, '::1', 'mentor mmmm', '$2y$08$mPj7xEoYzbBoQclWENAfVerkeL5g7W327f0bsTezVr7Q6zKG2dKiW', NULL, 'm@m.com', NULL, NULL, NULL, NULL, 1418715879, 1418885839, 1, 'mentor', 'mmmm', '0', '0'),
+(7, '::1', 'super manager test', '$2y$08$ZDRkh0CfDQF5JtduPU87juXW6LRJXaqpZo1MNAJ3fvPoRlAov3mR2', NULL, 'super@super.com', NULL, NULL, NULL, NULL, 1418729545, 1418871489, 1, 'super manager', 'test', '0', '0');
 
 -- --------------------------------------------------------
 
@@ -201,6 +267,12 @@ INSERT INTO `users_groups` (`id`, `user_id`, `group_id`) VALUES
 --
 
 --
+-- Indexes for table `announcement`
+--
+ALTER TABLE `announcement`
+ ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `faq`
 --
 ALTER TABLE `faq`
@@ -210,6 +282,12 @@ ALTER TABLE `faq`
 -- Indexes for table `groups`
 --
 ALTER TABLE `groups`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `homepage`
+--
+ALTER TABLE `homepage`
  ADD PRIMARY KEY (`id`);
 
 --
@@ -247,6 +325,11 @@ ALTER TABLE `users_groups`
 --
 
 --
+-- AUTO_INCREMENT for table `announcement`
+--
+ALTER TABLE `announcement`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+--
 -- AUTO_INCREMENT for table `faq`
 --
 ALTER TABLE `faq`
@@ -256,6 +339,11 @@ MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 ALTER TABLE `groups`
 MODIFY `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `homepage`
+--
+ALTER TABLE `homepage`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `login_attempts`
 --
@@ -270,7 +358,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 -- AUTO_INCREMENT for table `task`
 --
 ALTER TABLE `task`
-MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
+MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `users`
 --
