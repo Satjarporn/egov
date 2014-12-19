@@ -170,7 +170,16 @@
             </div>
           </div>
         </section>
-        
+         <section class="about text-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2">
+                <h1>About Us<span>E - Government</span></h1>
+                <a href="#portfolio" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
+              </div>
+            </div>
+          </div>
+        </section>
        
         <section class="portfolio text-center section-padding" id="portfolio">
           <div class="container">

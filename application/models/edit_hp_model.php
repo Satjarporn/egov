@@ -50,7 +50,7 @@ class Edit_hp_model extends CI_Model {
 			
 		);
 		//$this->db->where('id',1);
-		$this->db->update('homepage', $data,'id = 1');
+		$this->db->update('homepage',$data,'id = 1');
 		
 		//return $this->db->insert('homepage', $data);
 	}

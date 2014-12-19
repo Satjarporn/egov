@@ -21,6 +21,8 @@ class Main extends CI_Controller {
 	{
 		parent::__construct();
 		// $this->load->model('form_model');
+		$this->load->model('edit_hp_model');
+		$this->load->model('announcement_model');
 
 	}
 
@@ -34,7 +36,9 @@ class Main extends CI_Controller {
 			//open home page
 			redirect('homepage', 'refresh');
 		} else{
-		 	$this->load->view('home');
+			$data['hp'] = $this->edit_hp_model->get_homepage();
+			$data['announcement'] = $this->announcement_model->get_announcement();
+		 	$this->load->view('home',$data);
 		}
 		//$this->load->view('home');
 	}
@@ -46,10 +50,11 @@ class Main extends CI_Controller {
 	{
 		if ($this->ion_auth->logged_in())
 		{
-			if ($this->ion_auth->in_group('dev')) $this->load->view('developer_hp');
-			else if ($this->ion_auth->in_group('mentor')) $this->load->view('mentor_hp');
-			else if ($this->ion_auth->in_group('super')) $this->load->view('super_manager_hp');
-			else if ($this->ion_auth->in_group('admin')) $this->load->view('admin_hp');
+			$data['announcement'] = $this->announcement_model->get_announcement();
+			if ($this->ion_auth->in_group('dev')) $this->load->view('developer_hp',$data);
+			else if ($this->ion_auth->in_group('mentor')) $this->load->view('mentor_hp',$data);
+			else if ($this->ion_auth->in_group('super')) $this->load->view('super_manager_hp',$data);
+			else if ($this->ion_auth->in_group('admin')) $this->load->view('admin_hp',$data);
 			else $this->load->view('general_manager_hp');
 		} else{
 		 	redirect('', 'refresh');
@@ -59,7 +64,7 @@ class Main extends CI_Controller {
 	public function task()
 	{
 		if ($this->ion_auth->logged_in())
-		{
+		{	
 			if ($this->ion_auth->in_group('dev')) $this->load->view('developer_task');
 			else if ($this->ion_auth->in_group('mentor')) $this->load->view('mentor_task');
 			else if ($this->ion_auth->in_group('super')) $this->load->view('super_manager_task');
