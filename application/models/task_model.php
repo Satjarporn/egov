@@ -28,6 +28,19 @@ class Task_model extends CI_Model {
 		return $query->result_array();
 	}
 
+	public function get_dev_task($slug = FALSE){
+		if ($slug === FALSE){
+		$query = $this->db->get('task');
+		return $query->result_array();
+		}
+
+		if($slug==0){
+			$query = $this->db->get_where('task','type != 1 and comment_stat=0');
+		}
+		else $query = $this->db->get_where('task','comment_stat !=0');
+		return $query->result_array();
+	}
+
 	public function set_task(){
 		$this->load->helper('url');
 		$userid=$this->ion_auth->user()->row()->id;
