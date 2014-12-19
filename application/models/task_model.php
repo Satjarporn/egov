@@ -29,12 +29,14 @@ class Task_model extends CI_Model {
 	}
 
 	public function get_dev_task($slug = FALSE){
-		//if ($slug === FALSE){
-			//$query = $this->db->get('task');
-			//return $query->result_array();
-		//}
 		$userid=$this->ion_auth->user()->row()->id;
 		$query = $this->db->get_where('task','type = 0 and dev_ID = 0');
+		return $query->result_array();
+	}
+
+	public function get_join_task($slug = FALSE){
+		$userid=$this->ion_auth->user()->row()->id;
+		$query = $this->db->get_where('task','type != 2 and dev_ID = '.$userid);
 		return $query->result_array();
 	}
 
@@ -94,5 +96,23 @@ class Task_model extends CI_Model {
             );
 
 		$this->db->update('task', $data, "ID = ".$this->input->post('join'));
+	}
+	public function unjoin_task(){
+		$userid=$this->ion_auth->user()->row()->id;
+		$data = array(
+               'dev_ID' => 0,
+               'type' => 0
+            );
+
+		$this->db->update('task', $data, "ID = ".$this->input->post('join'));
+	}
+
+	public function send_work_task(){
+		$userid=$this->ion_auth->user()->row()->id;
+		$data = array(
+               'type' => 4
+            );
+
+		$this->db->update('task', $data, "ID = ".$this->input->post('id'));
 	}
 }

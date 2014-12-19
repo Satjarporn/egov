@@ -35,8 +35,10 @@ class Task extends CI_Controller {
 	{
 		if ($this->ion_auth->logged_in())
 		{
-			if ($this->ion_auth->in_group('dev')) 
-				$this->load->view('developer_send');
+			if ($this->ion_auth->in_group('dev')){
+				$data['task'] = $this->task_model->get_join_task();
+				$this->load->view('task/dev/send',$data);
+			}
 			else if ($this->ion_auth->in_group('mentor')){
 				$data['task'] = $this->task_model->get_mentor_task(1);
 				$this->load->view('task/mentor/send',$data);
@@ -113,6 +115,28 @@ class Task extends CI_Controller {
 		if ($this->ion_auth->logged_in()){
 			$this->task_model->join_task();
 			redirect('task', 'refresh');
+		}
+		else{
+		 	redirect('', 'refresh');
+		}
+	}
+
+	public function unjoin()
+	{
+		if ($this->ion_auth->logged_in()){
+			$this->task_model->unjoin_task();
+			redirect('task/send', 'refresh');
+		}
+		else{
+		 	redirect('', 'refresh');
+		}
+	}
+
+	public function send_work()
+	{
+		if ($this->ion_auth->logged_in()){
+			$this->task_model->send_work_task();
+			redirect('task/send', 'refresh');
 		}
 		else{
 		 	redirect('', 'refresh');
