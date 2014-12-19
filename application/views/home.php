@@ -79,7 +79,7 @@
               <div class="row">
                 <div class="col-md-8 col-md-offset-1 text-center inner">
                   <h1 class="animated fadeInDown">E-Government<span>Working Area</span></h1>
-                  <p class="animated fadeInUp delay-05s">A community for <em>working</em> together</p>
+                  <p class="animated fadeInUp delay-05s"><?php echo $hp['head']; ?></p>
                 </div>
               </div>
               <div class="row">
@@ -121,21 +121,21 @@
                       <i class="fa fa-th-list shadow"></i>
                     </div>
                     <h2>Task</h2>
-                    <p>List for doing work, you can find the proper work from here.</p>
+                    <p><?php echo $hp['task']; ?></p>
                   </div>
                   <div class="col-md-4 wp2 delay-05s">
                     <div class="icon">
                       <i class=" fa fa-cloud-upload shadow"></i>
                     </div>
                     <h2>Send</h2>
-                    <p>Uploading work to us just a click.</p>
+                    <p><?php echo $hp['send']; ?></p>
                   </div>
                   <div class="col-md-4 wp2 delay-1s">
                     <div class="icon">
                       <i class="fa fa-check-square shadow"></i>
                     </div>
                     <h2>Progress</h2>
-                    <p>How will you know that your work is done ,Click it!.</p>
+                    <p><?php echo $hp['progress']; ?></p>
                   </div>
                   <div class="clearfix"></div>
                 </div>
@@ -166,20 +166,17 @@
                 <div class="col-md-5 col-md-offset-7">
                   <div id="servicesSlider">
                     <ul class="slides">
+                      
+                      <?php $i=1;?>
+                      <?php foreach ($announcement as $announcement_item): ?>
+                     
                       <li>
-                        <h1 class="arrow">Responsive Design Specialists</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero. </p>
-                        <p>
-                        Mauris ultrices odio vitae nulla ultrices iaculis. Nulla rhoncus odio eu lectus faucibus facilisis. Maecenas ornare augue vitae sollicitudin accumsan. </p>
-                        <p>Etiam eget libero et erat eleifend consectetur a nec lectus. Sed id tellus lorem. Suspendisse sed venenatis odio, quis lobortis eros.</p>
+                        <h1 class="arrow"><?php echo $announcement_item['topic']; ?></a></h1>
+                        <p><?php echo $announcement_item['desc']; ?></p>
                       </li>
-                      <li>
-                        <h1 class="arrow">Bootstrap Professionals</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero. </p>
-                        <p>
-                        Mauris ultrices odio vitae nulla ultrices iaculis. Nulla rhoncus odio eu lectus faucibus facilisis. Maecenas ornare augue vitae sollicitudin accumsan. </p>
-                        <p>Etiam eget libero et erat eleifend consectetur a nec lectus. Sed id tellus lorem. Suspendisse sed venenatis odio, quis lobortis eros.</p>
-                      </li>
+                      
+                      <? $i++; ?>
+                      <?php endforeach ?>
                     </ul>
                   </div>
                   <div id="servicesSlider" style="color: #848484;">
@@ -211,39 +208,39 @@
                         <div class="img">
                           <img src="assets/img/portfolio-01.jpg" alt="Portfolio Item">
                           <div class="overlay">
-                            <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
+                             <!--a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a-->
                             <a class="close-overlay hidden">x</a>
                           </div>
                         </div>
                       </div>
-                      <h2>Creative Minds</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                      <h2><?php echo $hp['abtHead1']; ?></h2>
+                      <p><?php echo $hp['abtDesc1']; ?></p>
                     </div>
                     <div class="col-md-4 wp4 delay-05s">
                       <div class="overlay-effect effects clearfix">
                         <div class="img">
                           <img src="assets/img/portfolio-02.jpg" alt="Portfolio Item">
                           <div class="overlay">
-                            <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
+                             <!--a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a-->
                             <a class="close-overlay hidden">x</a>
                           </div>
                         </div>
                       </div>
-                      <h2>Creative Hearts</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                      <h2><?php echo $hp['abtHead2']; ?></h2>
+                      <p><?php echo $hp['abtDesc2']; ?></p>
                     </div>
                     <div class="col-md-4 wp4 delay-1s">
                       <div class="overlay-effect effects clearfix">
                         <div class="img">
                           <img src="assets/img/portfolio-03.jpg" alt="Portfolio Item">
                           <div class="overlay">
-                            <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
+                             <!--a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a-->
                             <a class="close-overlay hidden">x</a>
                           </div>
                         </div>
                       </div>
-                      <h2>Creative Ideas</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                      <h2><?php echo $hp['abtHead3']; ?></h2>
+                      <p><?php echo $hp['abtDesc3']; ?></p>
                     </div>
                   </li>
                   <li>
@@ -252,39 +249,39 @@
                         <div class="img">
                           <img src="assets/img/portfolio-01.jpg" alt="Portfolio Item">
                           <div class="overlay">
-                            <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
+                             <!--a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a-->s
                             <a class="close-overlay hidden">x</a>
                           </div>
                         </div>
                       </div>
-                      <h2>Creative Minds</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                      <h2><?php echo $hp['abtHead4']; ?></h2>
+                      <p><?php echo $hp['abtDesc4']; ?></p>
                     </div>
                     <div class="col-md-4 wp4 delay-05s">
                       <div class="overlay-effect effects clearfix">
                         <div class="img">
                           <img src="assets/img/portfolio-02.jpg" alt="Portfolio Item">
                           <div class="overlay">
-                            <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
+                            <!--a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a-->
                             <a class="close-overlay hidden">x</a>
                           </div>
                         </div>
                       </div>
-                      <h2>Creative Hearts</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                      <h2><?php echo $hp['abtHead5']; ?></h2>
+                      <p><?php echo $hp['abtDesc5']; ?></p>
                     </div>
                     <div class="col-md-4 wp4 delay-1s">
                       <div class="overlay-effect effects clearfix">
                         <div class="img">
                           <img src="assets/img/portfolio-03.jpg" alt="Portfolio Item">
                           <div class="overlay">
-                            <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
+                             <!--a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a-->
                             <a class="close-overlay hidden">x</a>
                           </div>
                         </div>
                       </div>
-                      <h2>Creative Ideas</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                      <h2><?php echo $hp['abtHead6']; ?></h2>
+                      <p><?php echo $hp['abtDesc6']; ?></p>
                     </div>
                   </li>
                 </ul>
@@ -294,7 +291,7 @@
         </section>
        
         
-        <section class="subscribe text-center">
+        <!--section class="subscribe text-center">
           <div class="container">
             <h1><i class="fa fa-paper-plane"></i><span>Subscribe to stay in the loop</span></h1>
             <form action="#">
@@ -302,7 +299,7 @@
               <input type="submit" name="" value="Send">
             </form>
           </div>
-        </section>
+        </section-->
         <section class="dark-bg text-center section-padding contact-wrap" id="contact">
           <a href="#top" class="up-btn"><i class="fa fa-chevron-up"></i></a>
           <div class="container">
@@ -315,28 +312,28 @@
               <div class="col-md-4">
                 <div class="light-box box-hover">
                   <h2><i class="fa fa-map-marker"></i><span>Address</span></h2>
-                  <p>Kookmin University, Seoul, Korea</p>
+                  <p><?php echo $hp['address']; ?></p>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="light-box box-hover">
                   <h2><i class="fa fa-mobile"></i><span>Phone</span></h2>
-                  <p>+82 10-3043-xxxx</p>
+                  <p><?php echo $hp['phone']; ?></p>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="light-box box-hover">
-                  <h2><i class="fa fa-paper-plane"></i><span>Email</span></h2>
-                  <p><a href="#">emailme@gmail.com</a></p>
+                  <h2><i class="fa fa-paper-plane" ></i><span>Email</span></h2>
+                  <p><a href="<?php echo $hp['email']; ?>" style="color:#8c9398;"><?php echo $hp['email']; ?></a></p>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
                 <ul class="social-buttons">
-                  <li><a href="#" class="social-btn"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="#" class="social-btn"><i class="fa fa-google-plus"></i></a></li>
+                  <li><a href="<?php echo $hp['facebook']; ?>" class="social-btn"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="<?php echo $hp['twitter']; ?>" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="<?php echo $hp['googleplus']; ?>" class="social-btn"><i class="fa fa-google-plus"></i></a></li>
                 </ul>
               </div>
             </div>

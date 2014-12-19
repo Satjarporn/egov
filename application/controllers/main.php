@@ -21,6 +21,8 @@ class Main extends CI_Controller {
 	{
 		parent::__construct();
 		// $this->load->model('form_model');
+		$this->load->model('edit_hp_model');
+		$this->load->model('announcement_model');
 
 	}
 
@@ -34,7 +36,9 @@ class Main extends CI_Controller {
 			//open home page
 			redirect('homepage', 'refresh');
 		} else{
-		 	$this->load->view('home');
+			$data['hp'] = $this->edit_hp_model->get_homepage();
+			$data['announcement'] = $this->announcement_model->get_announcement();
+		 	$this->load->view('home',$data);
 		}
 		//$this->load->view('home');
 	}
