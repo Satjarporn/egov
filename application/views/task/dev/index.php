@@ -152,7 +152,7 @@
               </div>
               <?php echo "<div id=\"task".$i."\" class=\"panel-collapse collapse\">"; ?>
                 <div class="panel-body">
-                  <?php echo form_open('task/comment') ?>
+                  <?php echo form_open('task/join') ?>
                   <?php echo "<p class=\"taskContent\" id=\"it2p".$i."\">" ?>Task Creator : <?php echo $task_item['owner_name']; ?>
                     <br>Release Date : <?php  if($task_item['type']==0) echo $task_item['release_date'];
                       else if($task_item['type']==1) echo "-";
@@ -172,8 +172,7 @@
                     <p class="taskUpdateInfo">
                     Last Update <?php echo $task_item['last_update_date']; ?>
                     </p>
-                    <?php echo "<input name=\"id\" type=\"hidden\" value=".$task_item['ID'].">" ?>
-                   <button name="comment_stat" type="submit" class="btn btn-danger" data-toggle="modal" data-target="#noCommentBox" value="1">Join</button>
+                   <button name="join" type="submit" class="btn btn-danger" data-toggle="modal" data-target="#noCommentBox" value=<?php echo $task_item['ID']; ?>>Join</button>
                  </form>
               </div>
               </div>

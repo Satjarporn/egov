@@ -29,15 +29,12 @@ class Task_model extends CI_Model {
 	}
 
 	public function get_dev_task($slug = FALSE){
-		if ($slug === FALSE){
-		$query = $this->db->get('task');
-		return $query->result_array();
-		}
-
-		if($slug==0){
-			$query = $this->db->get_where('task','type != 1 and comment_stat=0');
-		}
-		else $query = $this->db->get_where('task','comment_stat !=0');
+		//if ($slug === FALSE){
+			//$query = $this->db->get('task');
+			//return $query->result_array();
+		//}
+		$userid=$this->ion_auth->user()->row()->id;
+		$query = $this->db->get_where('task','type = 0 and dev_ID = 0');
 		return $query->result_array();
 	}
 
@@ -89,5 +86,13 @@ class Task_model extends CI_Model {
             );
 
 		$this->db->update('task', $data, "ID = ".$this->input->post('id'));
+	}
+	public function join_task(){
+		$userid=$this->ion_auth->user()->row()->id;
+		$data = array(
+               'dev_ID' => $userid
+            );
+
+		$this->db->update('task', $data, "ID = ".$this->input->post('join'));
 	}
 }

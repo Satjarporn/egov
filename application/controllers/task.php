@@ -107,4 +107,15 @@ class Task extends CI_Controller {
 		$this->task_model->delete_task($id);
 		redirect('task', 'refresh');
 	}
+
+	public function join()
+	{
+		if ($this->ion_auth->logged_in()){
+			$this->task_model->join_task();
+			redirect('task', 'refresh');
+		}
+		else{
+		 	redirect('', 'refresh');
+		}
+	}
 }
