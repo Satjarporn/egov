@@ -183,22 +183,21 @@
               <div class="row">
                 <div class="col-md-5 col-md-offset-7">
                   <div id="servicesSlider">
-                    <ul class="slides">
+                   <ul class="slides">
+                      
+                      <?php $i=1;?>
+                      <?php foreach ($announcement as $announcement_item): ?>
                       <li>
-                        <h1 class="arrow">Responsive Design Specialists</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero. </p>
-                        <p>
-                        Mauris ultrices odio vitae nulla ultrices iaculis. Nulla rhoncus odio eu lectus faucibus facilisis. Maecenas ornare augue vitae sollicitudin accumsan. </p>
-                        <p>Etiam eget libero et erat eleifend consectetur a nec lectus. Sed id tellus lorem. Suspendisse sed venenatis odio, quis lobortis eros. <a href="#">See more click!</a></p>
+                        <h1 class="arrow"><?php echo $announcement_item['topic']; ?></a></h1>
+                        <p><?php echo $announcement_item['desc']; ?></p>
                       </li>
-                      <li>
-                        <h1 class="arrow">Bootstrap Professionals</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero. </p>
-                        <p>
-                        Mauris ultrices odio vitae nulla ultrices iaculis. Nulla rhoncus odio eu lectus faucibus facilisis. Maecenas ornare augue vitae sollicitudin accumsan. </p>
-                        <p>Etiam eget libero et erat eleifend consectetur a nec lectus. Sed id tellus lorem. Suspendisse sed venenatis odio, quis lobortis eros. <a href="#">See more click!</a></p>
-                      </li>
+                      <? $i++; ?>
+                      <?php endforeach ?>
                     </ul>
+                  </div>
+                  <div id="servicesSlider" style="color: #848484;">
+                    <?php echo anchor('announcement','<font style="color:#848484;">see all announcement</font>')?>
+                  </div>
                   </div>
                 </div>
               </div>
@@ -322,7 +321,7 @@
         </section>
         -->
 
-        <section class="dark-bg text-center section-padding contact-wrap" id="contact">
+        <!--section class="dark-bg text-center section-padding contact-wrap" id="contact">
           <a href="#top" class="up-btn"><i class="fa fa-chevron-up"></i></a>
           <div class="container">
             <div class="row">
@@ -360,7 +359,7 @@
               </div>
             </div>
           </div>
-        </section>
+        </section-->
         <footer>
           <div class="container">
             <div class="row">
