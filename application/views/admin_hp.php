@@ -118,13 +118,13 @@
         
         <div id="page-wrapper">
 
-            <div class="container-fluid" id="tarea">
+          
 
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Dashboard <small>Statistics Overview</small>
+                            Dashboard <!-- <small>Statistics Overview</small> -->
                         </h1>
                         <ol class="breadcrumb">
                             <li class="active">
@@ -135,10 +135,33 @@
                 </div>
                 <!-- /.row -->
 
+                  <div class="container-fluid" id="tarea">
 
                 <div class="row">
+                    <div class="col-lg-12">
+                        <!-- <div class="panel panel-default"> -->
+                            <!-- <div class="panel-heading"
+                                <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Tasks Panel</h3>
+                            </div> -->
+                            <?php echo anchor('edit_hp', '
+                            <div class="panel-body" >
+                                <div class="list-group">
+                                  
+                                    <p class="list-group-item">
+                                        <span class="badge" style="background:red;">1</span>
+                                        <i class="fa fa-fw fa-user"></i> New User
+                                    </p>
+                                   
+                                </div>') ?>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+                
+                <div class="row">
                   
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-4 col-md-4">
                         <?php echo anchor('edit_hp', '<div class="panel panel-primary">
                             <div class="panel-heading">
                                 <div class="row">
@@ -161,7 +184,7 @@
                          </div>') ?>
                     </div>
 
-                      <div class="col-lg-3 col-md-6">
+                      <div class="col-lg-4 col-md-4">
                         <?php echo anchor('edit_role', '<div class="panel panel-red">
                             <div class="panel-heading">
                                 <div class="row">
@@ -184,7 +207,7 @@
                         </div>') ?>
                     </div>
 
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-4 col-md-4">
                         <?php echo anchor('faq', '<div class="panel panel-green">
                             <div class="panel-heading">
                                 <div class="row">
@@ -207,7 +230,7 @@
                             </a>
                        </div>') ?>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                   <!--  <div class="col-lg-4 col-md-4">
                         <div class="panel panel-yellow">
                             <div class="panel-heading">
                                 <div class="row">
@@ -228,12 +251,12 @@
                                 </div>
                             </a>
                         </div>
-                    </div>
+                    </div> -->
                     
                 </div>
                 <!-- /.row -->
 
-                <div class="row">
+              <!--   <div class="row">
                     <div class="col-lg-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -244,11 +267,11 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- /.row -->
 
-                <div class="row">
-                    <div class="col-lg-4">
+                <!-- <div class="row">
+                    <div class="col-lg-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h3 class="panel-title"><i class="fa fa-long-arrow-right fa-fw"></i> Donut Chart</h3>
@@ -308,14 +331,33 @@
                         </div>
                     </div>
                     
-                </div>
+                </div> -->
                 <!-- /.row -->
 
             </div>
             <!-- /.container-fluid -->
 
+
+
         </div>
         <!-- /#page-wrapper -->
+
+         <footer>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <ul class="legals">
+                  <li><a href="#">Terms &amp; Conditions</a></li>
+                  <li><a href="#">Legals</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 credit">
+                <p>Designed &amp; by <a href="#">Peter Finlan</a></p> 
+                <p>Developed &amp; by <a href="#"><em>Kasetsart Student</em></a></p>
+              </div>
+            </div>
+          </div>
+        </footer>
 
 
     <!-- jQuery -->

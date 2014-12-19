@@ -23,6 +23,7 @@ class Main extends CI_Controller {
 		// $this->load->model('form_model');
 		$this->load->model('edit_hp_model');
 		$this->load->model('announcement_model');
+		$this->load->model('admin_model');
 
 	}
 
@@ -54,7 +55,10 @@ class Main extends CI_Controller {
 			if ($this->ion_auth->in_group('dev')) $this->load->view('developer_hp',$data);
 			else if ($this->ion_auth->in_group('mentor')) $this->load->view('mentor_hp',$data);
 			else if ($this->ion_auth->in_group('super')) $this->load->view('super_manager_hp',$data);
-			else if ($this->ion_auth->in_group('admin')) $this->load->view('admin_hp',$data);
+			else if ($this->ion_auth->in_group('admin')) {
+				$data['admin'] = $this->announcement_model->get_admin();
+				$this->load->view('admin_hp',$data);
+		}
 			else $this->load->view('general_manager_hp');
 		} else{
 		 	redirect('', 'refresh');
