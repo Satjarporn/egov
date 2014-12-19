@@ -169,12 +169,10 @@
                       
                       <?php $i=1;?>
                       <?php foreach ($announcement as $announcement_item): ?>
-                     
                       <li>
                         <h1 class="arrow"><?php echo $announcement_item['topic']; ?></a></h1>
                         <p><?php echo $announcement_item['desc']; ?></p>
                       </li>
-                      
                       <? $i++; ?>
                       <?php endforeach ?>
                     </ul>

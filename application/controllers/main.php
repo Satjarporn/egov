@@ -23,6 +23,7 @@ class Main extends CI_Controller {
 		// $this->load->model('form_model');
 		$this->load->model('edit_hp_model');
 		$this->load->model('announcement_model');
+		$this->load->model('user_model');
 		
 	}
 
@@ -48,8 +49,12 @@ class Main extends CI_Controller {
 	}
 	public function homepage()
 	{
+
 		if ($this->ion_auth->logged_in())
 		{
+
+			$id=$this->ion_auth->get_user_id();
+			$data['user'] = $this->user_model->get_user($id);
 			$data['announcement'] = $this->announcement_model->get_announcement();
 			if ($this->ion_auth->in_group('dev')) $this->load->view('developer_hp',$data);
 			else if ($this->ion_auth->in_group('mentor')) $this->load->view('mentor_hp',$data);
