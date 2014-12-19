@@ -36,7 +36,7 @@
         <?php echo anchor('admin_hp', 'DashBoard') ?>
         <?php echo anchor('edit_hp', 'Information Configuration') ?>
         <?php echo anchor('edit_role', 'Edit member Role') ?>
-        <?php echo anchor('edit_faq', 'Edit FAQ') ?>
+        <?php echo anchor('faq/edit', 'Edit FAQ') ?>
         </nav>
 
     <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">

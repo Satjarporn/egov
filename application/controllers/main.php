@@ -248,7 +248,7 @@ class Main extends CI_Controller {
 			//save username to be data
 			$data['username'] = $user->username;
 			//open home page
-			if ($this->ion_auth->in_group('admin')) $this->load->view('edit_faq',$data);
+			if ($this->ion_auth->in_group('admin')) $this->load->view('faq/edit',$data);
 			else redirect('', 'refresh');
 		} else{
 		 	redirect('', 'refresh');

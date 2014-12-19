@@ -55,7 +55,7 @@ $route['faq'] = "faq";
 $route['edit_profile'] = "main/edit_profile";
 $route['admin'] = "main/admin";
 // $route['edit_hp'] = "main/edit_hp";
-$route['edit_faq'] = "main/edit_faq";
+//$route['edit_faq'] = "main/edit_faq";
 $route['edit_role'] = "main/edit_role";
 
 $route['announcement'] = "announcement";

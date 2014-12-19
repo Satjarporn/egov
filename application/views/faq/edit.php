@@ -34,9 +34,9 @@
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
         <h3>Menu</h3>
         <?php echo anchor('admin', 'DashBoard') ?>
-        <?php echo anchor('edit_hp', 'Edit Homepage') ?>
+        <?php echo anchor('edit_hp/edit', 'Edit Homepage') ?>
         <?php echo anchor('edit_role', 'Edit Member Role') ?>
-        <?php echo anchor('faq', 'Edit FAQ') ?>
+        <?php echo anchor('faq/edit', 'Edit FAQ') ?>
         </nav>
 
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
@@ -126,14 +126,15 @@
                               <?php $i=1; ?>
                               <?php foreach ($faq as $faq_item): ?>
                               <div class="form-group">
-                                  <label>Q:</label>
                                   <div class="col-lg-8">
+                                    <label>Q:</label>
                                     <input name="qes<?php echo $i; ?>" class="form-control" type="text" value="<?php echo $faq_item['question']; ?>">
                                   </div>
                               </div>
+                              
                               <div class="form-group">
-                                  <label>A:</label>
                                   <div class="col-lg-8">
+                                    <label>A:</label>
                                     <input name="ans<?php echo $i; ?>" class="form-control" type="text" value="<?php echo $faq_item['answer']; ?>">
                                   </div>
                               </div>
