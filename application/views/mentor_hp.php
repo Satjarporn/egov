@@ -183,7 +183,7 @@
                       <?php foreach ($announcement as $announcement_item): ?>
                       <li>
                         <h1 class="arrow"><?php echo $announcement_item['topic']; ?></a></h1>
-                        <p><?php echo $announcement_item['desc']; ?></p>
+                        <p style="text-align :left;"><?php echo nl2br(substr($announcement_item['desc'],0,300));?><a ><?php echo anchor('announcement','<font style="color:#848484;"> (See all information in Announcement)</font>')?></a></p>
                       </li>
                       <? $i++; ?>
                       <?php endforeach ?>
