@@ -232,18 +232,18 @@
 
 <?php $i=1;?>
 <?php foreach ($task as $task_item): ?>
-	<?php 	if($task_item['type']==0) echo"<div class=\"panel panel-default\">";
+	<?php 	if($task_item['type']==2) echo"<div class=\"panel panel-success\">";
 			else if($task_item['type']==1)echo"<div class=\"panel panel-danger\">";
-			else echo"<div class=\"panel panel-success\">"; 
+			else echo"<div class=\"panel panel-default\">"; 
 	?>
               <?php echo "<div class=\"panel-heading\" data-toggle=\"collapse\" data-target=\"#task".($i)."\" data-parent=\"#alltask\" aria-expanded=\"false\">"; ?>
                 <h4 class="panel-title collapsed">
                   <a class="col-md-2"><?php echo $task_item['create_date']; ?></a>
                   <?php echo "<a id=\"it1p".$i."\">".$task_item['name']; ?></a>
                  <a class="toRight">
-                 	<?php 	if($task_item['type']==0) echo "In Progress";
+                 	<?php 	if($task_item['type']==2) echo "Completed";
                  			else if($task_item['type']==1) echo "Stop Releasing";
-                 			else echo "Completed";
+                 			else echo "In Progress";
                  	?>
                  </a>
                   

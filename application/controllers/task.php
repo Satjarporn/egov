@@ -45,7 +45,10 @@ class Task extends CI_Controller {
 			}
 			else if ($this->ion_auth->in_group('super')) 
 				$this->load->view('super_manager_send');
-			else $this->load->view('manager_send',$data);
+			else {
+				$data['task'] = $this->task_model->get_wait_task();
+				$this->load->view('task/manager/send',$data);
+			}
 		} else{
 		 	redirect('', 'refresh');
 		}
@@ -136,6 +139,28 @@ class Task extends CI_Controller {
 	{
 		if ($this->ion_auth->logged_in()){
 			$this->task_model->send_work_task();
+			redirect('task/send', 'refresh');
+		}
+		else{
+		 	redirect('', 'refresh');
+		}
+	}
+
+	public function com_work()
+	{
+		if ($this->ion_auth->logged_in()){
+			$this->task_model->com_work_task();
+			redirect('task/send', 'refresh');
+		}
+		else{
+		 	redirect('', 'refresh');
+		}
+	}
+
+	public function reject()
+	{
+		if ($this->ion_auth->logged_in()){
+			$this->task_model->reject_task();
 			redirect('task/send', 'refresh');
 		}
 		else{

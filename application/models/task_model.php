@@ -40,6 +40,11 @@ class Task_model extends CI_Model {
 		return $query->result_array();
 	}
 
+	public function get_wait_task($slug = FALSE){
+		$query = $this->db->get_where('task','type = 4');
+		return $query->result_array();
+	}
+
 	public function set_task(){
 		$this->load->helper('url');
 		$userid=$this->ion_auth->user()->row()->id;
@@ -111,6 +116,25 @@ class Task_model extends CI_Model {
 		$userid=$this->ion_auth->user()->row()->id;
 		$data = array(
                'type' => 4
+            );
+
+		$this->db->update('task', $data, "ID = ".$this->input->post('id'));
+	}
+
+	public function com_work_task(){
+		$userid=$this->ion_auth->user()->row()->id;
+		$data = array(
+               'type' => 2
+            );
+
+		$this->db->update('task', $data, "ID = ".$this->input->post('id'));
+	}
+
+	public function reject_task(){
+		$userid=$this->ion_auth->user()->row()->id;
+		$data = array(
+               'type' => 3,
+               'reject' => $this->input->post('reason')
             );
 
 		$this->db->update('task', $data, "ID = ".$this->input->post('id'));
