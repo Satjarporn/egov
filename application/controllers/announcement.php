@@ -5,25 +5,30 @@ class Announcement extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('announcement_model');
+		$this->load->model('user_model');
 	}
 
 	public function index()
 	{
 		if ($this->ion_auth->logged_in())
 		{
-			
+			$id=$this->ion_auth->get_user_id();
+			$data['user'] = $this->user_model->get_user($id);
 			if ($this->ion_auth->in_group('super')){
 				$data['announcement'] = $this->announcement_model->get_announcement();
+				$this->load->view('other_page_header',$data);
 				$this->load->view('announcement/create_announcement',$data);
 			}
 			
 			else {
 				$data['announcement'] = $this->announcement_model->get_announcement();
+				$this->load->view('other_page_header',$data);
 				$this->load->view('announcement/all_announcement', $data);
 			}
 		}
 		else {
 				$data['announcement'] = $this->announcement_model->get_announcement();
+				$this->load->view('no_login_header',$data);
 				$this->load->view('announcement/all_announcement', $data);
 			}
 

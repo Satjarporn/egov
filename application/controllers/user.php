@@ -13,6 +13,7 @@ class user extends CI_Controller {
 		{
 			$id=$this->ion_auth->get_user_id();
 				$data['user'] = $this->user_model->get_user($id);
+				$this->load->view('other_page_header',$data);
 				$this->load->view('user/edit',$data);
 		}
 
@@ -27,6 +28,7 @@ class user extends CI_Controller {
 		{
 			if ($this->ion_auth->is_admin()){
 				$data['user'] = $this->user_model->get_user();
+			
 				$this->load->view('user/role',$data);
 			}
 		}

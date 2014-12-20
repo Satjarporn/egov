@@ -56,11 +56,23 @@ class Main extends CI_Controller {
 			$id=$this->ion_auth->get_user_id();
 			$data['user'] = $this->user_model->get_user($id);
 			$data['announcement'] = $this->announcement_model->get_announcement();
-			if ($this->ion_auth->in_group('dev')) $this->load->view('developer_hp',$data);
-			else if ($this->ion_auth->in_group('mentor')) $this->load->view('mentor_hp',$data);
-			else if ($this->ion_auth->in_group('super')) $this->load->view('super_manager_hp',$data);
+			if ($this->ion_auth->in_group('dev')){
+				$this->load->view('main_header',$data);
+				$this->load->view('developer_hp',$data);
+			}
+			else if ($this->ion_auth->in_group('mentor')){ 
+				$this->load->view('main_header',$data);
+				$this->load->view('mentor_hp',$data); 
+			}
+			else if ($this->ion_auth->in_group('super')){
+				$this->load->view('main_header',$data);
+				$this->load->view('super_manager_hp',$data);
+			} 
 			else if ($this->ion_auth->in_group('admin')) $this->load->view('admin_hp');
-			else $this->load->view('general_manager_hp');
+			else {
+				$this->load->view('main_header',$data);				
+				$this->load->view('general_manager_hp',$data);
+			}
 		} else{
 		 	redirect('', 'refresh');
 		}
@@ -68,48 +80,34 @@ class Main extends CI_Controller {
 	}
 	public function task()
 	{
+			
 		if ($this->ion_auth->logged_in())
 		{	
-			if ($this->ion_auth->in_group('dev')) $this->load->view('developer_task');
-			else if ($this->ion_auth->in_group('mentor')) $this->load->view('mentor_task');
-			else if ($this->ion_auth->in_group('super')) $this->load->view('super_manager_task');
-			else $this->load->view('manager_task',$data);
+			$id=$this->ion_auth->get_user_id();
+			$data['user'] = $this->user_model->get_user($id);
+			if ($this->ion_auth->in_group('dev')) {
+				$this->load->view('other_page_header',$data);
+				$this->load->view('developer_task');
+			}
+			else if ($this->ion_auth->in_group('mentor')){
+			 $this->load->view('other_page_header',$data);
+			 $this->load->view('mentor_task');
+			}
+			else if ($this->ion_auth->in_group('super')) {
+				$this->load->view('other_page_header',$data);
+				$this->load->view('super_manager_task');
+			}
+			else {
+				$this->load->view('other_page_header',$data);
+				$this->load->view('manager_task',$data);
+			}
 		} else{
 		 	redirect('', 'refresh');
 		}
 		// $this->load->view('manager_task');
 	}
 
-	public function mentortask()
-	{
-		if ($this->ion_auth->logged_in())
-		{
-			$user = $this->ion_auth->user()->row();
-			//save username to be data
-			$data['username'] = $user->username;
-			//open home page
-			$this->load->view('mentor_task',$data);
-		} else{
-		 	redirect('', 'refresh');
-		}
-		// $this->load->view('developer_task');
-	}
-
-	public function mentorsend()
-	{
-		if ($this->ion_auth->logged_in())
-		{
-			$user = $this->ion_auth->user()->row();
-			//save username to be data
-			$data['username'] = $user->username;
-			//open home page
-			$this->load->view('mentor_send',$data);
-		} else{
-		 	redirect('', 'refresh');
-		}
-		// $this->load->view('developer_task');
-	}
-
+	
 	public function send()
 	{
 		if ($this->ion_auth->logged_in())
@@ -118,10 +116,25 @@ class Main extends CI_Controller {
 			//save username to be data
 			$data['username'] = $user->username;
 			//open home page
-			if ($this->ion_auth->in_group('dev')) $this->load->view('developer_send');
-			else if ($this->ion_auth->in_group('mentor')) $this->load->view('mentor_send');
-			else if ($this->ion_auth->in_group('super')) $this->load->view('super_manager_send');
-			else $this->load->view('manager_send',$data);
+			$id=$this->ion_auth->get_user_id();
+			$data['user'] = $this->user_model->get_user($id);
+
+			if ($this->ion_auth->in_group('dev')) {
+				$this->load->view('other_page_header',$data);
+				$this->load->view('developer_send');
+			}
+			else if ($this->ion_auth->in_group('mentor')) {
+				$this->load->view('other_page_header',$data);
+				$this->load->view('mentor_send');
+			}
+			else if ($this->ion_auth->in_group('super')) {
+				$this->load->view('other_page_header',$data);
+				$this->load->view('super_manager_send');
+			}
+			else {
+				$this->load->view('other_page_header',$data);
+				$this->load->view('manager_send',$data);
+			}
 		} else{
 		 	redirect('', 'refresh');
 		}
@@ -136,9 +149,18 @@ class Main extends CI_Controller {
 			//save username to be data
 			$data['username'] = $user->username;
 			//open home page
-			if ($this->ion_auth->in_group('dev')) $this->load->view('developer_progress');
-			else if ($this->ion_auth->in_group('super')) $this->load->view('super_manager_progress');
-			else $this->load->view('manager_progress',$data);
+			if ($this->ion_auth->in_group('dev')) {
+				$this->load->view('other_page_header',$data);
+				$this->load->view('developer_progress');
+			}
+			else if ($this->ion_auth->in_group('super')){
+				$this->load->view('other_page_header',$data);
+				$this->load->view('super_manager_progress');
+			}
+			else {
+				$this->load->view('other_page_header',$data);
+				$this->load->view('manager_progress',$data);
+			}
 		} else{
 		 	redirect('', 'refresh');
 		}
@@ -146,60 +168,18 @@ class Main extends CI_Controller {
 	}
 
 
-	public function devtask()
-	{
-		if ($this->ion_auth->logged_in())
-		{
-			$user = $this->ion_auth->user()->row();
-			//save username to be data
-			$data['username'] = $user->username;
-			//open home page
-			$this->load->view('developer_task',$data);
-		} else{
-		 	redirect('', 'refresh');
-		}
-		// $this->load->view('developer_task');
-	}
-
-	public function devsend()
-	{
-		if ($this->ion_auth->logged_in())
-		{
-			$user = $this->ion_auth->user()->row();
-			//save username to be data
-			$data['username'] = $user->username;
-			//open home page
-			$this->load->view('developer_send',$data);
-		} else{
-		 	redirect('', 'refresh');
-		}
-		// $this->load->view('developer_task');
-	}
-
-	public function devprogress()
-	{
-		if ($this->ion_auth->logged_in())
-		{
-			$user = $this->ion_auth->user()->row();
-			//save username to be data
-			$data['username'] = $user->username;
-			//open home page
-			$this->load->view('developer_progress',$data);
-		} else{
-		 	redirect('', 'refresh');
-		}
-		// $this->load->view('developer_task');
-	}
-
 
 	public function faq()
 	{
 		if ($this->ion_auth->logged_in())
 		{
+			$id=$this->ion_auth->get_user_id();
+			$data['user'] = $this->user_model->get_user($id);
 			$user = $this->ion_auth->user()->row();
 			//save username to be data
 			$data['username'] = $user->username;
 			//open home page
+			$this->load->view('other_page_header',$data);
 			$this->load->view('FAQ',$data);
 		} else{
 		 	redirect('', 'refresh');
@@ -210,10 +190,13 @@ class Main extends CI_Controller {
 	{
 		if ($this->ion_auth->logged_in())
 		{
+			$id=$this->ion_auth->get_user_id();
+			$data['user'] = $this->user_model->get_user($id);
 			$user = $this->ion_auth->user()->row();
 			//save username to be data
 			$data['username'] = $user->username;
 			//open home page
+			$this->load->view('other_page_header',$data);
 			$this->load->view('edit_profile',$data);
 		} else{
 		 	redirect('', 'refresh');
@@ -270,8 +253,16 @@ class Main extends CI_Controller {
 	{
 		if ($this->ion_auth->logged_in())
 		{
-			if ($this->ion_auth->in_group('super')) $this->load->view('create_announcement');
-			else $this->load->view('all_announcement');
+			$id=$this->ion_auth->get_user_id();
+			$data['user'] = $this->user_model->get_user($id);
+			if ($this->ion_auth->in_group('super')){
+				$this->load->view('other_page_header',$data);
+			 $this->load->view('create_announcement');
+			}
+			else {
+				$this->load->view('other_page_header',$data);
+				$this->load->view('all_announcement');
+			}
 		} else{
 		 	redirect('', 'refresh');
 		}
