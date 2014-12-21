@@ -40,11 +40,6 @@
 
 $route['default_controller'] = "main";
 $route['task'] = "task";
-// $route['mentortask'] = "main/mentortask";
-// $route['mentorsend'] = "main/mentorsend";
-//$route['devtask'] = "main/devtask";
-//$route['devsend'] = "main/devsend";
-//$route['devprogress'] = "main/devprogress";
 $route['send'] = "task/send";
 $route['progress'] = "main/progress";
 $route['register']="main/register";
@@ -54,19 +49,11 @@ $route['wel']="welcome";
 $route['faq'] = "faq";
 $route['edit_profile'] = "user";
 $route['admin'] = "main/admin";
-// $route['edit_hp'] = "main/edit_hp";
-//$route['edit_faq'] = "main/edit_faq";
 $route['edit_role'] = "main/edit_role";
 
 $route['announcement'] = "announcement";
 $route['edit_hp'] = "edit_hp";
 
-
-/////// test
-
-//$route['news'] = 'news';
-//$route['news/(:any)'] = 'news/view/$1';
-//$route['news/create'] = 'news/create';
 
 $route['task/create'] = 'task/create';
 $route['task/update'] = 'task/update';
@@ -77,7 +64,7 @@ $route['faq/edit']='faq/edit';
 $route['announcement/create'] = "announcement/create";
 $route['announcement/delete/(:any)']='announcement/delete/$1';
 $route['edit_hp/edit'] = "edit_hp/edit";
-//// end test
+
 
 
 $route['404_override'] = '';
