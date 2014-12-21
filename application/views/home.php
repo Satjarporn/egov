@@ -59,8 +59,8 @@
 			<!-- <button type="button" class="btn btn-primary maxwidth">Sign in</button> -->
             <input type="submit" class="btn btn-primary maxwidth login-margin" name="submit" value="Login">
             <?php echo form_close();?>
-            <button type="button" class="btn btn-warning maxwidth login-margin">Forgot Password ?</button>
-            <button type="button" class="btn btn-success maxwidth login-margin">New Account</button>
+
+            <a href="<?php echo base_url(); ?>/index.php/register"><button type="button" class="btn btn-success maxwidth login-margin">New Account</button></a>
 
         </nav>
 
