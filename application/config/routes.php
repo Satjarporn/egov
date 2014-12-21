@@ -41,7 +41,7 @@
 $route['default_controller'] = "main";
 $route['task'] = "task";
 $route['send'] = "task/send";
-$route['progress'] = "main/progress";
+$route['progress'] = "task/progress";
 $route['register']="main/register";
 $route['homepage']='main/homepage';
 $route['auth']="auth";

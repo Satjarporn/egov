@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-  <head>
-    <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>E-Goverment Working Area</title>
-    
+	<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<title>E-Goverment Working Area</title>
+		
 
 
-    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-      <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    	<link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
 
-      <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-      <link href="<?php echo base_url(); ?>assets/css/flexslider.css" rel="stylesheet" >
-      <link href="<?php echo base_url(); ?>assets/css/styles.css" rel="stylesheet">
-      <link href="<?php echo base_url(); ?>assets/css/queries.css" rel="stylesheet">
-      <link href="<?php echo base_url(); ?>assets/css/animate.css" rel="stylesheet">
+    	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    	<link href="<?php echo base_url(); ?>assets/css/flexslider.css" rel="stylesheet" >
+    	<link href="<?php echo base_url(); ?>assets/css/styles.css" rel="stylesheet">
+    	<link href="<?php echo base_url(); ?>assets/css/queries.css" rel="stylesheet">
+    	<link href="<?php echo base_url(); ?>assets/css/animate.css" rel="stylesheet">
       <link href="<?php echo base_url(); ?>assets/css/progress_status.css" rel="stylesheet">
 
-      <!-- Push & slide css -->
-      <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/default.css" />
-      <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/component.css" />
+    	<!-- Push & slide css -->
+    	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/default.css" />
+    	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/component.css" />
       <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/frontpage.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/task.css" />
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -29,9 +29,9 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-  </head>
+	</head>
 
-  <body id="top" class="cbp-spmenu-push">
+	<body id="top" class="cbp-spmenu-push">
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
         <h3>Menu</h3>
         <?php echo anchor('', 'Home') ?>
@@ -91,7 +91,7 @@
 
         
 
-       <section class="swag text-center">
+        <section class="swag text-center">
           <div class="container">
             <div class="row">
 
@@ -107,7 +107,7 @@
 
               
               <div class="col-md-8 col-md-offset-2">
-                <h1>All Task Progess<span>Check all task progress here</span></h1>
+                <h1>All Task Progess<span>Check all task progress of yours and from all manager here</span></h1>
                 <a href="#tarea" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
               </div>
             </div>
@@ -118,25 +118,27 @@
 
 
         <!--task container-->
- <?php $sum=0;
-      $t0=0;
-      $t2=0;
-      $t3=0;
-      $t4=0;
- ?>
-<?php foreach ($task as $task_item): ?>
-<?php $sum++;
-      if($task_item['type']==0)$t0++;
-      else if($task_item['type']==2)$t2++;
-      else if($task_item['type']==3)$t3++;
-      else $t4++;
-?>
-<?php endforeach ?>
+
+
 
         <div class="col-md-12 taskarea" id="tarea"> 
 
           <!-- task menu -->
           <div class="taskmenu">
+
+<?php $sum=0;
+      $t0=0;
+      $t1=0;
+      $t2=0;
+      $t3=0;
+ ?>
+<?php foreach ($task as $task_item): ?>
+<?php $sum++;
+      if($task_item['type']==1)$t1++;
+      else if($task_item['type']==2)$t2++;
+      else $t0++;
+?>
+<?php endforeach ?>
           </div> <!-- task menu -->
 
           <!-- progress -->
@@ -148,7 +150,7 @@
                     <h1 class="panel-title text-center"><?php echo $sum;?></h1>
                 </div>
                 <div class="panel-body text-center">                        
-                    <strong>Joined</strong>
+                    <strong>All Task</strong>
                 </div>
             </div>
 
@@ -160,10 +162,10 @@
            
             <div class="panel status panel-inprogress">
                 <div class="panel-heading">
-                    <h1 class="panel-title text-center"><?php echo $t4;?></h1>
+                    <h1 class="panel-title text-center"><?php echo $t0;?></h1>
                 </div>
                 <div class="panel-body text-center">                        
-                    <strong>Pending</strong>
+                    <strong>In Progress</strong>
                 </div>
             </div>
 
@@ -173,10 +175,10 @@
           
             <div class="panel status panel-stop">
                 <div class="panel-heading">
-                    <h1 class="panel-title text-center"><?php echo $t3;?></h1>
+                    <h1 class="panel-title text-center"><?php echo $t1;?></h1>
                 </div>
                 <div class="panel-body text-center">                        
-                    <strong>Reject</strong>
+                    <strong>Stop Releasing</strong>
                 </div>
             </div>
 
@@ -207,11 +209,11 @@
             <label class="btn btn-default active  col-md-3 colo-xs-6">
               <input type="radio" name="taskFilter" autocomplete="off" value="all" checked> ALL TASK
             </label>
-            <label class="btn btn-warning col-md-3 colo-xs-6">
-              <input type="radio" name="taskFilter" autocomplete="off" value="inprog"> Pending task
+            <label class="btn btn-primary col-md-3 colo-xs-6">
+              <input type="radio" name="taskFilter" autocomplete="off" value="inprog"> In progress task
             </label>
             <label class="btn btn-danger col-md-3 colo-xs-6">
-              <input type="radio" name="taskFilter" autocomplete="off" value="stop"> Reject task
+              <input type="radio" name="taskFilter" autocomplete="off" value="stop"> Unreleased task
             </label>
              <label class="btn btn-success col-md-3 colo-xs-6">
               <input type="radio" name="taskFilter" autocomplete="off" value="complete"> Completed task
@@ -224,30 +226,22 @@
            <!-- task list -->
 
            <div class="panel-group" id="alltask">
-
-
-
- <?php $i=1;?>
+<?php $i=1;?>
 <?php foreach ($task as $task_item): ?>
-            <?php if($task_item['type']==0): ?>
-              <div class="panel panel-default">
-            <?php elseif($task_item['type']==2): ?>
-              <div class="panel panel-success">
-            <?php elseif($task_item['type']==3): ?>
-              <div class="panel panel-danger">
-            <?php else: ?>
-              <div class="panel panel-warning">
-            <? endif; ?>
+  <?php   if($task_item['type']==2) echo"<div class=\"panel panel-success\">";
+      else if($task_item['type']==1)echo"<div class=\"panel panel-danger\">";
+      else echo"<div class=\"panel panel-default\">"; 
+  ?>
               <?php echo "<div class=\"panel-heading\" data-toggle=\"collapse\" data-target=\"#task".($i)."\" data-parent=\"#alltask\" aria-expanded=\"false\">"; ?>
                 <h4 class="panel-title collapsed">
                   <a class="col-md-2"><?php echo $task_item['create_date']; ?></a>
                   <?php echo "<a id=\"it1p".$i."\">".$task_item['name']; ?></a>
                  <a class="toRight">
-              <?php   if($task_item['type']==0) echo "In Progress";
-                      else if($task_item['type']==2) echo "Completed";
-                      else if($task_item['type']==3) echo "Reject";
-                      else echo "Pending";
-                  ?>                 </a>
+                  <?php   if($task_item['type']==2) echo "Completed";
+                      else if($task_item['type']==1) echo "Stop Releasing";
+                      else echo "In Progress";
+                  ?>
+                 </a>
                   
 
                 </h4>
@@ -260,10 +254,12 @@
                       else echo $task_item['release_date'];
                   ?></p>
                  <button id="taskFile" type="button" class="btn btn-info">Current Task Description File</button> 
+    
+                  <button id="taskFile" type="button" class="btn btn-success">Developer Uploded File</button>
                    <br>
                    <?php echo "<p class=\"taskContent\" id=\"it3p".$i."\">".$task_item['desc']; ?></p>
                    <hr>
-                  <p class="taskContent">Mentor : </p>
+                   <p class="taskContent">Mentor : </p>
                     <?php if($task_item['comment_stat']!=2): ?>
                     <textarea readonly id="comment" class="form-control" rows="5" placeholder="Mentor's Comment" style="padding-bottom: 10px;"><?php echo $task_item['comment']; ?></textarea>  
                     <?php else: ?>
@@ -405,53 +401,53 @@
           </div>
         </footer>
 
-    
+		
 
-      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-          <!-- Include all compiled plugins (below), or include individual files as needed -->
+        	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        	<!-- Include all compiled plugins (below), or include individual files as needed -->
 
-          <script src="<?php echo base_url(); ?>assets/js/waypoints.min.js"></script>
-          <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
-          <script src="<?php echo base_url(); ?>assets/js/scripts.js"></script>
-          <script src="<?php echo base_url(); ?>assets/js/jquery.flexslider.js"></script>
-          <script src="<?php echo base_url(); ?>assets/js/modernizr.js"></script>
+        	<script src="<?php echo base_url(); ?>assets/js/waypoints.min.js"></script>
+        	<script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
+        	<script src="<?php echo base_url(); ?>assets/js/scripts.js"></script>
+        	<script src="<?php echo base_url(); ?>assets/js/jquery.flexslider.js"></script>
+        	<script src="<?php echo base_url(); ?>assets/js/modernizr.js"></script>
 
 
-          <!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
-        <script src="<?php echo base_url(); ?>assets/js/classie.js"></script>
-        <script>
-            var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
-                menuRight = document.getElementById( 'cbp-spmenu-s2' ),
-              showLeftPush = document.getElementById( 'nav-toggle' ),
-              showRightPush = document.getElementById( 'showRightPush' ),
-              body = document.body;
+        	<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
+    		<script src="<?php echo base_url(); ?>assets/js/classie.js"></script>
+    		<script>
+      			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+          			menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+        			showLeftPush = document.getElementById( 'nav-toggle' ),
+        			showRightPush = document.getElementById( 'showRightPush' ),
+        			body = document.body;
       
-            showLeftPush.onclick = function() {
-              classie.toggle( this, 'active' );
-              classie.toggle( body, 'cbp-spmenu-push-toright' );
-              classie.toggle( menuLeft, 'cbp-spmenu-open' );
-              disableOther( 'showLeftPush' );
-            };
-          showRightPush.onclick = function() {
-              classie.toggle( this, 'active' );
-              classie.toggle( body, 'cbp-spmenu-push-toleft' );
-              classie.toggle( menuRight, 'cbp-spmenu-open' );
-              disableOther( 'showRightPush' );
-            };
+      			showLeftPush.onclick = function() {
+			        classie.toggle( this, 'active' );
+			        classie.toggle( body, 'cbp-spmenu-push-toright' );
+			        classie.toggle( menuLeft, 'cbp-spmenu-open' );
+			        disableOther( 'showLeftPush' );
+			      };
+			    showRightPush.onclick = function() {
+			        classie.toggle( this, 'active' );
+			        classie.toggle( body, 'cbp-spmenu-push-toleft' );
+			        classie.toggle( menuRight, 'cbp-spmenu-open' );
+			        disableOther( 'showRightPush' );
+			      };
       
 
-          function disableOther( button ) {
-              if( button !== 'showLeftPush' ) {
-                classie.toggle( showLeftPush, 'disabled' );
-              }
-              if( button !== 'showRightPush' ) {
-                classie.toggle( showRightPush, 'disabled' );
-              }
-            }
+			    function disableOther( button ) {
+			        if( button !== 'showLeftPush' ) {
+			          classie.toggle( showLeftPush, 'disabled' );
+			        }
+			        if( button !== 'showRightPush' ) {
+			          classie.toggle( showRightPush, 'disabled' );
+			        }
+			      }
 
-          </script>
+			    </script>
 
            <!--animate pizza-->
   <script> 

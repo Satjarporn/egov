@@ -35,6 +35,12 @@ class Task_model extends CI_Model {
 		return $query->result_array();
 	}
 
+	public function get_all_dev_task($slug = FALSE){
+		$userid=$this->ion_auth->user()->row()->id;
+		$query = $this->db->get_where('task','(type = 0 and dev_ID = 0 ) or dev_ID ='.$userid);
+		return $query->result_array();
+	}
+
 	public function get_join_task($slug = FALSE){
 		$userid=$this->ion_auth->user()->row()->id;
 		$query = $this->db->get_where('task','type != 2 and dev_ID = '.$userid);

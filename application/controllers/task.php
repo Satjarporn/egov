@@ -32,7 +32,7 @@ class Task extends CI_Controller {
 			else {
 				$data['task'] = $this->task_model->get_task($id);
 				$this->load->view('other_page_header',$data);
-				$this->load->view('task/index', $data);
+				$this->load->view('task/manager/index', $data);
 			}
 		}
 
@@ -72,6 +72,36 @@ class Task extends CI_Controller {
 		}
 		// $this->load->view('manager_task');
 	}
+
+	public function progress()
+	{
+		if ($this->ion_auth->logged_in())
+		{
+			$id=$this->ion_auth->get_user_id();
+			$user = $this->ion_auth->user()->row();
+			//save username to be data
+			$data['username'] = $user->username;
+			//open home page
+			if ($this->ion_auth->in_group('dev')) {
+				$data['task'] = $this->task_model->get_all_dev_task();
+				$this->load->view('other_page_header',$data);
+				$this->load->view('task/dev/progress',$data);
+			}
+			else if ($this->ion_auth->in_group('super')){
+				$this->load->view('other_page_header',$data);
+				$data['task'] = $this->task_model->get_task();
+				$this->load->view('task/super/progress',$data);
+			}
+			else {
+				$this->load->view('other_page_header',$data);
+				$data['task'] = $this->task_model->get_task($id);
+				$this->load->view('task/manager/progress',$data);
+			}
+		} else{
+		 	redirect('', 'refresh');
+		}
+		// $this->load->view('manager_task');
+	}	
 
 	public function create(){
 		$this->load->helper('form');
