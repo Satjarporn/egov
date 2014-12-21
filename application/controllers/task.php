@@ -25,12 +25,12 @@ class Task extends CI_Controller {
 				$this->load->view('task/mentor/index',$data);
 			}
 			else if ($this->ion_auth->in_group('super')){
-				$data['task'] = $this->task_model->get_mentor_task(0);
+				$data['task'] = $this->task_model->get_task();
 				$this->load->view('other_page_header',$data);
 				$this->load->view('task/super/index',$data);
 			}
 			else {
-				$data['task'] = $this->task_model->get_task();
+				$data['task'] = $this->task_model->get_task($id);
 				$this->load->view('other_page_header',$data);
 				$this->load->view('task/index', $data);
 			}
@@ -58,11 +58,12 @@ class Task extends CI_Controller {
 				$this->load->view('task/mentor/send',$data);
 			}
 			else if ($this->ion_auth->in_group('super')) {
+				$data['task'] = $this->task_model->get_wait_task();
 				$this->load->view('other_page_header',$data);
 				$this->load->view('task/super/send',$data);
 			}
 			else {
-				$data['task'] = $this->task_model->get_wait_task();
+				$data['task'] = $this->task_model->get_wait_task($id);
 				$this->load->view('other_page_header',$data);
 				$this->load->view('task/manager/send',$data);
 			}

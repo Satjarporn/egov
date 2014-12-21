@@ -92,11 +92,13 @@
                     <p class="taskUpdateInfo">
                     Last Update <?php echo $task_item['last_update_date']; ?>
                     </p>
+                  <?php if($task_item['owner_ID']==$user['id']): ?>
                   <?php echo form_open('task/com_work') ?>
                    <button name="id" type="submit" class="btn btn-success" value=<?php echo $task_item['ID']; ?>>Complete</button>
                   
                    <button type="button" class="btn btn-danger reject" data-toggle="modal" data-target="#rejectBox" value=<?php echo $i ?>>Reject</button>
                  </form>
+                 <?php endif; ?>
               </div>
               </div>
             </div>

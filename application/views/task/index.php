@@ -186,14 +186,7 @@
                     Last Update <?php echo $task_item['last_update_date']; ?>
                     </p>
                     <?php echo "<input id=\"it0p".$i."\" type=\"hidden\" value=".$task_item['ID'].">" ?>
-                    <?php if($task_item['type']==0): ?>
-                    <?php echo form_open('task/stop_rel') ?>
-                   <button type="button" class="btn btn-primary update" data-toggle="modal" data-target="#updateTask" value=<?php echo $i ?>>Update Task</button>
-                    <input name="test" type="hidden" value="<?php echo $task_item['ID']; ?>">
-                    <button name="type" type="submit" class="btn btn-warning" value=1>Stop Releasing Task</button>
-                     <button type="button" class="btn btn-danger del"  data-toggle="modal" data-target="#deleteTask" value=<?php echo $task_item['ID']; ?>>Delete Task Permanently</button>
-                     </form>
-              		
+                    <?php if($task_item['type']==2): ?>
               		<?php elseif($task_item['type']==1): ?>
                   <?php echo form_open('task/stop_rel') ?>
               		<button type="button" class="btn btn-primary update" data-toggle="modal" data-target="#updateTask" value=<?php echo $i ?>>Update Task</button>
@@ -202,7 +195,12 @@
                   <button type="button" class="btn btn-danger del"  data-toggle="modal" data-target="#deleteTask" value=<?php echo $task_item['ID']; ?>>Delete Task Permanently</button>
                   </form>
                 	<?php else: ?>
-                	<button type="button" class="btn btn-default" data-toggle="modal" data-target="#completedTaskDetail">See Detail</button>
+                  <?php echo form_open('task/stop_rel') ?>
+                	<button type="button" class="btn btn-primary update" data-toggle="modal" data-target="#updateTask" value=<?php echo $i ?>>Update Task</button>
+                    <input name="test" type="hidden" value="<?php echo $task_item['ID']; ?>">
+                    <button name="type" type="submit" class="btn btn-warning" value=1>Stop Releasing Task</button>
+                     <button type="button" class="btn btn-danger del"  data-toggle="modal" data-target="#deleteTask" value=<?php echo $task_item['ID']; ?>>Delete Task Permanently</button>
+                     </form>
                     <?php endif; ?>
               </div>
               </div>

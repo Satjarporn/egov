@@ -12,7 +12,8 @@ class Task_model extends CI_Model {
 		}
 
 		$query = $this->db->get_where('task', array('owner_ID' => $slug));
-		return $query->row_array();
+		// return $query->row_array();
+		return $query->result_array();
 	}
 
 	public function get_mentor_task($slug = FALSE){
@@ -24,7 +25,7 @@ class Task_model extends CI_Model {
 		if($slug==0){
 			$query = $this->db->get_where('task','type != 1 and comment_stat=0');
 		}
-		else $query = $this->db->get_where('task','comment_stat !=0');
+		else $query = $this->db->get_where('task','comment_stat !=0 and mentor_ID = '.$this->ion_auth->user()->row()->id);
 		return $query->result_array();
 	}
 
@@ -41,7 +42,12 @@ class Task_model extends CI_Model {
 	}
 
 	public function get_wait_task($slug = FALSE){
-		$query = $this->db->get_where('task','type = 4');
+		if ($slug === FALSE){
+			$query = $this->db->get_where('task','type = 4');
+			return $query->result_array();
+		}
+
+		$query = $this->db->get_where('task','type = 4 and owner_ID = '.$slug);
 		return $query->result_array();
 	}
 

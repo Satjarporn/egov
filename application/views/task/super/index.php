@@ -144,19 +144,19 @@
 
 <?php $i=1;?>
 <?php foreach ($task as $task_item): ?>
-	<?php 	if($task_item['type']==2) echo"<div class=\"panel panel-success\">";
-			else if($task_item['type']==1)echo"<div class=\"panel panel-danger\">";
-			else echo"<div class=\"panel panel-default\">"; 
-	?>
+  <?php   if($task_item['type']==2) echo"<div class=\"panel panel-success\">";
+      else if($task_item['type']==1)echo"<div class=\"panel panel-danger\">";
+      else echo"<div class=\"panel panel-default\">"; 
+  ?>
               <?php echo "<div class=\"panel-heading\" data-toggle=\"collapse\" data-target=\"#task".($i)."\" data-parent=\"#alltask\" aria-expanded=\"false\">"; ?>
                 <h4 class="panel-title collapsed">
                   <a class="col-md-2"><?php echo $task_item['create_date']; ?></a>
                   <?php echo "<a id=\"it1p".$i."\">".$task_item['name']; ?></a>
                  <a class="toRight">
-                 	<?php 	if($task_item['type']==2) echo "Completed";
-                 			else if($task_item['type']==1) echo "Stop Releasing";
-                 			else echo "In Progress";
-                 	?>
+                  <?php   if($task_item['type']==2) echo "Completed";
+                      else if($task_item['type']==1) echo "Stop Releasing";
+                      else echo "In Progress";
+                  ?>
                  </a>
                   
 
@@ -165,10 +165,10 @@
               <?php echo "<div id=\"task".$i."\" class=\"panel-collapse collapse\">"; ?>
                 <div class="panel-body">
                   <?php echo "<p class=\"taskContent\" id=\"it2p".$i."\">" ?>Task Creator : <?php echo $task_item['owner_name']; ?>
-                    <br>Release Date : <?php 	if($task_item['type']==0) echo $task_item['release_date'];
-                 			else if($task_item['type']==1) echo "-";
-                 			else echo $task_item['release_date'];
-                 	?></p>
+                    <br>Release Date : <?php  if($task_item['type']==0) echo $task_item['release_date'];
+                      else if($task_item['type']==1) echo "-";
+                      else echo $task_item['release_date'];
+                  ?></p>
                  <button id="taskFile" type="button" class="btn btn-info">Current Task Description File</button> 
     
                   <button id="taskFile" type="button" class="btn btn-success">Developer Uploded File</button>
@@ -186,29 +186,30 @@
                     Last Update <?php echo $task_item['last_update_date']; ?>
                     </p>
                     <?php echo "<input id=\"it0p".$i."\" type=\"hidden\" value=".$task_item['ID'].">" ?>
-                    <?php if($task_item['type']==0): ?>
-                    <?php echo form_open('task/stop_rel') ?>
-                   <button type="button" class="btn btn-primary update" data-toggle="modal" data-target="#updateTask" value=<?php echo $i ?>>Update Task</button>
-                    <input name="test" type="hidden" value="<?php echo $task_item['ID']; ?>">
-                    <button name="type" type="submit" class="btn btn-warning" value=1>Stop Releasing Task</button>
-                     <button type="button" class="btn btn-danger del"  data-toggle="modal" data-target="#deleteTask" value=<?php echo $task_item['ID']; ?>>Delete Task Permanently</button>
-                     </form>
-              		
-              		<?php elseif($task_item['type']==1): ?>
+                  <?php if($task_item['owner_ID']==$user['id']): ?>
+                  <?php if($task_item['type']==2): ?>
+                  <?php elseif($task_item['type']==1): ?>
                   <?php echo form_open('task/stop_rel') ?>
-              		<button type="button" class="btn btn-primary update" data-toggle="modal" data-target="#updateTask" value=<?php echo $i ?>>Update Task</button>
+                  <button type="button" class="btn btn-primary update" data-toggle="modal" data-target="#updateTask" value=<?php echo $i ?>>Update Task</button>
                   <input name="test" type="hidden" value="<?php echo $task_item['ID']; ?>">
                   <button name="type" type="submit" class="btn btn-warning" value=0>Re-release Task</button>
                   <button type="button" class="btn btn-danger del"  data-toggle="modal" data-target="#deleteTask" value=<?php echo $task_item['ID']; ?>>Delete Task Permanently</button>
                   </form>
-                	<?php else: ?>
-                	<button type="button" class="btn btn-default" data-toggle="modal" data-target="#completedTaskDetail">See Detail</button>
-                    <?php endif; ?>
+                  <?php else: ?>
+                  <?php echo form_open('task/stop_rel') ?>
+                  <button type="button" class="btn btn-primary update" data-toggle="modal" data-target="#updateTask" value=<?php echo $i ?>>Update Task</button>
+                    <input name="test" type="hidden" value="<?php echo $task_item['ID']; ?>">
+                    <button name="type" type="submit" class="btn btn-warning" value=1>Stop Releasing Task</button>
+                     <button type="button" class="btn btn-danger del"  data-toggle="modal" data-target="#deleteTask" value=<?php echo $task_item['ID']; ?>>Delete Task Permanently</button>
+                     </form>
+                  <?php endif; ?>
+                  <?php endif; ?>
               </div>
               </div>
             </div>
 <? $i++; ?>
 <?php endforeach ?>
+
 
 
            </div> <!-- all task -->
