@@ -41,7 +41,7 @@
         <h3>Menu</h3>
         <?php echo anchor('admin', 'DashBoard') ?>
          <?php echo anchor('edit_hp', 'Edit Homepage') ?>
-        <?php echo anchor('edit_role', 'Edit Member Role') ?>
+        <?php echo anchor('user/role', 'Edit Member Role') ?>
         <?php echo anchor('faq/edit', 'Edit FAQ') ?>
         </nav>
 

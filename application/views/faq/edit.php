@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Admin</title>
     <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="../assets/css/flexslider.css" rel="stylesheet" >
-    <link href="../assets/css/styles.css" rel="stylesheet">
-    <link href="../assets/css/queries.css" rel="stylesheet">
-    <link href="../assets/css/animate.css" rel="stylesheet">
+      <link href="<?php echo base_url(); ?>assets/css/flexslider.css" rel="stylesheet" >
+      <link href="<?php echo base_url(); ?>assets/css/styles.css" rel="stylesheet">
+      <link href="<?php echo base_url(); ?>assets/css/queries.css" rel="stylesheet">
+      <link href="<?php echo base_url(); ?>assets/css/animate.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="../assets/css/sb-admin.css" rel="stylesheet">
@@ -24,9 +24,9 @@
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- Push & slide css -->
-    <link rel="stylesheet" type="text/css" href="../assets/css/default.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/component.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/authorLogin.css" />
+     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/default.css" />
+      <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/component.css" />
+      <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/frontpage.css" />
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -41,7 +41,7 @@
         <h3>Menu</h3>
         <?php echo anchor('admin', 'DashBoard') ?>
          <?php echo anchor('edit_hp', 'Edit Homepage') ?>
-        <?php echo anchor('edit_role', 'Edit Member Role') ?>
+        <?php echo anchor('user/role', 'Edit Member Role') ?>
         <?php echo anchor('faq/edit', 'Edit FAQ') ?>
         </nav>
 
@@ -71,6 +71,7 @@
               
               <div class="col-md-8 col-md-offset-2">
                 <h1>FAQ Editing<span>Frequency Asking Question<br>Create your FAQ</span></h1>
+                <div class="alert alert-info alert-dismissible" style="background:rgba(217,237,247,0.7);">Please input the value in the box<br>then click "Save Changes" at the bottom of the page to edit the FAQ.</div>
                 <a href="#features" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
               </div>
             </div>
@@ -113,7 +114,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-md-offset-3 text-center">    
-                        <button type="submit" class="learn-more-btn">Save Change</button>  
+                        <button type="submit" class="learn-more-btn">Save Changes</button>  
                     </div>
                 </div>
                 </from>

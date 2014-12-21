@@ -41,7 +41,7 @@
         <h3>Menu</h3>
         <?php echo anchor('admin', 'DashBoard') ?>
          <?php echo anchor('edit_hp', 'Edit Homepage') ?>
-        <?php echo anchor('edit_role', 'Edit Member Role') ?>
+        <?php echo anchor('user/role', 'Edit Member Role') ?>
         <?php echo anchor('faq/edit', 'Edit FAQ') ?>
         </nav>
 
@@ -128,7 +128,7 @@
                     </div>
 
                       <div class="col-lg-4 col-md-4">
-                        <?php echo anchor('edit_role', '<div class="panel panel-red">
+                        <?php echo anchor('user/role', '<div class="panel panel-red">
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
@@ -151,7 +151,7 @@
                     </div>
 
                     <div class="col-lg-4 col-md-4">
-                        <?php echo anchor('faq', '<div class="panel panel-green">
+                        <?php echo anchor('faq/edit', '<div class="panel panel-green">
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
