@@ -39,7 +39,7 @@
 */
 
 $route['default_controller'] = "main";
-$route['task'] = "task";
+$route['task/(:any)'] = "task/index/$1";
 $route['send'] = "task/send";
 $route['progress'] = "task/progress";
 $route['register']="main/register";
